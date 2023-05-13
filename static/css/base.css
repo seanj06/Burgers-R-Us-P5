@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto+Mono:wght@500&display=swap');
+
 body {
     background: url("https://burgers-r-us1.s3.eu-west-1.amazonaws.com/media/burgers2.jpeg") no-repeat center center fixed;
     background-size: cover;
@@ -8,4 +10,14 @@ body {
 
 .hero-text {
     color: white;
+    font-family: 'Roboto Mono', sans-serif; 
+}
+
+.hero-logo {
+    font-family: 'Lora', sans-serif;
+    margin: auto;
+    padding: 0;
+    font-size: 2.3rem;
+    text-decoration: underline;
+    color: #555;
 }
