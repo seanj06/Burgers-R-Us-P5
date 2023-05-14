@@ -51,7 +51,7 @@ class Food(models.Model):
     sku = models.CharField(max_length=36, unique=True, blank=True, null=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
-    is_vegan = models.BooleanField(default=False, null=True, blank=True)
+    is_vegetarian = models.BooleanField(default=False, null=True, blank=True)
     is_gluten_free = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
