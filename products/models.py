@@ -1,7 +1,6 @@
 from django.db import models
 import uuid
-from django.db.models.signals import pre_save
-from django.dispatch import receiver
+from multiselectfield import MultiSelectField
 # Create your models here.
 
 
@@ -31,6 +30,15 @@ class Food(models.Model):
     Model for food
     """
 
+    CONTAINS_CHOICES = [
+        ('Nuts', 'Nuts'),
+        ('Dairy', 'Dairy'),
+        ('Gluten', 'Gluten'),
+        ('Soy', 'Soy'),
+        ('Fish', 'Fish'),
+        ('Shellfish', 'Shellfish'),
+    ]
+
     class Meta:
         """"
         Order food products by name in the admin panel
@@ -49,6 +57,7 @@ class Food(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     is_available = models.BooleanField(default=True)
     image = models.ImageField(null=True, blank=True)
+    contains = MultiSelectField(choices=CONTAINS_CHOICES, blank=True)
 
     def __str__(self):
         return self.name
