@@ -9,6 +9,13 @@ class Category(models.Model):
     """
     Model for food categories
     """
+
+    class meta:
+        """
+        Alters name in admin panel
+        """
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=200)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -21,8 +28,15 @@ class Category(models.Model):
 
 class Food(models.Model):
     """
-    Model for food 
+    Model for food
     """
+
+    class Meta:
+        """"
+        Order food products by name in the admin panel
+        """
+        ordering = ('name',)
+
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL
         )
@@ -40,6 +54,9 @@ class Food(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
+        """
+        Generates unique sku using uuid
+        """
         if not self.sku:
             self.sku = str(uuid.uuid4()).replace('-', '')[:8]
         super(Food, self).save(*args, **kwargs) 
