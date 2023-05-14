@@ -1,5 +1,7 @@
 from django.db import models
-
+import uuid
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 # Create your models here.
 
 
@@ -24,7 +26,7 @@ class Food(models.Model):
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL
         )
-    sku = models.CharField(max_length=254, null=True, blank=True)
+    sku = models.CharField(max_length=36, unique=True, blank=True, null=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     is_vegan = models.BooleanField(default=False, null=True, blank=True)
@@ -36,3 +38,8 @@ class Food(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.sku:
+            self.sku = str(uuid.uuid4()).replace('-', '')[:8]
+        super(Food, self).save(*args, **kwargs) 
