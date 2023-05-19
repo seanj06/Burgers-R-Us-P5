@@ -26,6 +26,11 @@ def all_products(request):
 
             products = products.filter(queries)
 
+            if not products:  
+                messages.info(
+                    request, "No products found matching your search."
+                    )
+
     context = {
         'products': products,
         'search_term': query,
