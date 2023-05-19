@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from .models import Food, Category
+from .models import Food, Category, SubCategory
 from django.contrib import messages
 from django.db.models import Q
 
@@ -17,6 +17,11 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if "subcategory" in request.GET:
+            subcategory = request.GET["subcategory"].split(",")
+            products = products.filter(sub_category__name__in=subcategory)
+            subcategory = SubCategory.objects.filter(name__in=subcategory)  
 
         if 'q' in request.GET:
             query = request.GET['q']

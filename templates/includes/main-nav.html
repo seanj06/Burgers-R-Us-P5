@@ -23,9 +23,9 @@
                 Burgers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="burgers-link">
-                <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">Premium Burgers</a>
-                <a href="{% url 'products' %}" class="dropdown-item">Beef Burgers</a>
-                <a href="{% url 'products' %}" class="dropdown-item">Chicken burgers</a>
+                <a href="{% url 'products' %}?subcategory=premium_burgers" class="dropdown-item">Premium Burgers</a>
+                <a href="{% url 'products' %}?subcategory=beef_burgers" class="dropdown-item">Beef Burgers</a>
+                <a href="{% url 'products' %}?subcategory=chicken_burgers" class="dropdown-item">Chicken burgers</a>
                 <a href="{% url 'products' %}?category=Burgers" class="dropdown-item">All burgers</a>
             </div>
         </li>
@@ -36,9 +36,9 @@
                 Sides
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sides-link">
-                <a href="" class="dropdown-item">Garlic Bread</a>
-                <a href="" class="dropdown-item">Chips</a>
-                <a href="" class="dropdown-item">Other</a>
+                <a href="{% url 'products' %}?subcategory=garlic_bread" class="dropdown-item">Garlic Bread</a>
+                <a href="{% url 'products' %}?subcategory=chips" class="dropdown-item">Chips</a>
+                <a href="{% url 'products' %}?subcategory=other" class="dropdown-item">Other</a>
                 <a href="{% url 'products' %}?category=Sides" class="dropdown-item">All Sides</a>
 
             </div>
@@ -50,8 +50,8 @@
                 Pizza
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="pizza-link">
-                <a href="" class="dropdown-item">Vegetarian</a>
-                <a href="" class="dropdown-item">Meat</a>
+                <a href="{% url 'products' %}?subcategory=vegetarian_pizza" class="dropdown-item">Vegetarian</a>
+                <a href="{% url 'products' %}?subcategory=meat_pizza" class="dropdown-item">Meat Pizza</a>
                 <a href="{% url 'products' %}?category=Pizza" class="dropdown-item">All Pizzas</a>
             </div>
         </li>
