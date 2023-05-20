@@ -15,6 +15,8 @@
                 <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">By Price High To Low</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category A-Z</a>
                 <a href="{% url 'products' %}?sort=category&direction=desc" class="dropdown-item ">By Category Z-A</a>
+                <a href="{% url 'products' %}?sort=subcategory&direction=asc" class="dropdown-item ">By Sub Category A-Z</a>
+                <a href="{% url 'products' %}?sort=subcategory&direction=desc" class="dropdown-item ">By Sub Category Z-A</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
