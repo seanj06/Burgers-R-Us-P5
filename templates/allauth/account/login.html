@@ -33,6 +33,7 @@
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
+<div class="overlay"></div>
 <div class="allauth-cont">
   <p class="text-center">{% blocktrans %}If you have not created an account yet, then please
     <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
