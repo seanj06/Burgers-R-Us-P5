@@ -13,7 +13,7 @@ body {
 }
 
 .hero-text {
-    font-family: 'Roboto Mono', sans-serif; 
+    font-family: 'Roboto Mono', sans-serif;
     font-size: 2.5rem;
     text-decoration: underline;
 }
@@ -99,9 +99,15 @@ body {
 .product-name {
     font-size: 1.3rem;
     text-decoration: underline;
-    font-family: 'Roboto Mono', sans-serif; 
+    font-family: 'Roboto Mono', sans-serif;
 }
 
+/* All auth */
+
+.forms {
+    padding-top: 5rem;
+    margin-top: 5rem;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

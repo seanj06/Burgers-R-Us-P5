@@ -1,15 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container header-container">
-        <div class="overlay"></div>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="allauth-form-inner-content">
-                    {% block inner_content %}
-                    {% endblock %}
-                </div>
+<div class="container header-container">
+    <div class="overlay"></div>
+    {% if messages %}
+    <div>
+        <strong>Messages:</strong>
+        <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-12">
+            <div class="allauth-form-inner-content">
+                {% block inner_content %}
+                {% endblock %}
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
