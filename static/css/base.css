@@ -12,6 +12,13 @@ body {
     font-family: 'Lato';
 }
 
+/* Header */
+
+.header {
+    background-color: gold;
+    color: white;
+}
+
 .hero-text {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 2.5rem;
@@ -40,9 +47,6 @@ body {
     text-transform: uppercase;
 }
 
-.main-logo-link {
-    width: fit-content;
-}
 
 .shop-now-button {
     background: black;
@@ -108,6 +112,7 @@ body {
     padding-top: 5rem;
     margin-top: 5rem;
 }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -140,4 +145,19 @@ body {
     body {
         height: calc(100vh - 116px);
     }
+
+    .nav-icons {
+        display: none;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .main-logo-link > h2 {
+        text-align: center;
+    }
+
+
 }
+

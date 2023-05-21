@@ -44,14 +44,14 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class=" hero-logo logo-font text-black my-0 pt-3"><strong>Burgers-</strong>R-Us</h2>
+    <header class="container-fluid fixed-top header">
+        <div id="topnav" class="row pt-lg-2 d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+                <a href="{% url 'home' %}" class="nav-link">
+                    <h2 class="hero-logo logo-font text-black my-0 pt-3"><strong>Burgers-</strong>R-Us</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-6 col-lg-4 my-auto py-1 py-lg-0 search-bar">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -67,7 +67,7 @@
                 </form>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0 nav-icons">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -107,8 +107,8 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
