@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
 
@@ -40,3 +40,16 @@ def edit_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(reverse('cart_home'))
+
+
+def remove_from_cart(request, item_id):
+    """
+    View to remove item from cart
+    """
+    cart = request.session.get('cart', {})
+
+    if item_id in cart:
+        del cart[item_id]
+
+    request.session['cart'] = cart
+    return HttpResponse(status=200)
