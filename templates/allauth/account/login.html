@@ -4,20 +4,18 @@
 {% load account socialaccount %}
 {% load crispy_forms_tags %}
 
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block extra_title %} - {% trans "Sign In" %}{% endblock %}
 
 {% block inner_content %}
 
-<hr>
-<h2 class="logo-font mb-4 text-center">{% trans "Sign In" %}</h2>
+<h2 class="logo-font text-center mb-2">{% trans "Sign In" %}</h2>
 <hr>
 
 {% get_providers as socialaccount_providers %}
 
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
-  of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+  of your existing third party accounts. Or, <a href="{{ signup_url }}"><span>Sign Up</span></a>
   for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
@@ -33,25 +31,24 @@
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<div class="overlay"></div>
-<div class="allauth-cont">
-  <p class="text-center">{% blocktrans %}If you have not created an account yet, then please
-    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+<p>{% blocktrans %}If you have not created an account yet, then please
+  <a href="{{ signup_url }}"><span>Sign Up</span></a> first.{% endblocktrans %}
+</p>
+{% endif %}
+
+<form class="login" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  {{ form|crispy }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <div class="mx-auto col-12 col-md-8 col-lg-6 mt-5 pt-5 text-center">
-    <form class="login" method="POST" action="{% url 'account_login' %}">
-      {% csrf_token %}
-      {{ form|crispy }}
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-      {% endif %}
-      <a class="btn btn-success rounded-0" href="{% url 'home' %}">Home</a>
-      <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>
-      <p class="mt-2">
-        <a class="button secondaryAction btn btn-warning" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-      </p>
-    </form>
-  </div>
-</div>
+
+  <a class="btn btn-success rounded-0" href="{% url 'home' %}">Home</a>
+  <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+  <p class="mt-2">
+    <a class="button secondaryAction btn btn-warning"
+      href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  </p>
+</form>
 
 {% endblock %}

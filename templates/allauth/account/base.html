@@ -2,20 +2,9 @@
 
 {% block content %}
 <div class="container header-container">
-    <div class="overlay"></div>
-    {% if messages %}
-    <div>
-        <strong>Messages:</strong>
-        <ul>
-            {% for message in messages %}
-            <li>{{message}}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
-    <div class="row">
-        <div class="col-12">
-            <div class="allauth-form-inner-content">
+    <div class="row mt-5">
+        <div class="col-12 col-md-6 mx-auto">
+            <div class="allauth-form">
                 {% block inner_content %}
                 {% endblock %}
             </div>
