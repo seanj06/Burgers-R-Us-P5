@@ -1,16 +1,26 @@
 import uuid
 from django.db import models
+from django.utils import timezone
 from django.db.models import Sum
 from django.conf import settings
 from products.models import Food
 
-# Create your models here.
+# Delay in minutes to earliest delivery time option
+DELIVERY_TIME_DELAY = 30
 
 
 class Order(models.Model):
     """
     Model for food orders
     """
+    # Choices for delivery times
+    DELIVERY_TIME_CHOICES = [
+        (i, (
+            timezone.now() + timezone.timedelta(minutes=i+DELIVERY_TIME_DELAY)
+            ).strftime('%H:%M'))
+        for i in range(0, 120-DELIVERY_TIME_DELAY, 15)
+    ]
+
     order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
@@ -21,6 +31,9 @@ class Order(models.Model):
     address_2 = models.CharField(max_length=80, null=True, blank=True)
     address_3 = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+    delivery_time = models.IntegerField(
+        choices=DELIVERY_TIME_CHOICES, null=True
+        )
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0
         )
