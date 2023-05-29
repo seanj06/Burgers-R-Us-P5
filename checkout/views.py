@@ -13,6 +13,7 @@ import stripe
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    intent = None
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
@@ -22,7 +23,7 @@ def checkout(request):
             'eircode': request.POST['eircode'],
             'county': request.POST['county'],
             'town': request.POST['town'],
-            'address_1': request.POST['adress_1'],
+            'address_1': request.POST['address_1'],
             'address_2': request.POST['address_2'],
             'address_3': request.POST['address_3'],
             'delivery_time': request.POST['delivery_time'],
@@ -34,7 +35,7 @@ def checkout(request):
 
             for item_id, item_data in cart.items():
                 try:
-                    product = Food.objects.get(id=item_id)
+                    food = Food.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_item = OrderItem(
                             order=order,
@@ -78,7 +79,7 @@ def checkout(request):
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret,
+        'client_secret': intent.client_secret if intent else None,
     }
 
     return render(request, template, context)
