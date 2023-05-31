@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.db.models import Sum
 from django.conf import settings
 from products.models import Food
+from profiles.models import Profile
 
 # Delay in minutes to earliest delivery time option
 DELIVERY_TIME_DELAY = 30
@@ -22,6 +23,10 @@ class Order(models.Model):
     ]
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(
+        Profile, on_delete=models.SET_NULL, null=True,
+        blank=True, related_name='orders'
+        )
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     eircode = models.CharField(max_length=10, null=False, blank=False)
