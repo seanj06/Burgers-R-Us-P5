@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from .models import Profile
 from .forms import ProfileForm
+from checkout.models import Order
 
 
 def profile(request):
@@ -23,6 +24,8 @@ def profile(request):
         'form': form,
         'profile': profile,
         'orders': orders,
+        'on_profile_page': True
     }
 
     return render(request, template, context)
+
