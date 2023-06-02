@@ -1,27 +1,23 @@
 {% extends "account/base.html" %}
-{% block title %} Logout {% endblock %}
+
 {% load i18n %}
-{% load crispy_forms_tags %}
+
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
-{% block content %}
-<div class="overlay"></div>
-<div class="mx-auto col-12 col-md-8 col-lg-6 text-center forms">
-  <h1>{% trans "Sign Out" %}</h1>
-  <p>{% trans 'Are you sure you want to sign out?' %}</p>
-  <form method="post" action="{% url 'account_logout' %}">
-    {% csrf_token %}
-    {{ form|crispy }}
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <div class="row text-center">
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary" id="logout-btn">{% trans 'Sign Out' %}</button>
-      </div>
-    </div>
-  </form>
-</div>
+{% block inner_content %}
+<hr>
+<h2 class="logo-font mb-4">{% trans "Sign Out" %}</h2>
+<hr>
+<p>{% trans 'Are you sure you want to sign out?' %}</p>
+
+<form method="post" action="{% url 'account_logout' %}">
+  {% csrf_token %}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Cancel</a>
+  <button type="submit">{% trans 'Sign Out' %}</button>
+</form>
 
 
 {% endblock %}
