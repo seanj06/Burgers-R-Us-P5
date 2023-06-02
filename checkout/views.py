@@ -96,7 +96,23 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        order_form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = Profile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'eircode': profile.default_eircode,
+                    'town': profile.default_town,
+                    'address_1': profile.default_address_1,
+                    'address_2': profile.default_address_2,
+                    'address_3': profile.default_address_3,
+                    'county': profile.default_county,
+                })
+            except Profile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
