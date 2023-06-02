@@ -6,6 +6,8 @@ from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
 from .models import OrderItem, Order
+from profiles.models import Profile
+from profiles.forms import ProfileForm
 from products.models import Food
 from cart.contexts import cart_contents
 import stripe
@@ -116,6 +118,29 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_profile = profile
+        order.save()
+
+        # Save the user's info
+        if save_info:
+            profile_data = {
+                'default_email': order.email,
+                'default_eircode': order.eircode,
+                'default_town': order.town,
+                'default_address1': order.address_1,
+                'default_address2': order.address_2,
+                'default_address3': order.address_3,
+                'default_county': order.county,
+            }
+
+            user_profile_form = ProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
+
     messages.success(request, f'Your order has been placed \
         Your food will be with you shortly. \
         Your order number is {order_number}. A confirmation \
