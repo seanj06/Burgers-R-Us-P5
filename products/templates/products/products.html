@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -14,7 +18,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
+            <hr class="w-50 mb-1">
+            <h2 class="logo-font pt-3 header-text">Products</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -39,10 +44,12 @@
                                 Category (A-Z)</option>
                             <option value="category_desc"
                                 {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                            <option value="subcategory_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
-                                 Sub Category (A-Z)</option>
+                            <option value="subcategory_asc"
+                                {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                Sub Category (A-Z)</option>
                             <option value="subcategory_desc"
-                                {% if current_sorting == 'category_desc' %}selected{% endif %}>Sub Category (Z-A)</option>
+                                {% if current_sorting == 'category_desc' %}selected{% endif %}>Sub Category (Z-A)
+                            </option>
                         </select>
                     </div>
                 </div>
@@ -59,8 +66,8 @@
 
             <div class="row">
                 {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex">
-                    <div class="card flex-fill h-100 border-0">
+                <div class="col-md-6 col-lg-4 mt-3 d-flex">
+                    <div class="card flex-fill h-100">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -72,37 +79,35 @@
                         </a>
                         {% endif %}
                         <div class="card-body pb-0 text-center">
-                            <p class="product-name">{{ product.name }}</p>
+                            <a href="{% url 'product_detail' product.id %}">
+                                <p class="product-name">{{ product.name }}</p>
+                            </a>
                             <p>{{ product.description }}</p>
-                            <p><strong class="text-black pt-2">Contains:</strong> {{ product.contains }}</p>
+                            <hr>
+                            <p><strong class="pt-2 px-2">Contains:</strong> {{ product.contains }}</p>
+                            <hr>
                             {% if product.is_vegetarian %}
-                            <p><strong class="text-black">Vegetarian:</strong> Yes</p>
+                            <p><strong class="px-2">Vegetarian:</strong> Yes</p>
+                            <hr>
                             {% else %}
-                            <p><strong class="text-black">Vegetarian:</strong> No</p>
+                            <p><strong class="px-2">Vegetarian:</strong> No</p>
+                            <hr>
                             {% endif %}
                             {% if product.is_gluten_free %}
-                            <p><strong class="text-black">Gluten Free:</strong> Yes</p>
+                            <p><strong class="px-2">Gluten Free:</strong> Yes</p>
                             {% else %}
-                            <p><strong class="text-black">Gluten Free:</strong> No</p>
+                            <p><strong class="px-2">Gluten Free:</strong> No</p>
                             {% endif %}
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold text-center">${{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold text-center text-white">€{{ product.price }}</p>
                                     {% if product.category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted"
+                                    <p class="mt-1 mb-0">
+                                        <a class="text-white"
                                             href="{% url 'products' %}?category={{ product.category.name }}">
                                             <i class="fas fa-tag mr-1"></i>{{ product.category.name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    {% if product.sub_category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted"
-                                            href="{% url 'products' %}?subcategory={{ product.subcategory.name }}">
-                                            <i class="fas fa-tag mr-1"></i>{{ product.sub_category.friendly_name }}
                                         </a>
                                     </p>
                                     {% endif %}

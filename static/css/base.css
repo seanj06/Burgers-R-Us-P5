@@ -100,11 +100,7 @@ body {
     object-fit: cover;
 }
 
-.product-name {
-    font-size: 1.3rem;
-    text-decoration: underline;
-    font-family: 'Roboto Mono', sans-serif;
-}
+
 
 /* All auth */
 
