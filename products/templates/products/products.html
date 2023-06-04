@@ -55,11 +55,14 @@
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
-                        {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
-                        {% endif %}
-                        {{ products|length }} Products{% if search_term %} found for
+                        {% with products_count=products|length %}
+                        {% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
+                        {% if products_count > 0 %}
+                        <span class="product-count">Showing {{ products.start_index }}-{{ products.end_index }} of
+                            {{ products.paginator.count }} Products</span>
+                        {% endif %}
+                        {% endwith %}
                     </p>
                 </div>
             </div>

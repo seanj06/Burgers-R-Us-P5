@@ -48,6 +48,11 @@
     font-size: 1.3rem;
 }
 
+.product-count {
+    color: black;
+    font-size: 1.3rem;
+}
+
 /* Media queries for small screens */
 @media screen and (max-width: 768px) {
     .card-img-top {
