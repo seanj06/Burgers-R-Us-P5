@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Food, Category, SubCategory
 from django.contrib import messages
 from django.db.models import Q
@@ -23,13 +24,12 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-                
+
             if sortkey == 'category':
                 sortkey = 'category__name'
 
             if sortkey == 'subcategory':
-                sortkey = 'sub_category__name'    
-      
+                sortkey = 'sub_category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -66,6 +66,15 @@ def all_products(request):
                 messages.info(
                     request, "No products found matching your search."
                     )
+
+    paginator = Paginator(products, 6)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)        
 
     current_sorting = f'{sort}_{direction}'                
 
