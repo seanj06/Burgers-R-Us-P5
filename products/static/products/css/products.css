@@ -3,6 +3,7 @@
 .header-text {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 2.5rem;
+    color: gold;
 }
 
 .product-name {
@@ -38,24 +39,25 @@
 
 .pagination-link {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.5rem;
     padding-left: 10px;
     padding-bottom: 1rem;
 }
 
 .pagination-link:hover {
-    color: black;
+    color: white;
 }
 
 .current-page {
     font-weight: bold;
+    color: gold;
     padding-left: 10px;
     font-size: 1.3rem;
 }
 
 .product-count {
-    color: black;
+    color: gold;
     font-size: 1.3rem;
 }
 
@@ -80,7 +82,7 @@
 #detail-body {
     background-color: gray;
     border-radius: 50px;
-    border: 5px solid gold;
+    border: 2px solid gold;
 }
 
 #detail-card {
