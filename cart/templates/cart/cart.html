@@ -81,14 +81,14 @@
                             <p class="my-0 text-white">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <a class="btn btn-primary text-white"><small>Update</small></a>
-                            <a class="btn btn-danger text-white"
+                            <a class="update-link btn btn-primary text-white"><small>Update</small></a>
+                            <a class="remove-item btn btn-danger text-white"
                                 id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
                     </tr>
                     {% endfor %}
-                    <tr>
-                        <td colspan="5" class="pt-5 text-right">
+                    <tr class="text-center">
+                        <td colspan="5" class="pt-5 text-center text-white">
                             <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
@@ -101,8 +101,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <td colspan="5" class="text-center">
+                            <a href="{% url 'products' %}" class="btn btn-primary rounded-0 btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
