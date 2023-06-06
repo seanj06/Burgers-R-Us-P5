@@ -74,20 +74,47 @@
     text-decoration: underline;
 }
 
+.image-container {
+    margin: auto;
+    padding: 0;
+}
+
+.image-container img {
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid white;
+    max-width: 100%;
+    max-height: 300px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 .detail-img {
     border: 2px solid white;
     border-radius: 30px;
 }
 
+
 #detail-body {
     background-color: gray;
     border-radius: 50px;
     border: 2px solid gold;
+
 }
 
 #detail-card {
     border-radius: 50px;
     margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+    #detail-body {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -96,7 +123,7 @@
     }
 }
 
-@media screen and (max-width: 640px) { 
+@media screen and (max-width: 640px) {
     #detail-card {
         margin-top: 10rem;
     }

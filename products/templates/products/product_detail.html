@@ -20,18 +20,25 @@
         <div class="col-12 col-md-10">
             <div class="card" id="detail-card">
                 <div class="card-body" id="detail-body">
-                    <h2 class="card-title text-center">{{ product.name }}</h2>
-                    <div class="text-center mb-4">
-                        {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank">
-                            <img class="img-fluid detail-img" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
-                        </a>
-                        {% endif %}
+                    <div class="row text-center justify-content-center">
+                        <div class="col-lg-12">
+                            <h2 class="card-title text-center">{{ product.name }}</h2>
+                        </div>
+                        <div class="text-center image-container text-center">
+                            <div class="col-lg-12">
+                                {% if product.image %}
+                                <a href="{{ product.image.url }}" target="_blank">
+                                    <img class="img-fluid" src="{{ product.image.url }}"
+                                        alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
                     <hr>
                     <div class="text-center detail-details">
@@ -71,7 +78,7 @@
                                 <div class="row"></div>
                                 <div class="col-12 text-center">
                                     {% if product.category %}
-                                    <p class="btn btn-danger mb-0">More
+                                    <p class="btn btn-danger mb-0 mt-3">More
                                         <a class="text-white"
                                             href="{% url 'products' %}?category={{ product.category.name }}">
                                             <i class="fas fa-tag mr-1"></i>{{ product.category.name }}
@@ -80,13 +87,13 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            <a href="{% url 'products' %}" class="btn btn-primary mt-2">
+                            <a href="{% url 'products' %}" class="btn btn-primary mt-3">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Back to Products</span>
                             </a>
-                            <button type="submit" class="btn btn-success text-uppercase mt-2">
+                            <button type="submit" class="btn btn-success text-uppercase mt-3">
                                 <i class="fas fa-shopping-cart"></i> Add to Cart
                             </button>
                     </div>
