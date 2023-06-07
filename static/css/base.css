@@ -10,6 +10,10 @@ body {
     background-color: aliceblue;
 }
 
+.rule {
+    background-color: white;
+}
+
 /* Header */
 
 .header {

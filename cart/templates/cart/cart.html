@@ -19,9 +19,9 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col text-center">
-            <hr>
-            <h2 class="logo-font mb-4 header-text">Cart</h2>
-            <hr>
+            <hr class="w-50 mb-1 rule">
+            <h2 class="logo-font mb-3 header-text">Cart</h2>
+            <hr class="w-50 mb-1 rule">
         </div>
     </div>
 
@@ -93,7 +93,7 @@
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
+                            <p class="mb-1 text-white">
                                 You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
                                 more!
                             </p>
@@ -106,7 +106,7 @@
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                <span class="text-uppercase">Back to Products</span>
                             </a>
                             <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                                 <span class="text-uppercase">Secure Checkout</span>
@@ -119,13 +119,15 @@
                 </table>
             </div>
             {% else %}
-            <p class="lead mb-5">Your Cart is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
+            <div class="text-center">
+                <p class="lead mt-5 text-white">Your Cart is empty!.</p>
+                <a href="{% url 'products' %}" class="btn btn-primary mt-3 text-center">
+                    <span class="icon text-center">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Products</span>
+                </a>
+            </div>
             {% endif %}
         </div>
     </div>
@@ -134,8 +136,9 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script src="{% static 'cart/js/cart.js' %}"></script>
+{% include 'products/includes/quantity_button_script.html' %}
 <script type="text/javascript">
+    // Update quantity on click
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
