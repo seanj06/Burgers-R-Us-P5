@@ -36,6 +36,12 @@ body {
     color: #555;
 }
 
+.header-text {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 2.5rem;
+    color: gold;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
