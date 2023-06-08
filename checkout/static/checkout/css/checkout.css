@@ -46,3 +46,17 @@
     background: rgba(23, 162, 184, .85);
     z-index: 9999;
 }
+
+.checkout-header {
+    color: gold;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.order-confirmation-wrapper {
+    background-color: gray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
