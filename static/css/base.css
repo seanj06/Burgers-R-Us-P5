@@ -211,6 +211,10 @@ body {
     .container {
         max-width: 80%;
     }
+
+    .background-overlay {
+        top: -40px;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -229,8 +233,13 @@ body {
 }
 
 @media (max-width: 991px) {
+    
     .header-container {
         padding-top: 170px;
+    }
+
+    .hero-text {
+        font-size: 1.4rem;
     }
 
     body {
@@ -253,9 +262,6 @@ body {
 }
 
 @media (max-width: 991px) {
-    .header-container {
-        padding-top: 200px;
-    }
 
     body {
         height: calc(100vh - 116px);
