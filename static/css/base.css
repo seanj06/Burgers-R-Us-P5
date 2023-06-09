@@ -23,8 +23,7 @@ body {
 
 .hero-text {
     font-family: 'Roboto Mono', sans-serif;
-    font-size: 2.5rem;
-    text-decoration: underline;
+    font-size: 1.9rem;
 }
 
 .hero-logo {
@@ -40,6 +39,24 @@ body {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 2.5rem;
     color: gold;
+}
+
+/* Home Page */
+
+.hero-container {
+    position: relative; 
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/media/hero-image.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
 }
 
 /* from Bulma */
