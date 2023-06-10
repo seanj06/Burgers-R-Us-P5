@@ -11,9 +11,7 @@ def contact(request):
             contact_message = form.save(commit=False)
             contact_message.user = request.user
             contact_message.save()
-            messages.success(request, 'Your form has been submitted.\
-                 We will be in touch shortly.')
-            return redirect('home')
+            return redirect('contact_success')
     else:
         form = ContactMessageForm()
 
@@ -22,3 +20,10 @@ def contact(request):
     }    
 
     return render(request, 'contact/contact.html', context)
+
+
+def contact_success(request):
+    """
+    View to render contact success page
+    """    
+    return render(request, 'contact/contact-success.html')

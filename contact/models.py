@@ -24,4 +24,4 @@ class ContactMessage(models.Model):
     issue = models.CharField(max_length=100, choices=ISSUE_CHOICES, null=True)
 
     def __str__(self):
-        return f"{self.subject} by {self.user}"
+        return f"{self.issue} by {self.user}"
