@@ -14,7 +14,7 @@ class Category(models.Model):
         Alters name in admin panel
         """
         verbose_name_plural = 'Categories'
-    
+
     sub_category = models.ManyToManyField('SubCategory')
     name = models.CharField(max_length=200)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
