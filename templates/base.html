@@ -69,6 +69,14 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0 nav-icons">
+                    <li class="list-inline-item">
+                        <a class="text-black nav-link" href="{% url 'contact' %}">
+                            <div class="text-center pt-3">
+                                <div><i class="fas fa-envelope fa-lg"></i></div>
+                                <p class="my-0">Contact Us</p>
+                            </div>
+                        </a>
+                    </li>
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -97,9 +105,9 @@
                                 <div><i class="fas fa-shopping-cart"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
+                                    €{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                    $0.00
+                                    €0.00
                                     {% endif %}
                                 </p>
                             </div>
