@@ -17,7 +17,7 @@ def contact(request):
 
     context = {
         'form': form,
-    }    
+    }
 
     return render(request, 'contact/contact.html', context)
 
@@ -25,5 +25,5 @@ def contact(request):
 def contact_success(request):
     """
     View to render contact success page
-    """    
+    """
     return render(request, 'contact/contact-success.html')

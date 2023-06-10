@@ -25,7 +25,8 @@
 </div>
 <div class="container mt-3 mb-3">
     <h2 class="text-center header-text">Opening Hours</h2>
-    <p class="text-center text-white">We are open 7 days a week and open late for deliveries or collection on weekends</p>
+    <p class="text-center text-white">We are open 7 days a week and open late for deliveries or collection on weekends
+    </p>
     <hr class="rule">
     <table class="table mt-4">
         <thead class="thead-dark">
@@ -79,11 +80,17 @@
                 <td>01:00 AM</td>
                 <td>15:00 AM - 12:30 AM</td>
             </tr>
-            
+
         </tbody>
     </table>
 </div>
-<div class="container">
-    <a href="{% url 'contact' %}">hi</a>
+<div class="container mt-3 mb-3 pb-3">
+    <h3 class="text-center header-text">Contact Us</h3>
+    <p class="text-center text-white">Have an issue with your order or an enquiry? Press the contact us button below</p>
+    <hr class="rule">
+    <div class="text-center">
+        <a href="{% url 'contact' %}" class="btn btn-success btn-lg">Contact Us</a>
+    </div>
 </div>
+
 {% endblock %}
