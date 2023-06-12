@@ -21,10 +21,26 @@
             <hr class="w-50 mb-1 rule">
             <h2 class="logo-font pt-3 header-text text-center">Reviews</h2>
             <hr class="w-50 mb-1 rule">
+            {% if user.is_authenticated %}
+            <div class="row text-center">
+                <div class="col-12">
+                    <h5 class="text-white">Click the button below to write a review</h5>
+                    <a href="" class="btn btn-primary">Write Review</a>
+                </div>
+            </div>
+            {% else %}
+            <div class="row text-center">
+                <div class="col-12">
+                    <h5 class="text-white">You must be logged in to write a review</h5>
+                    <p class="text-white">Click here to <a href="{% url 'account_login' %}"> login </a> or <a href="{% url 'account_signup' %}"> sign up</a>if you havent already</p>
+                </div>
+            </div>
+            {% endif%}
             {% for review in reviews %}
             <div class="row text-center mt-3 comment-container">
                 <div class="col-12 text-center review">
-                    <p class="rating mx-4"> Review By: <span class="text-white px-3">{{ review.author }}</span></p>
+                    <p class="rating mx-4"> Review By: <span class="text-white px-3">{{ review.author }}</span>
+                    </p>
                     <hr class="rule">
                     <p class="rating">On: <span class="text-white px-3">{{ review.created_at }}</span></p>
                     <p class="text-white">{{ review.comment }}</p>
