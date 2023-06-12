@@ -25,6 +25,7 @@
             <div class="row text-center mt-3 comment-container">
                 <div class="col-12 text-center review">
                     <p class="rating mx-4"> Review By: <span class="text-white px-3">{{ review.author }}</span></p>
+                    <hr class="rule">
                     <p class="rating">On: <span class="text-white px-3">{{ review.created_at }}</span></p>
                     <p class="text-white">{{ review.comment }}</p>
                     <p class="rating px-3">Rated: <span class="text-white px-3">{{ review.rating }}<i
@@ -41,4 +42,29 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".like-btn").click(function () {
+            var reviewId = $(this).data("review-id");
+            var likeBtn = $(this);
+
+            $.ajax({
+                url: "/review/like/",
+                method: "POST",
+                data: {
+                    review_id: reviewId,
+                    csrfmiddlewaretoken: "{{ csrf_token }}"
+                },
+                success: function (response) {
+                    // Update the like count on the page
+                    var likesCount = likeBtn.parent().find(".likes-count");
+                    likesCount.text("Likes: " + response.likes_count);
+                }
+            });
+        });
+    });
+</script>
 {% endblock %}
