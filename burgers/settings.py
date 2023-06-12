@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'contact',
+    'review',
     # Allauth
     'allauth',
     'allauth.account',
