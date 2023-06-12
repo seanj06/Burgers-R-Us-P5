@@ -27,8 +27,13 @@
                     <p class="rating mx-4"> Review By: <span class="text-white px-3">{{ review.author }}</span></p>
                     <p class="rating">On: <span class="text-white px-3">{{ review.created_at }}</span></p>
                     <p class="text-white">{{ review.comment }}</p>
-                        <p class="rating px-3">Rated: <span class="text-white px-3">{{ review.rating }}<i class="fas fa-star rating"></i> out of 5<i class="fas fa-star rating"></i><span</p>
-                    <p class="likes-count">{{ review.likes_count }}</p>
+                    <p class="rating px-3">Rated: <span class="text-white px-3">{{ review.rating }}<i
+                                class="fas fa-star rating"></i> out of 5<i class="fas fa-star rating"></i>
+                        </span></p>
+                    <button class="like-btn" data-review-id="{{ review.id }}">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span class="likes-count text-white px-3">Likes: {{ review.likes_count }}</span>
                 </div>
             </div>
             <hr class="rule">
