@@ -1,0 +1,7 @@
+{% for review in reviews %}
+    <div class="review">
+        <p>{{ review.comment }}</p>
+        <p>{{ review.author}}</p>
+        <span class="likes-count">{{ review.likes_count }}</span>
+    </div>
+{% endfor %}

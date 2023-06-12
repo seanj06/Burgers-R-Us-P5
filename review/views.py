@@ -12,4 +12,4 @@ def reviews(request):
     context = {
         'reviews': reviews,
     }
-    return render(request, 'review/review_list.html', context)
+    return render(request, 'review/review.html', context)
