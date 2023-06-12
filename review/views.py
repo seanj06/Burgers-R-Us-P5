@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
+from django.contrib import messages
 from .models import Review
+from .forms import ReviewForm
 
 # Create your views here.
 
@@ -34,3 +36,23 @@ def like_review(request):
     else:
         return JsonResponse({}, status=400)
 
+
+def add_review(request):
+    """
+    View for adding a review
+    """
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.author = request.user
+            review.save()
+            messages.success(request, 'Your review has been created')
+            return redirect('reviews')
+    else:
+        form = ReviewForm()
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'review/add_review.html', context)
