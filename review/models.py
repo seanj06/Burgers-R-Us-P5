@@ -21,4 +21,4 @@ class Review(models.Model):
         return f'Review by {self.author.username}'
 
     def likes_count(self):
-        return self.likes.count()    
+        return self.likes.count()
