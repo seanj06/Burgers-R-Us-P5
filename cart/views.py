@@ -42,12 +42,15 @@ def edit_cart(request, item_id):
     View to edit item in cart
     """
     product = get_object_or_404(Food, pk=item_id)
-    cart = request.session.get('cart', {})
     quantity = int(request.POST.get('quantity'))
+    cart = request.session.get('cart', {})
 
-    if item_id in cart:
+    if quantity > 0:
         cart[item_id] = quantity
-        request, f'Updated {product.name} quantity to {cart[item_id]}'
+        messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+    else:
+        cart.pop(item_id)
+        messages.success(request, f'Removed {product.name} from your cart')
 
     request.session['cart'] = cart
     return redirect(reverse('cart_home'))
