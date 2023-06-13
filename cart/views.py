@@ -65,7 +65,7 @@ def remove_from_cart(request, item_id):
 
     if item_id in cart:
         del cart[item_id]
-        request, f'Removed {product.name} from your cart'
+        messages.success(request, f'Removed {product.name} from your cart')
 
     request.session['cart'] = cart
     return HttpResponse(status=200)
