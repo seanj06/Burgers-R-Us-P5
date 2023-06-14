@@ -32,7 +32,8 @@
             <div class="row text-center">
                 <div class="col-12">
                     <h5 class="text-white">You must be logged in to write a review</h5>
-                    <p class="text-white">Click here to <a href="{% url 'account_login' %}"> login </a> or <a href="{% url 'account_signup' %}"> sign up</a>if you havent already</p>
+                    <p class="text-white">Click here to <a href="{% url 'account_login' %}"> login </a> or <a
+                            href="{% url 'account_signup' %}"> sign up</a>if you havent already</p>
                 </div>
             </div>
             {% endif%}
@@ -52,6 +53,20 @@
                     </button>
                     <span class="likes-count text-white px-3">Likes: {{ review.likes_count }}</span>
                 </div>
+                {% if user.is_authenticated and review.author == user %}
+                <div class="col-12 text-center review">
+                    <!-- Delete Button -->
+                    <form action="{% url 'delete_review' review.id %}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <div class="confirmation-container" style="display: none;">
+                            <p>Are you sure you want to delete this review?</p>
+                            <button type="submit" class="btn btn-success btn-sm">Confirm Delete</button>
+                            <button type="button" class="btn btn-danger btn-sm cancel-delete">Cancel</button>
+                        </div>
+                        <button type="button" class="btn btn-danger delete-review">Delete</button>
+                    </form>
+                </div>
+                {% endif %}
             </div>
             <hr class="rule">
             {% endfor %}
@@ -80,6 +95,23 @@
                     likesCount.text("Likes: " + response.likes_count);
                 }
             });
+        });
+
+        $(".show-delete-confirmation").click(function () {
+            $(this).siblings(".confirmation-container").show();
+        });
+
+        $(".cancel-delete").click(function () {
+            $(this).closest(".confirmation-container").hide();
+        });
+
+        $(".delete-review").click(function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            var confirmationContainer = $(this).siblings(".confirmation-container");
+            confirmationContainer.show();
+
+            var confirmDeleteBtn = confirmationContainer.find(".confirm-delete");
+            confirmDeleteBtn.attr("href", $(this).attr("href"));
         });
     });
 </script>

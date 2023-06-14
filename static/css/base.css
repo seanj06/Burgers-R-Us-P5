@@ -171,6 +171,23 @@ body {
     padding: 20px;
 }
 
+.confirmation-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    border: 1px solid white;
+    margin-bottom: 3rem;
+    background-color: gold;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
