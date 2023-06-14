@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Review
 from .forms import ReviewForm
@@ -56,3 +57,17 @@ def add_review(request):
         'form': form,
     }
     return render(request, 'review/add_review.html', context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """
+    View for deleting a review
+    """
+    review = get_object_or_404(Review, id=review_id)
+    if review.author == request.user:
+        review.delete()
+        messages.success(request, 'Your review has been deleted')
+    else:
+        messages.error(request, 'You are not authorized to delete this review')
+    return redirect('reviews')
