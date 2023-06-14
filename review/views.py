@@ -71,3 +71,29 @@ def delete_review(request, review_id):
     else:
         messages.error(request, 'You are not authorized to delete this review')
     return redirect('reviews')
+
+
+@login_required
+def edit_review(request, review_id):
+    """
+    View for editing a review
+    """
+    review = get_object_or_404(Review, id=review_id)
+    if review.author == request.user:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST, instance=review)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Your review has been updated')
+                return redirect('reviews')
+        else:
+            form = ReviewForm(instance=review)
+    else:
+        messages.error(request, 'You are not authorized to edit this review')
+        return redirect('reviews')
+
+    context = {
+        'form': form,
+        'review': review,
+    }
+    return render(request, 'review/edit_review.html', context)

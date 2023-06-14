@@ -48,10 +48,10 @@
                     <p class="rating px-3">Rated: <span class="text-white px-3">{{ review.rating }}<i
                                 class="fas fa-star rating"></i> out of 5<i class="fas fa-star rating"></i>
                         </span></p>
-                    <button class="like-btn" data-review-id="{{ review.id }}">
+                    <button class="like-btn mb-2" data-review-id="{{ review.id }}">
                         <i class="fas fa-thumbs-up"></i>
                     </button>
-                    <span class="likes-count text-white px-3">Likes: {{ review.likes_count }}</span>
+                    <span class="likes-count text-white px-3 mb-2">Likes: {{ review.likes_count }}</span>
                 </div>
                 {% if user.is_authenticated and review.author == user %}
                 <div class="col-12 text-center review">
@@ -63,8 +63,9 @@
                             <button type="submit" class="btn btn-success btn-sm">Confirm Delete</button>
                             <button type="button" class="btn btn-danger btn-sm cancel-delete">Cancel</button>
                         </div>
-                        <button type="button" class="btn btn-danger delete-review">Delete</button>
+                        <button type="button" class="btn btn-danger delete-review mt-2">Delete</button>
                     </form>
+                    <a href="{% url 'edit_review' review.id %}" class="btn btn-primary edit-review mt-2">Edit</a>
                 </div>
                 {% endif %}
             </div>

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <hr class="w-50 mb-1 rule">
+            <h2 class="logo-font pt-3 header-text text-center">Edit Review</h2>
+            <hr class="w-50 mb-1 rule">
+            <p class="text-white text-center pt-2">Edit Your Review Below
+            </p>
+            <form method="post" action="{% url 'edit_review' review.id %}" class="text-white">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success btn mb-2">Save Changes</button>
+                    <a href="{% url 'reviews' %}" class="btn btn-warning mb-2 text-white">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
