@@ -41,6 +41,7 @@ def checkout(request):
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'eircode': request.POST['eircode'],
+            'phone_number': request.POST['phone_number'],
             'county': request.POST['county'],
             'town': request.POST['town'],
             'address_1': request.POST['address_1'],
@@ -103,6 +104,7 @@ def checkout(request):
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
                     'eircode': profile.default_eircode,
+                    'phone_number': profile.default_phone_number,
                     'town': profile.default_town,
                     'address_1': profile.default_address_1,
                     'address_2': profile.default_address_2,
@@ -146,6 +148,7 @@ def checkout_success(request, order_number):
             profile_data = {
                 'default_email': order.email,
                 'default_eircode': order.eircode,
+                'default_phone_number': order.phone_number,
                 'default_town': order.town,
                 'default_address1': order.address_1,
                 'default_address2': order.address_2,

@@ -65,7 +65,7 @@ class Food(models.Model):
         )
     sub_category = models.ForeignKey(
         "SubCategory", null=True, blank=True, on_delete=models.SET_NULL
-    )    
+    )
     sku = models.CharField(max_length=36, unique=True, blank=True, null=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -86,4 +86,4 @@ class Food(models.Model):
         """
         if not self.sku:
             self.sku = str(uuid.uuid4()).replace('-', '')[:8]
-        super(Food, self).save(*args, **kwargs) 
+        super(Food, self).save(*args, **kwargs)

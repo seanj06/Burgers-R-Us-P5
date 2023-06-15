@@ -13,7 +13,7 @@ class OrderForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         required_fields = [
-            'full_name', 'email', 'eircode',
+            'full_name', 'email', 'eircode', 'phone_number',
             'county', 'town', 'address_1', 'delivery_time'
             ]
 
@@ -26,7 +26,7 @@ class OrderForm(forms.ModelForm):
         """
         model = Order
         fields = [
-            'full_name', 'email', 'eircode',
+            'full_name', 'email', 'eircode', 'phone_number',
             'county', 'town', 'address_1', 'address_2',
             'address_3', 'delivery_time'
             ]
