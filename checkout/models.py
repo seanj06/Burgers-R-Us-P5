@@ -6,6 +6,7 @@ from django.db.models import Sum
 from django.conf import settings
 from products.models import Food
 from profiles.models import Profile
+from .delivery_times import generate_delivery_time_choices
 
 # Delay in minutes to earliest delivery time option
 DELIVERY_TIME_DELAY = 30
@@ -15,30 +16,6 @@ class Order(models.Model):
     """
     Model for food orders
     """
-
-    def generate_delivery_time_choices():
-        """
-        Generates delivery time choices
-        rounded to the closest 15-minute interval.
-        """
-        choices = []
-        current_time = datetime.now().replace(second=0, microsecond=0)
-        delivery_time = current_time + timedelta(minutes=DELIVERY_TIME_DELAY)
-
-        rounded_minute = (delivery_time.minute // 15) * 15
-        rounded_delivery_time = delivery_time.replace(minute=rounded_minute)
-        choices.append(
-            (rounded_delivery_time.time(),
-             rounded_delivery_time.strftime('%H:%M'))
-            )
-
-        while rounded_delivery_time < current_time.replace(hour=23, minute=45):
-            rounded_delivery_time += timedelta(minutes=15)
-            choices.append((rounded_delivery_time.time(),
-                            rounded_delivery_time.strftime('%H:%M')
-                            ))
-
-        return choices
 
     # Uses generate delivery_time_choices method
     DELIVERY_TIME_CHOICES = generate_delivery_time_choices()
@@ -131,4 +108,4 @@ class OrderItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.food.sku} on order {self.order.order_number}'    
+        return f'SKU {self.food.sku} on order {self.order.order_number}'
