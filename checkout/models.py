@@ -7,7 +7,7 @@ from products.models import Food
 from profiles.models import Profile
 
 # Delay in minutes to earliest delivery time option
-DELIVERY_TIME_DELAY = 30
+DELIVERY_TIME_DELAY = 90
 
 
 class Order(models.Model):
@@ -19,7 +19,7 @@ class Order(models.Model):
         (i, (
             timezone.now() + timezone.timedelta(minutes=i+DELIVERY_TIME_DELAY)
             ).strftime('%H:%M'))
-        for i in range(0, 120-DELIVERY_TIME_DELAY, 15)
+        for i in range(0, 300-DELIVERY_TIME_DELAY, 15)
     ]
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
