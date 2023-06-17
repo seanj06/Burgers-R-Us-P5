@@ -11,6 +11,8 @@ from .delivery_times import generate_delivery_time_choices
 # Delay in minutes to earliest delivery time option
 DELIVERY_TIME_DELAY = 30
 
+DELIVERY_TIME_CHOICES = generate_delivery_time_choices()
+
 
 class Order(models.Model):
     """
@@ -18,7 +20,6 @@ class Order(models.Model):
     """
 
     # Uses generate delivery_time_choices method
-    DELIVERY_TIME_CHOICES = generate_delivery_time_choices()
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
@@ -26,7 +27,9 @@ class Order(models.Model):
         blank=True, related_name='orders'
         )
     full_name = models.CharField(max_length=50, null=False, blank=False)
-    phone_number = models.CharField(max_length=20, null=True, blank=False)
+    phone_number = models.CharField(
+        max_length=20, null=False, blank=False, default=0
+        )
     email = models.EmailField(max_length=254, null=False, blank=False)
     eircode = models.CharField(max_length=10, null=False, blank=False)
     county = models.CharField(max_length=30, null=False, blank=False)
@@ -35,8 +38,9 @@ class Order(models.Model):
     address_2 = models.CharField(max_length=80, null=True, blank=True)
     address_3 = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    delivery_time = models.IntegerField(
-        choices=DELIVERY_TIME_CHOICES, null=True
+    delivery_time = models.TimeField(
+        choices=DELIVERY_TIME_CHOICES,
+        null=False, blank=False,
         )
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0
