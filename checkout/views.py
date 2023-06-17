@@ -9,7 +9,10 @@ from .models import OrderItem, Order
 from profiles.models import Profile
 from profiles.forms import ProfileForm
 from products.models import Food
+from django.utils import timezone
+from datetime import datetime, timedelta, date
 from cart.contexts import cart_contents
+from .delivery_times import generate_delivery_time_choices
 import stripe
 import json
 
@@ -34,6 +37,7 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    delivery_choices = generate_delivery_time_choices(date.today())
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
@@ -47,8 +51,14 @@ def checkout(request):
             'address_1': request.POST['address_1'],
             'address_2': request.POST['address_2'],
             'address_3': request.POST['address_3'],
-            'delivery_time': request.POST['delivery_time'],
         }
+
+        delivery_time = request.POST.get('delivery_time')
+        if not delivery_time:
+            messages.error(request, 'Sorry delivery is currently unavailable')
+            return render(request, template, context)
+
+        form_data['delivery_time'] = delivery_time
 
         order_form = OrderForm(form_data)
         if order_form.is_valid:
@@ -125,6 +135,7 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret if intent else None,
+        'delivery_choices': delivery_choices,
     }
 
     return render(request, template, context)

@@ -71,6 +71,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6">
+            {% if delivery_choices %}
             <p class="text-white mt-3">Please fill out the form to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
@@ -89,7 +90,7 @@
                     {{ order_form.address_2 | as_crispy_field }}
                     {{ order_form.address_3 | as_crispy_field }}
                     {{ order_form.delivery_time | as_crispy_field }}
-                    
+
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
                         <label class="form-check-label" for="id-save-info">Save this delivery information to my
@@ -135,6 +136,11 @@
                 </div>
             </form>
         </div>
+        {% else %}
+        <div class="row text-center mt-4">
+            <p class="text-white">Delivery is currently unavailable. Please try again later.</p>
+        </div>
+        {% endif %}
     </div>
 </div>
 <div id="loading-overlay">
