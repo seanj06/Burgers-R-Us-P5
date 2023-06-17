@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Food, Category, SubCategory
+from .forms import ProductForm
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
