@@ -8,6 +8,8 @@ from products.models import Food
 from profiles.models import Profile
 from .delivery_times import generate_delivery_time_choices
 
+# Delay in minutes to earliest delivery time option
+DELIVERY_TIME_DELAY = 30
 
 DELIVERY_TIME_CHOICES = generate_delivery_time_choices(date.today())
 
@@ -16,6 +18,8 @@ class Order(models.Model):
     """
     Model for food orders
     """
+
+    # Uses generate delivery_time_choices method
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
@@ -80,7 +84,7 @@ class Order(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.order_number
+        return self.order_number    
 
 
 class OrderItem(models.Model):

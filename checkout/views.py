@@ -137,7 +137,7 @@ def checkout(request):
         'client_secret': intent.client_secret if intent else None,
         'delivery_choices': delivery_choices,
     }
-
+    print(delivery_choices)
     return render(request, template, context)
 
 
