@@ -30,6 +30,7 @@ def generate_delivery_time_choices(delivery_date):
         end_time_str = opening_hours['end']
         if end_time_str:
             end_time = datetime.strptime(end_time_str, '%H:%M').time()
+            end_time = datetime.combine(delivery_date, end_time)
         else:
             end_time = None
 
@@ -45,10 +46,11 @@ def generate_delivery_time_choices(delivery_date):
                 hour=start_time.hour, minute=start_time.minute
             )
 
-        if end_time is not None and end_time < start_time:
+        if end_time is not None and end_time < datetime.combine(
+                delivery_date, start_time):
             end_time = datetime.combine(
-                delivery_date + timedelta(days=1), end_time
-                )
+                delivery_date + timedelta(days=1), end_time.time()
+            )
 
         while end_time is None or rounded_delivery_time <= end_time:
             choices.append(
@@ -56,5 +58,8 @@ def generate_delivery_time_choices(delivery_date):
                  rounded_delivery_time.strftime('%H:%M'))
             )
             rounded_delivery_time += timedelta(minutes=15)
+
+    if not choices:
+        choices.append(("Closed", "Sorry, we are closed for delivery"))        
 
     return choices
