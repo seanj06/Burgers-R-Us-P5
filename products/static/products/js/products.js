@@ -61,3 +61,22 @@ $('.decrement-qty').click(function (e) {
     var itemId = $(this).data('item_id');
     handleEnableDisable(itemId);
 });
+
+$(document).ready(function () { 
+    $(".show-delete-confirmation").click(function () {
+        $(this).siblings(".confirmation-container").show();
+    });
+
+    $(".cancel-delete").click(function () {
+        $(this).closest(".confirmation-container").hide();
+    });
+
+    $(".delete-product").click(function (event) {
+        event.preventDefault(); // Prevent the default form submission
+        var confirmationContainer = $(this).siblings(".confirmation-container");
+        confirmationContainer.show();
+
+        var confirmDeleteBtn = confirmationContainer.find(".confirm-delete");
+        confirmDeleteBtn.attr("href", $(this).attr("href"));
+    });
+});
