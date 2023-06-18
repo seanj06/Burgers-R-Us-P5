@@ -22,7 +22,7 @@
     {% if request.user.is_superuser %}
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
-            <form method="POST" action="{% url 'add_product' %}" class="form mb-2 text-white" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'edit_product' %}" class="form mb-2 text-white" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <hr class="rule">
