@@ -13,63 +13,12 @@
     <p><strong>Order Number:</strong> {{ order.order_number }}</p>
     <p><strong>Order Date:</strong>{{ order.date }}</p>
     <p><strong>Delivery Time:</strong> {{ order.get_delivery_time_display }}</p>
+    <p><strong>Order Total:</strong>€{{ order.order_total }}</p>
+    <p><strong>Delivery:</strong>€{{ order.delivery_cost }}</p>
+    <p><strong>Grand Total:</strong>€{{ order.grand_total }}</p>
+
 
     <p>Please feel free to contact us if you have any questions.</p>
-
-    <h2>Order Items</h2>
-    {% for item in order.order_item.all %}
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <p class="mb-0 font-weight-bold">{{ item.food.name }}</p>
-        </div>
-        <div class="col-12 col-md-8 text-right">
-            <p class="small mb-0">{{ item.quantity }} @ €{{ item.food.price }} each</p>
-        </div>
-    </div>
-    {% endfor %}
-
-    <div class="row">
-        <div class="col checkout-header">
-            <p>Delivering To:</p>
-        </div>
-    </div>
-
-    <!-- Rest of the delivery address details -->
-
-    <div class="row">
-        <div class="col checkout-header">
-            <p>Billing Info:</p>
-        </div>
-    </div>
-
-    <!-- Rest of the billing details -->
-
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <p class="mb-0 font-weight-bold">Order Total:</p>
-        </div>
-        <div class="col-12 col-md-8 text-right">
-            <p class="mb-0">€{{ order.order_total }}</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <p class="mb-0 font-weight-bold">Delivery:</p>
-        </div>
-        <div class="col-12 col-md-8 text-right">
-            <p>€{{ order.delivery_cost }}</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <p class="mb-0 font-weight-bold">Grand Total:</p>
-        </div>
-        <div class="col-12 col-md-8 text-right">
-            <p class="mb-0">€{{ order.grand_total }}</p>
-        </div>
-    </div>
 </body>
 
 </html>
