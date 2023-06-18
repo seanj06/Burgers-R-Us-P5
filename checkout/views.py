@@ -13,6 +13,9 @@ from django.utils import timezone
 from datetime import datetime, timedelta, date
 from cart.contexts import cart_contents
 from .delivery_times import generate_delivery_time_choices
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 import stripe
 import json
 
@@ -178,6 +181,18 @@ def checkout_success(request, order_number):
 
     if 'cart' in request.session:
         del request.session['cart']
+
+    subject = f'Order Confirmation - Order #{order.order_number}'
+    from_email = 'burgers-r-us@example.com'
+    to_email = [order.email]
+
+    html_message = render_to_string('checkout/email/order_confirmation.html',
+                                    {'order': order})
+    plain_message = strip_tags(html_message)
+
+    send_mail(subject, plain_message,
+              from_email, to_email,
+              html_message=html_message)    
 
     template = 'checkout/checkout_success.html'
     context = {
