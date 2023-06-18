@@ -17,7 +17,7 @@
 <div class="overlay"></div>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-10">
+        <div class="col-12 col-md-11">
             <div class="card" id="detail-card">
                 <div class="card-body" id="detail-body">
                     <div class="row text-center justify-content-center">
@@ -29,7 +29,9 @@
                                 {% if product.image %}
                                 <img class="product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
-                                <img class="product-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                <img class="product-image"
+                                    src="https://burgers-r-us1.s3.eu-west-1.amazonaws.com/media/no-image.webp"
+                                    alt="{{ product.name }}">
                                 {% endif %}
                             </div>
                         </div>
@@ -113,7 +115,7 @@
                             Delete</button>
                         <button type="button" class="btn btn-danger btn-sm cancel-delete">Cancel</button>
                     </div>
-                    <button type="button" class="btn btn-danger delete-product">Delete</button>
+                    <button type="button" class="btn btn-danger delete-product">Delete Product</button>
                 </form>
             </div>
         </div>
@@ -125,5 +127,4 @@
 {% block postloadjs %}
 {{ block.super }}
 <script src="{% static 'products/js/products.js' %}"></script>
-{% include 'products/includes/quantity_button_script.html' %}
 {% endblock %}
