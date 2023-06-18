@@ -109,7 +109,7 @@ def add_product(request):
     """
     if not request.user.is_superuser:
         messages.error(request,
-                       'Sorry you are not authorized to add a product'
+                       'Sorry you are not authorized to edit a product'
                        )
         return redirect(reverse('home'))
     if request.method == 'POST':
@@ -166,4 +166,19 @@ def edit_product(request, product_id):
         'product': product,
     }
 
-    return render(request, template, context)    
+    return render(request, template, context)
+
+
+@login_required
+def delete_product(request, product_id):
+    """
+    Delete a product from the store
+    """
+    if not request.user.is_superuser:
+        messages.error(request,
+                       'Sorry you are not authorized to delete a product'
+                       )
+    product = get_object_or_404(Food, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
