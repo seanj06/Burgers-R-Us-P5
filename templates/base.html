@@ -48,11 +48,13 @@
     <header class="container-fluid fixed-top header">
         <div id="topnav" class="row pt-lg-2 d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+                <!-- Logo -->
                 <a href="{% url 'home' %}" class="nav-link">
                     <h2 class="hero-logo logo-font text-black my-0 pt-3"><strong>Burgers-</strong>R-Us</h2>
                 </a>
             </div>
             <div class="col-6 col-lg-4 my-auto py-1 py-lg-0 search-bar">
+                <!-- Search Bar -->
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -67,61 +69,73 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0 nav-icons">
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="{% url 'reviews' %}">
-                            <div class="text-center pt-3">
-                                <div><i class="fas fa-star fa-lg"></i></div>
-                                <p class="my-0">Reviews</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="{% url 'contact' %}">
-                            <div class="text-center pt-3">
-                                <div><i class="fas fa-envelope fa-lg"></i></div>
-                                <p class="my-0">Contact Us</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item dropdown">
+            <div class="col-6 col-lg-4 my-auto py-1 py-lg-0">
+                <!-- Dropdown Menu for Icons -->
+                <div class="row align-items-center justify-content-end">
+                    <div class="dropdown text-center text-lg-right">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center pt-3">
+                            <div class="text-center pt-3 dropdown">
+                                <div><i class="fas fa-ellipsis-v fa-lg"></i></div>
+                                <p class="my-0">Menu</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <!-- Reviews -->
+                            <a class="dropdown-item" href="{% url 'reviews' %}">
+                                <div class="text-center pt-3">
+                                    <div><i class="fas fa-star fa-lg"></i></div>
+                                    <p class="my-0">Reviews</p>
+                                </div>
+                            </a>
+                            <!-- Contact Us -->
+                            <a class="dropdown-item" href="{% url 'contact' %}">
+                                <div class="text-center pt-3">
+                                    <div><i class="fas fa-envelope fa-lg"></i></div>
+                                    <p class="my-0">Contact Us</p>
+                                </div>
+                            </a>
+                            <!-- Cart -->
+                            <a class="dropdown-item" href="{% url 'cart_home'%}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-cart"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        €0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown text-center">
+                        <a class="text-black nav-link" href="#" id="my-account" data-toggle="dropdown">
+                            <div class="text-center pt-3 dropdown">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" aria-labelledby="my-account">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
+                            <!-- Product Management -->
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
+                            <!-- My Profile -->
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                            <!-- Logout -->
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
+                            <!-- Register -->
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <!-- Login -->
                             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="{% url 'cart_home'%}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-cart"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    €{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    €0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
