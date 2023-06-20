@@ -7,7 +7,7 @@
 
 <body>
     <h1>Order Confirmation</h1>
-    <p>Thank you for your order!</p>
+    <p>Dear {{ order.full_name }}Thank you for your order!</p>
 
     <h2>Order Details</h2>
     <p><strong>Order Number:</strong> {{ order.order_number }}</p>
@@ -17,8 +17,23 @@
     <p><strong>Delivery:</strong>€{{ order.delivery_cost }}</p>
     <p><strong>Grand Total:</strong>€{{ order.grand_total }}</p>
 
+    <h3>Delivering to</h3>
 
-    <p>Please feel free to contact us if you have any questions.</p>
+    <p><strong>Address line 1:</strong>{{ order.address_1 }}</p>
+    {% if order.address_2 %}
+    <p><strong>Address line 2:</strong>{{ order.address_2 }}</p>
+    {% endif %}
+    {% if order.address_2 %}
+    <p><strong>Address line 3:</strong>{{ order.address_3 }}</p>
+    {% endif %}
+    <p><strong>Town:</strong>€{{ order.town }}</p>
+    <p><strong>County:</strong>€{{ order.county }}</p>
+    <p><strong>Eircode:</strong>€{{ order.eircode }}</p>
+    
+
+    <p>Please feel free to contact us if you have any questions by replying to this email or 
+        call us on (01) 2761234
+    </p>
 </body>
 
 </html>
