@@ -22,14 +22,14 @@
             <h2 class="logo-font pt-3 header-text text-center">Reviews</h2>
             <hr class="w-50 mb-1 rule">
             {% if user.is_authenticated %}
-            <div class="row text-center">
+            <div class="row text-center mt-3">
                 <div class="col-12">
                     <h5 class="text-white">Click the button below to write a review</h5>
-                    <a href="{% url 'add_review' %}" class="btn btn-primary">Write Review</a>
+                    <a href="{% url 'add_review' %}" class="btn btn-primary mt-2">Write A Review</a>
                 </div>
             </div>
             {% else %}
-            <div class="row text-center">
+            <div class="row text-center mt-3">
                 <div class="col-12">
                     <h5 class="text-white">You must be logged in to write a review</h5>
                     <p class="text-white">Click here to <a href="{% url 'account_login' %}"> login </a> or <a
@@ -44,8 +44,8 @@
                     </p>
                     <hr class="rule">
                     <p class="rating">On: <span class="text-white px-3">{{ review.created_at }}</span></p>
-                    <p class="text-white">{{ review.comment }}</p>
-                    <p class="rating px-3">Rated: <span class="text-white px-3">{{ review.rating }}<i
+                    <p class="rating">Review: <span class="text-white px-3">{{ review.comment }}</span></p>
+                    <p class="rating">Rated: <span class="text-white">{{ review.rating }}<i
                                 class="fas fa-star rating"></i> out of 5<i class="fas fa-star rating"></i>
                         </span></p>
                     <button class="like-btn mb-2" data-review-id="{{ review.id }}">
@@ -94,6 +94,7 @@
                     // Update the like count on the page
                     var likesCount = likeBtn.parent().find(".likes-count");
                     likesCount.text("Likes: " + response.likes_count);
+                    likeBtn.toggleClass("liked");
                 }
             });
         });

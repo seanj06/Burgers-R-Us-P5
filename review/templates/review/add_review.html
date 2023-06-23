@@ -13,7 +13,7 @@
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12">
+        <div class="col-12 col-md-10 col-lg-8">
             <hr class="w-50 mb-1 rule">
             <h2 class="logo-font pt-3 header-text text-center">Add A Review</h2>
             <hr class="w-50 mb-1 rule">
@@ -23,7 +23,7 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success btn-lg mb-2">Submit</button>
+                    <button type="submit" class="btn btn-success mb-2">Submit</button>
                 </div>
             </form>
         </div>

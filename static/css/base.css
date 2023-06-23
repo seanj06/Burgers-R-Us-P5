@@ -12,7 +12,12 @@ body {
 
 .rule {
     background-color: white;
-    width: 60vw;
+}
+
+.container {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
 }
 
 /* Header */
@@ -63,6 +68,11 @@ body {
 .logged-text {
     text-decoration: underline;
     font-size: 1.1rem;
+}
+
+.like-btn.liked {
+    color: blue;
+    background-color: white;
 }
 
 
