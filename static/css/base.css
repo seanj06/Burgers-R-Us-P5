@@ -23,7 +23,7 @@ body {
 
 .hero-text {
     font-family: 'Roboto Mono', sans-serif;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
 }
 
 .navbar-nav .nav-item {
@@ -55,7 +55,7 @@ body {
 
 .header-text {
     font-family: 'Roboto Mono', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     color: gold;
 }
 
@@ -379,13 +379,13 @@ body {
         display: none;
     }
 
+    .header-text {
+        font-size: 1.5rem;
+    }
 
-}
-
-@media (max-width: 991px) {
-
-    body {
-        height: calc(100vh - 116px);
+    .table td,
+    .table th {
+        font-size: 14px;
     }
 
     .display-4.logo-font.text-black {
@@ -409,12 +409,5 @@ body {
         font-size: .9rem;
     }
 
-    
-}
 
-/* Cart */
-
-.update-link,
-.remove-item {
-    cursor: pointer;
 }
