@@ -12,6 +12,7 @@ body {
 
 .rule {
     background-color: white;
+    width: 60vw;
 }
 
 /* Header */
@@ -63,7 +64,6 @@ body {
     text-decoration: underline;
     font-size: 1.1rem;
 }
-
 
 
 @media (max-width: 991px) {
