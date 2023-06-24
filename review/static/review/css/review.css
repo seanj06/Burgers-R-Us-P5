@@ -48,11 +48,13 @@
     padding: 20px;
     border: 1px solid white;
     margin-bottom: 3rem;
-    background-color: gold;
-    color: black;
+    background-color: gray;
+    color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 100%; 
+    max-width: 400px; 
 }
 
 @media (max-width: 992px) {

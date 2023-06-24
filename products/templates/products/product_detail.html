@@ -74,12 +74,11 @@
                                 <div class="row"></div>
                                 <div class="col-12 text-center">
                                     {% if product.category %}
-                                    <p class="btn btn-danger mb-0 mt-3">More
-                                        <a class="text-white"
-                                            href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-tag mr-1"></i>{{ product.category.name }}
-                                        </a>
-                                    </p>
+                                    <a href="{% url 'products' %}?category={{ product.category.name }}"
+                                        class="btn btn-danger mb-0 mt-3">
+                                        <i class="fas fa-tag mr-1"></i>
+                                        <span class="text-white">More&nbsp;{{ product.category.name }}</span>
+                                    </a>
                                     {% endif %}
                                 </div>
                             </div>
