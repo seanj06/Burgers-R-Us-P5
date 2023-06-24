@@ -74,6 +74,7 @@
             {% endfor %}
         </div>
     </div>
+    {% if reviews.paginator.num_pages > 1 %}
     <div class="container pt-3 mt-3 text-center">
         {% if products.has_previous %}
         <a class="pagination-link" href="?page={{ products.previous_page_number }}">&laquo; Previous</a>
@@ -91,6 +92,7 @@
         <a class="pagination-link" href="?page={{ products.next_page_number }}">Next &raquo;</a>
         {% endif %}
     </div>
+    {% endif %}
 </div>
 {% endblock %}
 {% block postloadjs %}
