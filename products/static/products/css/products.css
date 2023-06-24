@@ -15,12 +15,8 @@
     font-family: 'Roboto Mono', sans-serif;
     color: gold;
     font-size: 1.3rem;
-    padding-bottom: 2px solid gold;
 }
 
-.product-name:hover {
-    color: gold;
-}
 
 .card-body {
     background-color: gray;
@@ -57,7 +53,7 @@
     font-weight: bold;
     color: gold;
     padding-left: 10px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .product-count {
@@ -117,6 +113,15 @@
     .product-image {
         margin-top: 1rem;
     }
+
+    .pagination-link {
+        font-size: 1.2rem;
+    }
+
+    #detail-body {
+        border: 1px solid gold;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
