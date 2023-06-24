@@ -17,7 +17,7 @@
 <div class="overlay"></div>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12">
+        <div class="col-12 col-md-10 col-lg-8">
             <hr class="w-50 mb-1 rule">
             <h2 class="logo-font pt-3 header-text text-center">Reviews</h2>
             <hr class="w-50 mb-1 rule">
@@ -40,18 +40,20 @@
             {% for review in reviews %}
             <div class="row text-center mt-3 comment-container">
                 <div class="col-12 text-center review">
-                    <p class="rating mx-4"> Review By: <span class="text-white px-3">{{ review.author }}</span>
+                    <p class="rating mx-4"> Review By: <span class="text-black px-3">{{ review.author }}</span>
                     </p>
                     <hr class="rule">
-                    <p class="rating">On: <span class="text-white px-3">{{ review.created_at }}</span></p>
-                    <p class="rating">Review: <span class="text-white px-3">{{ review.comment }}</span></p>
-                    <p class="rating">Rated: <span class="text-white">{{ review.rating }}<i
+                    <p class="rating">On: <span class="text-black px-3">{{ review.created_at }}</span></p>
+                    <hr class="rule">
+                    <p class="rating">Review: <span class="text-black px-3">{{ review.comment }}</span></p>
+                    <hr class="rule">
+                    <p class="rating">Rated: <span class="text-black">{{ review.rating }}<i
                                 class="fas fa-star rating"></i> out of 5<i class="fas fa-star rating"></i>
                         </span></p>
                     <button class="like-btn mb-2" data-review-id="{{ review.id }}">
                         <i class="fas fa-thumbs-up"></i>
                     </button>
-                    <span class="likes-count text-white px-3 mb-2">Likes: {{ review.likes_count }}</span>
+                    <span class="likes-count text-black px-3 mb-2">Likes: {{ review.likes_count }}</span>
                 </div>
                 {% if user.is_authenticated and review.author == user %}
                 <div class="col-12 text-center review">
@@ -69,7 +71,6 @@
                 </div>
                 {% endif %}
             </div>
-            <hr class="rule">
             {% endfor %}
         </div>
     </div>

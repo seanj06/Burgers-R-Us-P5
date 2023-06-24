@@ -16,3 +16,48 @@
     padding-left: 10px;
     font-size: 1.3rem;
 }
+
+
+.rating {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.like-btn {
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.comment-container {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    margin: 1rem;
+    border: 1px solid gold;
+}
+
+.confirmation-container {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    border: 1px solid white;
+    margin-bottom: 3rem;
+    background-color: gold;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .rating {
+        font-size: 1rem;
+    }
+}
+
