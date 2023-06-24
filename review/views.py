@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Review
@@ -13,6 +14,16 @@ def reviews(request):
     View to render a list of all reviews
     """
     reviews = Review.objects.all()
+
+    paginator = Paginator(reviews, 6)
+    page = request.GET.get('page')
+    try:
+        reviews = paginator.page(page)
+    except PageNotAnInteger:
+        reviews = paginator.page(1)
+    except EmptyPage:
+        reviews = paginator.page(paginator.num_pages)        
+
     context = {
         'reviews': reviews,
     }
