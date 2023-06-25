@@ -11,24 +11,24 @@
 
     <h2>Order Details</h2>
     <p><strong>Order Number:</strong> {{ order.order_number }}</p>
-    <p><strong>Order Date:</strong>{{ order.date }}</p>
-    <p><strong>Delivery Time:</strong> {{ order.get_delivery_time_display }}</p>
-    <p><strong>Order Total:</strong>€{{ order.order_total }}</p>
-    <p><strong>Delivery:</strong>€{{ order.delivery_cost }}</p>
-    <p><strong>Grand Total:</strong>€{{ order.grand_total }}</p>
+    <p><strong>Order Date:</strong>&nbsp;{{ order.date }}</p>
+    <p><strong>Delivery Time:</strong>&nbsp;{{ order.get_delivery_time_display }}</p>
+    <p><strong>Order Total:</strong>&nbsp;€{{ order.order_total }}</p>
+    <p><strong>Delivery:</strong>&nbsp;€{{ order.delivery_cost }}</p>
+    <p><strong>Grand Total:</strong>&nbsp;€{{ order.grand_total }}</p>
 
     <h3>Delivering to</h3>
 
-    <p><strong>Address line 1:</strong>{{ order.address_1 }}</p>
+    <p><strong>Address line 1:</strong>&nbsp;{{ order.address_1 }}</p>
     {% if order.address_2 %}
-    <p><strong>Address line 2:</strong>{{ order.address_2 }}</p>
+    <p><strong>Address line 2:</strong>&nbsp;{{ order.address_2 }}</p>
     {% endif %}
     {% if order.address_2 %}
-    <p><strong>Address line 3:</strong>{{ order.address_3 }}</p>
+    <p><strong>Address line 3:</strong>&nbsp;{{ order.address_3 }}</p>
     {% endif %}
-    <p><strong>Town:</strong>€{{ order.town }}</p>
-    <p><strong>County:</strong>€{{ order.county }}</p>
-    <p><strong>Eircode:</strong>€{{ order.eircode }}</p>
+    <p><strong>Town:</strong>&nbsp;{{ order.town }}</p>
+    <p><strong>County:</strong>&nbsp;{{ order.county }}</p>
+    <p><strong>Eircode:</strong>&nbsp;{{ order.eircode }}</p>
     
 
     <p>Please feel free to contact us if you have any questions by replying to this email or 

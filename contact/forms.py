@@ -14,5 +14,5 @@ class ContactMessageForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'placeholder': 'Your Email'}),
             'subject': forms.TextInput(attrs={'placeholder': 'Subject'}),
             'message': forms.Textarea(attrs={'placeholder': 'Your Message'}),
-            'issue': forms.Select(attrs={'class': 'custom-select'}),
+            'issue': forms.Select(attrs={'class': 'form-control'}),
         }
