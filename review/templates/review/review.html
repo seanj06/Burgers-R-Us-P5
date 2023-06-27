@@ -38,11 +38,12 @@
             </div>
             {% endif%}
             {% for review in reviews %}
-            <div class="row text-center mt-3 comment-container">
+            <div class="row text-center mt-3 p-4 comment-container">
                 <div class="col-12 text-center review">
-                    <p class="rating mx-4"> Review By: <span class="text-black px-3">{{ review.author }}</span>
+                    <hr class="bg-black">
+                    <p class="rating mx-4"> Review By: <span class="text-gray px-3">{{ review.author }}</span>
                     </p>
-                    <hr class="rule">
+                    <hr class="bg-black">
                     <p class="rating">On: <span class="text-black px-3">{{ review.created_at }}</span></p>
                     <hr class="rule">
                     <p class="rating">Review: <span class="text-black px-3">{{ review.comment }}</span></p>
