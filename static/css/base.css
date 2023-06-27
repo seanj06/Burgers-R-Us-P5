@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto+Mono:wght@500&display=swap');
 
+/* General Styling */
+
 html {
     height: 100%;
 }
@@ -39,8 +41,9 @@ body {
     height: 100%;
     margin-top: 5px;
     color: gold;
+    text-decoration: underline;
+    font-size: 1.1rem;
 }
-
 
 
 .hero-logo {
@@ -59,15 +62,6 @@ body {
     color: gold;
 }
 
-.logged-text {
-    text-decoration: underline;
-    font-size: 1.1rem;
-}
-
-.like-btn.liked {
-    color: blue;
-    background-color: white;
-}
 
 .icon-text {
     font-size: 0.6rem;
@@ -104,6 +98,7 @@ body {
 
 .hero-container {
     position: relative;
+    padding-bottom: 6rem;
 }
 
 .background-overlay {
@@ -119,6 +114,7 @@ body {
 }
 
 /* from Bulma */
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -131,39 +127,6 @@ body {
     text-transform: uppercase;
 }
 
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.bg-black {
-    background: #000 !important;
-}
 
 .overlay {
     height: 100%;
@@ -186,9 +149,7 @@ body {
 }
 
 
-
-
-/* ------------------------------- bootstrap toasts */
+/* Bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -206,6 +167,7 @@ body {
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
 .arrow-up {
     width: 0;
     height: 0;
@@ -218,6 +180,7 @@ body {
 }
 
 /* Convenience classes - colors copied from Bootstrap */
+
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -285,7 +248,7 @@ body {
 }
 
 
-/* -------------------------------- Media Queries */
+/*  Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -326,6 +289,8 @@ body {
     }
 
 }
+
+/* Medium size screens */
 
 @media (max-width: 991px) {
 
@@ -392,8 +357,24 @@ body {
 
 }
 
+/* Small Mobile screens */
+
 @media (max-width: 375px) {
     .home-icon {
         display: none;
+    }
+
+    .table td,
+    .table th {
+        font-size: 13px;
+    }
+}
+
+/* Breakpoint for hero text */
+
+@media (max-width: 425px) {
+
+    .hero-text {
+        font-size: 1rem;
     }
 }
