@@ -3,6 +3,7 @@
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-2x"></i></div>
+            <p class="icon-text">My Account</p>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -23,10 +24,11 @@
         {% endif %}
     </div>
 </li>
-<li class="list-inline-item">
+<li class="list-inline-item home-icon">
     <a class="text-white nav-link d-block d-lg-none" href="{% url 'home' %}">
         <div class="text-center">
             <div><i class="fas fa-home fa-2x"></i></div>
+            <p class="icon-text">Home</p>
         </div>
     </a>
 </li>
@@ -34,6 +36,7 @@
     <a class="text-white nav-link d-block d-lg-none" href="{% url 'reviews' %}" id="contact-options">
         <div class="text-center">
             <div><i class="fas fa-star fa-2x"></i></div>
+            <p class="icon-text">Reviews</p>
         </div>
     </a>
 </li>
@@ -41,6 +44,7 @@
     <a class="text-white nav-link d-block d-lg-none" href="{% url 'contact' %}" id="contact-options">
         <div class="text-center">
             <div><i class="fas fa-envelope fa-2x"></i></div>
+            <p class="icon-text">Contact</p>
         </div>
     </a>
 </li>
@@ -49,6 +53,7 @@
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-2x"></i></div>
+            <p class="icon-text">Search</p>
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -71,12 +76,12 @@
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none"
         href="{% url 'cart_home'%}">
         <div class="text-center">
-            <div><i class="fas fa-shopping-cart text-white"></i></div>
-            <p class="my-0 text-white">
+            <div><i class="fas fa-shopping-cart fa-2x text-white"></i></div>
+            <p class="icon-text">
                 {% if grand_total %}
-                ${{ grand_total|floatformat:2 }}
+                €{{ grand_total|floatformat:2 }}
                 {% else %}
-                $0.00
+                €0.00
                 {% endif %}
             </p>
         </div>

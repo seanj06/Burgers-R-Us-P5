@@ -65,10 +65,12 @@
                 <a href="{% url 'products' %}?category=Pizza" class="dropdown-item">All Pizzas</a>
             </div>
         </li>
+    </ul>
+    <ul class="navbar-nav">
         <li class="nav-item">
             {% if request.user.is_authenticated %}
-            <p class="logged-text">Logged in as: {{ request.user.username }}</p>
-        {% endif %}
+            <p class="logged-text navbar-text ml-auto">Logged in as: {{ request.user.username }}</p>
+            {% endif %}
         </li>
     </ul>
 </div>
