@@ -95,6 +95,10 @@ body {
     text-decoration: underline;
 }
 
+.main-menu:hover {
+    color: gold;
+}
+
 
 /* Home Page */
 

@@ -96,16 +96,10 @@
                                 </div>
                             </a>
                             <!-- Cart -->
-                            <a class="dropdown-item" href="{% url 'cart_home'%}">
+                            <a class="dropdown-item" href="{% url 'home'%}">
                                 <div class="text-center">
-                                    <div><i class="fas fa-shopping-cart"></i></div>
-                                    <p class="my-0">
-                                        {% if grand_total %}
-                                        €{{ grand_total|floatformat:2 }}
-                                        {% else %}
-                                        €0.00
-                                        {% endif %}
-                                    </p>
+                                    <div><i class="fas fa-home"></i></div>
+                                    <p class="my-0">Home</p>
                                 </div>
                             </a>
                         </div>
@@ -135,6 +129,18 @@
                             {% endif %}
                         </div>
                     </div>
+                    <a class="dropdown mt-3 nav-link main-menu" href="{% url 'cart_home' %}">
+                        <div class="text-center">
+                            <div><i class="fas fa-shopping-cart"></i></div>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                €{{ grand_total|floatformat:2 }}
+                                {% else %}
+                                €0.00
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
