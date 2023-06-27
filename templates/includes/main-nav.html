@@ -10,7 +10,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Food
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price Low To
                     High</a>
                 <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">By Price High To
@@ -32,7 +32,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Burgers
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="burgers-link">
+            <div class="dropdown-menu" aria-labelledby="burgers-link">
                 <a href="{% url 'products' %}?subcategory=premium_burgers" class="dropdown-item">Premium Burgers</a>
                 <a href="{% url 'products' %}?subcategory=beef_burgers" class="dropdown-item">Beef Burgers</a>
                 <a href="{% url 'products' %}?subcategory=chicken_burgers" class="dropdown-item">Chicken burgers</a>
@@ -45,7 +45,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sides
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sides-link">
+            <div class="dropdown-menu" aria-labelledby="sides-link">
                 <a href="{% url 'products' %}?subcategory=garlic_bread" class="dropdown-item">Garlic Bread</a>
                 <a href="{% url 'products' %}?subcategory=chips" class="dropdown-item">Chips</a>
                 <a href="{% url 'products' %}?subcategory=other" class="dropdown-item">Other</a>
@@ -59,7 +59,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 Pizza
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="pizza-link">
+            <div class="dropdown-menu" aria-labelledby="pizza-link">
                 <a href="{% url 'products' %}?subcategory=vegetarian_pizza" class="dropdown-item">Vegetarian</a>
                 <a href="{% url 'products' %}?subcategory=meat_pizza" class="dropdown-item">Meat Pizza</a>
                 <a href="{% url 'products' %}?category=Pizza" class="dropdown-item">All Pizzas</a>

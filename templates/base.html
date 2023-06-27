@@ -80,7 +80,7 @@
                                 <p class="my-0">Menu</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu" aria-labelledby="user-options">
                             <!-- Reviews -->
                             <a class="dropdown-item" href="{% url 'reviews' %}">
                                 <div class="text-center pt-3">
@@ -117,7 +117,7 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="my-account">
+                        <div class="dropdown-menu" aria-labelledby="my-account">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <!-- Product Management -->

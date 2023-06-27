@@ -80,10 +80,19 @@ body {
 }
 
 
-@media (max-width: 991px) {}
-
 .dropdown {
     color: gold;
+}
+
+.dropdown-menu {
+    background-color: gray;
+    border: 1px solid gold;
+    width: 200px;
+}
+
+.dropdown-menu>a {
+    color: white;
+    text-decoration: underline;
 }
 
 
