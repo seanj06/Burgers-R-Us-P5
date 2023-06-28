@@ -34,9 +34,6 @@ def generate_delivery_time_choices(delivery_date):
         else:
             end_time = None
 
-        if current_time < datetime.combine(delivery_date, start_time):
-            return [("Closed", "Sorry, we are closed for delivery")]
-
         rounded_minute = (delivery_time.minute // 15) * 15
         rounded_delivery_time = delivery_time.replace(minute=rounded_minute)
 
@@ -59,7 +56,5 @@ def generate_delivery_time_choices(delivery_date):
             )
             rounded_delivery_time += timedelta(minutes=15)
 
-    if not choices:
-        choices.append(("Closed", "Sorry, we are closed for delivery"))        
-
-    return choices
+    if choices:
+        return choices

@@ -31,7 +31,7 @@ DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = ["burgers-r-us1.herokuapp.com",
                  "localhost",
-                 '8000-seanj06-burgersrusp5-rwpjxgtbm41.ws-eu100.gitpod.io']
+                 '8000-seanj06-burgersrusp5-rwpjxgtbm41.ws-eu101.gitpod.io']
 
 
 # Application definition

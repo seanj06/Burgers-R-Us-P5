@@ -15,6 +15,7 @@
 {% endblock %}
 
 {% block content %}
+{% if delivery_choices %}
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
@@ -24,7 +25,7 @@
             <hr class="w-50 mb-1 rule">
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5 mt-3">
             <p class="text-white">Order Summary ({{ product_count }})</p>
@@ -138,6 +139,20 @@
         </div>
     </div>
 </div>
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <hr class="w-50 mb-1 rule">
+            <h2 class="logo-font mb-3 header-text">Delivery Service Closed</h2>
+            <hr class="w-50 mb-1 rule">
+            <p class="mt-4 text-center text-white">We are currently closed for delivery. Please check our opening hours
+                and come back later.</p>
+            <a href="{% url 'home' %}" class="btn btn-primary btn-lg">Home</a>
+        </div>
+    </div>
+</div>
+{% endif %}
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">
