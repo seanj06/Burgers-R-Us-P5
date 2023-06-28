@@ -34,7 +34,7 @@ def contact_success(request):
     View to render contact success page
     """
     contact = ContactMessage.objects.latest('time')
-    subject = f'Enquiry Confirmation - Enquiry #{contact.subject}'
+    subject = f'Enquiry Confirmation - Enquiry {contact.subject}'
     from_email = 'burgers-r-us@example.com'
     to_email = [contact.email]
 
@@ -45,4 +45,5 @@ def contact_success(request):
     send_mail(subject, plain_message,
               from_email, to_email,
               html_message=html_message)
+
     return render(request, 'contact/contact-success.html')
