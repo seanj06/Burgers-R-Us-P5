@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enquiry Confirmation</title>
+</head>
+
+<body>
+    <h1>Enquiry Confirmation</h1>
+    <p>Dear {{ contact.name }}&nbsp; Thank you for your order!</p>
+
+    <h2>Equiry Details</h2>
+    <hr>
+    <h3>Your enquiry has been received and we will get back to you shortly</h3>
+    <hr>
+    <p><strong>Subject:</strong> {{ contact.subject }}</p>
+    <p><strong>Message:</strong> {{ contact.message }}</p>
+    <p><strong>Issue:</strong> {{ contact.get_issue_display }}</p>
+
+</body>
+
+</html>

@@ -7,9 +7,10 @@
 
 <body>
     <h1>Order Confirmation</h1>
-    <p>Dear {{ order.full_name }}Thank you for your order!</p>
+    <p>Dear {{ order.full_name }}&nbsp; Thank you for your order!</p>
 
     <h2>Order Details</h2>
+    <hr>
     <p><strong>Order Number:</strong> {{ order.order_number }}</p>
     <p><strong>Order Date:</strong>&nbsp;{{ order.date }}</p>
     <p><strong>Delivery Time:</strong>&nbsp;{{ order.get_delivery_time_display }}</p>
@@ -22,7 +23,7 @@
     <p><strong>Grand Total:</strong>&nbsp;€{{ order.grand_total }}</p>
 
     <h3>Delivering to</h3>
-
+    <hr>
     <p><strong>Address line 1:</strong>&nbsp;{{ order.address_1 }}</p>
     {% if order.address_2 %}
     <p><strong>Address line 2:</strong>&nbsp;{{ order.address_2 }}</p>
