@@ -22,7 +22,7 @@ def reviews(request):
     except PageNotAnInteger:
         reviews = paginator.page(1)
     except EmptyPage:
-        reviews = paginator.page(paginator.num_pages)     
+        reviews = paginator.page(paginator.num_pages)
 
     context = {
         'reviews': reviews,
