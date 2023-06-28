@@ -140,7 +140,6 @@ def checkout(request):
         'client_secret': intent.client_secret if intent else None,
         'delivery_choices': delivery_choices,
     }
-    print(delivery_choices)
     return render(request, template, context)
 
 
@@ -192,7 +191,7 @@ def checkout_success(request, order_number):
 
     send_mail(subject, plain_message,
               from_email, to_email,
-              html_message=html_message)    
+              html_message=html_message)
 
     template = 'checkout/checkout_success.html'
     context = {
