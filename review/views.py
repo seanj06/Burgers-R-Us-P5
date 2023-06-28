@@ -22,7 +22,7 @@ def reviews(request):
     except PageNotAnInteger:
         reviews = paginator.page(1)
     except EmptyPage:
-        reviews = paginator.page(paginator.num_pages)        
+        reviews = paginator.page(paginator.num_pages)     
 
     context = {
         'reviews': reviews,
@@ -66,6 +66,7 @@ def add_review(request):
 
     context = {
         'form': form,
+        'on_review_page': True,
     }
     return render(request, 'review/add_review.html', context)
 
@@ -79,9 +80,16 @@ def delete_review(request, review_id):
     if review.author == request.user:
         review.delete()
         messages.success(request, 'Your review has been deleted')
+        return redirect('reviews')
     else:
         messages.error(request, 'You are not authorized to delete this review')
-    return redirect('reviews')
+
+    context = {
+        'on_review_page': True,
+        'review': review,
+    }
+
+    return render(request, 'review/review.html', context)
 
 
 @login_required
@@ -106,5 +114,6 @@ def edit_review(request, review_id):
     context = {
         'form': form,
         'review': review,
+        'on_review_page': True,
     }
     return render(request, 'review/edit_review.html', context)

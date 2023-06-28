@@ -183,6 +183,15 @@ body {
     height: 2px;
 }
 
+.toast-header {
+    background-color: gold;
+    color: black;
+}
+
+.toast-body {
+    background-color: gray;
+}
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 
 .arrow-up {

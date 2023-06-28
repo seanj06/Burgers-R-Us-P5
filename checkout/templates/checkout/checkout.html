@@ -15,6 +15,7 @@
 {% endblock %}
 
 {% block content %}
+
 {% if delivery_choices %}
 <div class="overlay"></div>
 <div class="container">
@@ -83,6 +84,7 @@
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5 text-white">
                     <legend class="fieldset-label small text-white px-2 w-auto">Delivery</legend>
+                    {{ order_form.eircode.errors }}
                     {{ order_form.eircode | as_crispy_field }}
                     {{ order_form.county | as_crispy_field }}
                     {{ order_form.town | as_crispy_field }}

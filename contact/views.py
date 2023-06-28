@@ -24,6 +24,7 @@ def contact(request):
 
     context = {
         'form': form,
+        'on_contact_page': True,
     }
 
     return render(request, 'contact/contact.html', context)
@@ -46,4 +47,8 @@ def contact_success(request):
               from_email, to_email,
               html_message=html_message)
 
-    return render(request, 'contact/contact-success.html')
+    context = {
+        'on_contact_page': True
+    }
+
+    return render(request, 'contact/contact-success.html', context)
