@@ -2,7 +2,6 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
-from django.contrib.messages import get_messages
 from products.models import Food
 
 
@@ -121,7 +120,9 @@ class TestRemoveFromCart(TestCase):
         """
         self.client.login(username='testuser', password='testpassword')
         item_id = self.product.pk
-        response = self.client.post(reverse('remove_from_cart', args=[item_id]))
+        response = self.client.post(reverse(
+            'remove_from_cart', args=[item_id]
+            ))
         self.assertEqual(response.status_code, 200)
         updated_cart = self.client.session.get('cart', {})
         self.assertNotIn(str(item_id), updated_cart)
