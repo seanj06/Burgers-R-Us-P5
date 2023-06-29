@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-
+<!-- Meta Content -->
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -12,12 +12,12 @@
     <meta name="author" content="Sean Johnston">
     <meta name="description" content="Order now for fast delivery on our wide range of delicious food">
     <meta name="keywords" content="food near me, restaurants nearby, food nearby, fast food, restaurants open near me, burgers, fries,
-    order fast food online, order burgers online, fast food delivery, burgers restaurant">
+    order fast food online, order burgers online, fast food delivery, burgers restaurant, food reviews">
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
-
+    <!-- Css, Bootstrap CSS and Google Fonts -->
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -27,7 +27,7 @@
 
     {% block extra_css %}
     {% endblock %}
-
+    <!-- Font awesome, jquery and Bootstrap js -->
     {% block corejs %}
     <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -44,8 +44,8 @@
 
     {% block extra_js %}
     {% endblock %}
-
-    <title>Burgers-R-Us {% block extra_title %}{% endblock %}</title>
+    <!-- Title -->
+    <title>Burgers-R-Us. Delicious Fast Food Delivered{% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
