@@ -65,3 +65,45 @@ class TestOrderModel(TestCase):
         order.save()
         self.assertIsNotNone(order.order_number)
         self.assertIsInstance(order.order_number, str)
+
+    def test_str_(self):
+        """
+        unit test for __str__ method
+        """
+        order_item = OrderItem(order=self.order, food=self.food, quantity=2)
+        self.assertEqual(
+            str(order_item),
+            f'SKU {self.food.sku} on order {self.order.order_number}'
+            )
+
+
+class TestOrderItemModel(TestCase):
+    """
+    Unit Tests For Order model
+    """
+    def setUp(self):
+        self.user = User.objects.create_user(
+            username='testuser', password='testpassword'
+            )
+        self.food = Food.objects.create(name='Test Food', price=10)
+        self.order = Order.objects.create(
+            user_profile=self.user.profile,
+            full_name='john test',
+            phone_number='1234567890',
+            email='johntest@example.com',
+            eircode='EIR123',
+            county='County',
+            town='Town',
+            address_1='Address 1',
+            delivery_time='10:00',
+        )
+
+    def test_str_(self):
+        """
+        unit test for __str__ method
+        """
+        order_item = OrderItem(order=self.order, food=self.food, quantity=2)
+        self.assertEqual(
+            str(order_item),
+            f'SKU {self.food.sku} on order {self.order.order_number}'
+        )
