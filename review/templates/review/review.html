@@ -15,86 +15,88 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8">
-            <hr class="w-50 mb-1 rule">
-            <h2 class="logo-font pt-3 header-text text-center">Reviews</h2>
-            <hr class="w-50 mb-1 rule">
-            {% if user.is_authenticated %}
-            <div class="row text-center mt-3">
-                <div class="col-12">
-                    <h5 class="text-white">Click the button below to write a review</h5>
-                    <a href="{% url 'add_review' %}" class="btn btn-primary mt-2">Write A Review</a>
+<section class="review">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <hr class="w-50 mb-1 rule">
+                <h2 class="logo-font pt-3 header-text text-center">Reviews</h2>
+                <hr class="w-50 mb-1 rule">
+                {% if user.is_authenticated %}
+                <div class="row text-center mt-3">
+                    <div class="col-12">
+                        <h5 class="text-white">Click the button below to write a review</h5>
+                        <a href="{% url 'add_review' %}" class="btn btn-primary mt-2">Write A Review</a>
+                    </div>
                 </div>
+                {% else %}
+                <div class="row text-center mt-3">
+                    <div class="col-12">
+                        <h5 class="text-white">You must be logged in to write a review</h5>
+                        <p class="text-white">Click here to <a href="{% url 'account_login' %}"> login </a> or <a
+                                href="{% url 'account_signup' %}"> sign up</a>if you havent already</p>
+                    </div>
+                </div>
+                {% endif%}
+                {% for review in reviews %}
+                <div class="row text-center mt-3 p-4 comment-container">
+                    <div class="col-12 text-center review">
+                        <hr class="bg-black">
+                        <p class="rating mx-4"> Review By: <span class="text-gray px-3">{{ review.author }}</span>
+                        </p>
+                        <hr class="bg-black">
+                        <p class="rating">On: <span class="text-black px-3">{{ review.created_at }}</span></p>
+                        <hr class="rule">
+                        <p class="rating">Review: <span class="text-black px-3">{{ review.comment }}</span></p>
+                        <hr class="rule">
+                        <p class="rating">Rated: <span class="text-black">{{ review.rating }}<i
+                                    class="fas fa-star rating"></i> out of 5<i class="fas fa-star rating"></i>
+                            </span></p>
+                        <button class="like-btn mb-2" data-review-id="{{ review.id }}">
+                            <i class="fas fa-thumbs-up"></i>
+                        </button>
+                        <span class="likes-count text-black px-3 mb-2">Likes: {{ review.likes_count }}</span>
+                    </div>
+                    {% if user.is_authenticated and review.author == user %}
+                    <div class="col-12 text-center review">
+                        <!-- Delete Button -->
+                        <form action="{% url 'delete_review' review.id %}" method="post" class="d-inline">
+                            {% csrf_token %}
+                            <div class="confirmation-container" style="display: none;">
+                                <p>Are you sure you want to delete this review?</p>
+                                <button type="submit" class="btn btn-success btn-sm">Confirm Delete</button>
+                                <button type="button" class="btn btn-danger btn-sm cancel-delete">Cancel</button>
+                            </div>
+                            <button type="button" class="btn btn-danger delete-review mt-2">Delete</button>
+                        </form>
+                        <a href="{% url 'edit_review' review.id %}" class="btn btn-primary edit-review mt-2">Edit</a>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
             </div>
-            {% else %}
-            <div class="row text-center mt-3">
-                <div class="col-12">
-                    <h5 class="text-white">You must be logged in to write a review</h5>
-                    <p class="text-white">Click here to <a href="{% url 'account_login' %}"> login </a> or <a
-                            href="{% url 'account_signup' %}"> sign up</a>if you havent already</p>
-                </div>
-            </div>
-            {% endif%}
-            {% for review in reviews %}
-            <div class="row text-center mt-3 p-4 comment-container">
-                <div class="col-12 text-center review">
-                    <hr class="bg-black">
-                    <p class="rating mx-4"> Review By: <span class="text-gray px-3">{{ review.author }}</span>
-                    </p>
-                    <hr class="bg-black">
-                    <p class="rating">On: <span class="text-black px-3">{{ review.created_at }}</span></p>
-                    <hr class="rule">
-                    <p class="rating">Review: <span class="text-black px-3">{{ review.comment }}</span></p>
-                    <hr class="rule">
-                    <p class="rating">Rated: <span class="text-black">{{ review.rating }}<i
-                                class="fas fa-star rating"></i> out of 5<i class="fas fa-star rating"></i>
-                        </span></p>
-                    <button class="like-btn mb-2" data-review-id="{{ review.id }}">
-                        <i class="fas fa-thumbs-up"></i>
-                    </button>
-                    <span class="likes-count text-black px-3 mb-2">Likes: {{ review.likes_count }}</span>
-                </div>
-                {% if user.is_authenticated and review.author == user %}
-                <div class="col-12 text-center review">
-                    <!-- Delete Button -->
-                    <form action="{% url 'delete_review' review.id %}" method="post" class="d-inline">
-                        {% csrf_token %}
-                        <div class="confirmation-container" style="display: none;">
-                            <p>Are you sure you want to delete this review?</p>
-                            <button type="submit" class="btn btn-success btn-sm">Confirm Delete</button>
-                            <button type="button" class="btn btn-danger btn-sm cancel-delete">Cancel</button>
-                        </div>
-                        <button type="button" class="btn btn-danger delete-review mt-2">Delete</button>
-                    </form>
-                    <a href="{% url 'edit_review' review.id %}" class="btn btn-primary edit-review mt-2">Edit</a>
-                </div>
-                {% endif %}
-            </div>
-            {% endfor %}
         </div>
-    </div>
-    {% if reviews.paginator.num_pages > 1 %}
-    <div class="container pt-3 mt-3 text-center">
-        {% if products.has_previous %}
-        <a class="pagination-link" href="?page={{ products.previous_page_number }}">&laquo; Previous</a>
-        {% endif %}
+        {% if reviews.paginator.num_pages > 1 %}
+        <div class="container pt-3 mt-3 text-center">
+            {% if products.has_previous %}
+            <a class="pagination-link" href="?page={{ products.previous_page_number }}">&laquo; Previous</a>
+            {% endif %}
 
-        {% for num in reviews.paginator.page_range %}
-        {% if products.number == num %}
-        <span class="current-page">{{ num }}</span>
-        {% else %}
-        <a class="pagination-link" href="?page={{ num }}">{{ num }}</a>
-        {% endif %}
-        {% endfor %}
+            {% for num in reviews.paginator.page_range %}
+            {% if products.number == num %}
+            <span class="current-page">{{ num }}</span>
+            {% else %}
+            <a class="pagination-link" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+            {% endfor %}
 
-        {% if reviews.has_next %}
-        <a class="pagination-link" href="?page={{ products.next_page_number }}">Next &raquo;</a>
+            {% if reviews.has_next %}
+            <a class="pagination-link" href="?page={{ products.next_page_number }}">Next &raquo;</a>
+            {% endif %}
+        </div>
         {% endif %}
     </div>
-    {% endif %}
-</div>
+</section>
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
