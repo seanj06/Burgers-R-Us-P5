@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /profiles/
+Sitemap: https://burgers-r-us1.herokuapp.com/sitemap.xml
