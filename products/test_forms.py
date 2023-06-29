@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import ProductForm
 from .models import Category, SubCategory
+from decimal import Decimal
 
 
 class TestProductForm(TestCase):
