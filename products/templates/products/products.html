@@ -159,25 +159,28 @@
             </div>
         </div>
         {% if products.paginator.num_pages > 1 %}
-        <div class="container pt-3 mt-3 text-center">
-            {% if products.has_previous %}
-            <a class="pagination-link" href="?page={{ products.previous_page_number }}">&laquo; Previous</a>
-            {% endif %}
+    <div class="container pt-3 mt-3 text-center">
+        {% if products.has_previous %}
+            <a class="pagination-link" href="?page={{ products.previous_page_number }}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}{% if 'category' in request.GET %}&category={{ request.GET.category|stringformat:'s' }}{% endif %}{% if 'sub_category' in request.GET %}&sub_category={{ request.GET.sub_category|stringformat:'s' }}{% endif %}">
+                &laquo; Previous
+            </a>
+        {% endif %}
 
-            {% for num in products.paginator.page_range %}
+        {% for num in products.paginator.page_range %}
             {% if products.number == num %}
-            <span class="current-page">{{ num }}</span>
+                <span class="current-page">{{ num }}</span>
             {% else %}
-            <a class="pagination-link" href="?page={{ num }}">{{ num }}</a>
+                <a class="pagination-link" href="?page={{ num }}">{{ num }}</a>
             {% endif %}
-            {% endfor %}
+        {% endfor %}
 
-            {% if products.has_next %}
-            <a class="pagination-link" href="?page={{ products.next_page_number }}">Next &raquo;</a>
-            {% endif %}
-        </div>
+        {% if products.has_next %}
+            <a class="pagination-link" href="?page={{ products.next_page_number }}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}{% if 'category' in request.GET %}&category={{ request.GET.category|stringformat:'s' }}{% endif %}{% if 'sub_category' in request.GET %}&sub_category={{ request.GET.sub_category|stringformat:'s' }}{% endif %}">
+                Next &raquo;
+            </a>
         {% endif %}
     </div>
+{% endif %}
 </section>
 {% endblock %}
 {% block postloadjs %}

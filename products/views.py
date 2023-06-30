@@ -48,7 +48,7 @@ def all_products(request):
         if "subcategory" in request.GET:
             subcategory = request.GET["subcategory"].split(",")
             products = products.filter(sub_category__name__in=subcategory)
-            subcategory = SubCategory.objects.filter(name__in=subcategory)  
+            subcategory = SubCategory.objects.filter(name__in=subcategory)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -64,7 +64,7 @@ def all_products(request):
 
             products = products.filter(queries)
 
-            if not products:  
+            if not products:
                 messages.info(
                     request, "No products found matching your search."
                     )
@@ -76,9 +76,9 @@ def all_products(request):
     except PageNotAnInteger:
         products = paginator.page(1)
     except EmptyPage:
-        products = paginator.page(paginator.num_pages)        
+        products = paginator.page(paginator.num_pages)
 
-    current_sorting = f'{sort}_{direction}'                
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
