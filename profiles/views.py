@@ -17,7 +17,7 @@ def profile(request):
             form.save()
             messages.success(request, 'Your Profile has been updated')
         else:
-            messages.error(request, 'Sorry something went wrong')    
+            messages.error(request, 'Sorry something went wrong')
 
     template = 'profiles/profile.html'
     context = {

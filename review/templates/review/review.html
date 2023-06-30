@@ -28,7 +28,7 @@
                 <div class="row text-center mt-3">
                     <div class="col-12">
                         <h5 class="text-white">Click the button below to write a review</h5>
-                        <a href="{% url 'add_review' %}" class="btn btn-primary mt-2">Write A Review</a>
+                        <a href="{% url 'add_review' %}" class="btn btn-primary mt-2 text-black">Write A Review</a>
                     </div>
                 </div>
                 {% else %}
@@ -69,9 +69,9 @@
                                 <button type="submit" class="btn btn-success btn-sm">Confirm Delete</button>
                                 <button type="button" class="btn btn-danger btn-sm cancel-delete">Cancel</button>
                             </div>
-                            <button type="button" class="btn btn-danger delete-review mt-2">Delete</button>
+                            <button type="button" class="btn btn-warning delete-review mt-2 text-black">Delete</button>
                         </form>
-                        <a href="{% url 'edit_review' review.id %}" class="btn btn-primary edit-review mt-2">Edit</a>
+                        <a href="{% url 'edit_review' review.id %}" class="btn btn-primary edit-review mt-2 text-black">Edit</a>
                     </div>
                     {% endif %}
                 </div>

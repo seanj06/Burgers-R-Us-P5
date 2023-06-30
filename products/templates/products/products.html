@@ -97,8 +97,8 @@
                                 <a href="{% url 'product_detail' product.id %}">
                                     <h2 class="product-name">{{ product.name }}</h2>
                                 </a>
+                                <hr class="bg-white">
                                 <p>{{ product.description }}</p>
-                                <hr>
                                 <p><strong class="pt-2 px-2">Contains:</strong> {{ product.contains }}</p>
                                 <hr>
                                 {% if product.is_vegetarian %}
@@ -144,7 +144,7 @@
                                                         class="btn btn-danger btn-sm cancel-delete">Cancel</button>
                                                 </div>
                                                 <button type="button"
-                                                    class="btn btn-sm btn-danger delete-product">Delete
+                                                    class="btn btn-sm btn-danger text-black delete-product">Delete
                                                     Product</button>
                                             </form>
                                         </div>

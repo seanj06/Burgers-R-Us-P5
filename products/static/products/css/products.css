@@ -32,16 +32,16 @@
 
 
 .card-body {
-    background-color: gray;
+    background-color: #454545;
 }
 
 .card-body p {
-    color: white;
+    color: ghostwhite;
     font-size: 1.1rem;
 }
 
 .card-footer {
-    background-color: gray;
+    background-color: #454545;
 }
 
 .card-img-top {
@@ -96,7 +96,7 @@
 }
 
 #detail-body {
-    background-color: gray;
+    background-color: #454545;
     border-radius: 50px;
     border: 2px solid gold;
 
