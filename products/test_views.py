@@ -2,6 +2,8 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Food, Category, SubCategory
+from .forms import ProductForm
+from django.test.client import Client
 from .views import all_products
 from django.contrib.messages import get_messages
 from decimal import Decimal
@@ -100,7 +102,7 @@ class TestAddProductView(TestCase):
 
         form_data = {
             'category': self.category.id,
-            'sub_category': self.subcategory.id, 
+            'sub_category': self.subcategory.id,
             'name': 'Test Product',
             'description': 'Test description',
             'is_vegetarian': True,
@@ -179,3 +181,56 @@ class TestAddProductView(TestCase):
             'Sorry you are not authorized to edit a product'
             )
         self.assertEqual(Food.objects.count(), 0)
+
+
+class TestEditProductView(TestCase):
+    """
+    Unit tests for edit_product view
+    """
+
+    def setUp(self):
+        """
+        setup method
+        """
+        self.client = Client()
+        self.category = Category.objects.create(name='Test Category')
+        self.subcategory = SubCategory.objects.create(name='Test Subcategory')
+        self.product = Food.objects.create(
+            name='Food 1', category=self.category, price=9.99
+        )
+        self.user = User.objects.create_user(
+            username='testuser', password='testpass'
+            )
+        self.superuser = User.objects.create_superuser(
+            username='admin',
+            email='admin@example.com',
+            password='adminpassword'
+        )
+
+    def test_edit_product_authenticated_superuser(self):
+        """
+        Unit test for authenticated superuser
+        """
+        self.client.force_login(self.superuser)
+        url = reverse('edit_product', args=[self.product.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'products/edit_product.html')
+        self.assertIsInstance(response.context['form'], ProductForm)
+        self.assertEqual(response.context['product'], self.product)
+        self.assertContains(response, f'You are editing {self.product.name}')
+
+    def test_edit_product_authenticated_non_superuser(self):
+        """
+        Unit test for unathenticated user
+        """
+        self.client.force_login(self.user)
+        url = reverse('edit_product', args=[self.product.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('home'))
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(
+            str(messages[0]), 'Sorry you are not authorized to add a product'
+            )
