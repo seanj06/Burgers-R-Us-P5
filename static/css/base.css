@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Lora:wght@500&family=Roboto+Mono:wght@500&display=swap');
 
 /* General Styling */
 
@@ -30,7 +30,7 @@ body {
 }
 
 .hero-text {
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Belanosima', sans-serif;
     font-size: 1.4rem;
 }
 
@@ -47,7 +47,7 @@ body {
 
 
 .hero-logo {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Belanosima', sans-serif;
     margin: auto;
     padding: 7px;
     font-size: 2rem;
@@ -57,7 +57,7 @@ body {
 }
 
 .header-text {
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Belanosima', sans-serif;
     font-size: 1.9rem;
     color: gold;
 }
@@ -160,6 +160,7 @@ body {
     z-index: -1;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 
 
 /* All auth */

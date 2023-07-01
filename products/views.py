@@ -86,6 +86,7 @@ def all_products(request):
         'current_categories': categories,
         'subcategory': subcategory,
         'current_sorting': current_sorting,
+        'on_product_page': True,
     }
 
     return render(request, 'products/products.html', context)
@@ -117,7 +118,7 @@ def add_product(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('products'))
         else:
             messages.error(request,
                            'Failed to add product.\
@@ -129,6 +130,7 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+        'on_product_page': True,
     }
 
     return render(request, template, context)
