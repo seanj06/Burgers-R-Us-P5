@@ -114,7 +114,7 @@ class TestAddProductView(TestCase):
         }
         response = self.client.post(reverse('add_product'), data=form_data)
 
-        self.assertRedirects(response, reverse('add_product'))
+        self.assertRedirects(response, reverse('products'))
         self.assertEqual(Food.objects.count(), 1)
         product = Food.objects.first()
         self.assertEqual(product.name, 'Test Product')
