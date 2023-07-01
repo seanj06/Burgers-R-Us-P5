@@ -170,6 +170,15 @@ body {
     margin-top: 5rem;
 }
 
+.sign-in-links {
+    color: gold;
+    text-decoration: underline;
+}
+
+.sign-in-links:hover {
+    color: gold;
+}
+
 
 /* Bootstrap toasts */
 

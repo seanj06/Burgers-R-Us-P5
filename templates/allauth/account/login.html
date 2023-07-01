@@ -35,7 +35,7 @@
 
       {% else %}
       <p class="text-white mt-3">{% blocktrans %}If you have not created an account yet, then please
-        <a href="{{ signup_url }}"><span>Sign Up</span></a> first.{% endblocktrans %}
+        <a href="{{ signup_url }}" class="sign-in-links"><span>Sign Up</span></a> first.{% endblocktrans %}
       </p>
       {% endif %}
 
@@ -47,8 +47,8 @@
         {% endif %}
 
         <div class="d-flex justify-content-center">
-          <a class="btn btn-success rounded-0 m-1" href="{% url 'home' %}">Home</a>
-          <button class="primaryAction btn btn-primary m-1" type="submit">{% trans "Sign In" %}</button>
+          <a class="btn btn-success rounded-0 m-1 text-black" href="{% url 'home' %}">Home</a>
+          <button class="primaryAction btn btn-primary m-1 text-black" type="submit">{% trans "Sign In" %}</button>
         </div>
         <p class="mt-2 text-center">
           <a class="button secondaryAction btn btn-warning text-center"
