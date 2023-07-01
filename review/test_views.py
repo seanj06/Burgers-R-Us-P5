@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from .models import Review
+from review.forms import ReviewForm
 from .views import reviews
 
 
@@ -90,3 +91,38 @@ class TestReviewLikes(TestCase):
 
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.content, b'{}')
+
+
+class TestAddReview(TestCase):
+    """
+    Unit tests for add review view
+    """
+    def setUp(self):
+        """
+        Setup method
+        """
+        self.user = User.objects.create_user(
+            username='testuser', password='testpassword'
+            )
+
+    def test_add_review(self):
+        """
+        Unit tests for add review
+        """
+        self.client.force_login(self.user)
+        form_data = {'rating': 5, 'comment': 'Test review'}
+        response = self.client.post(
+            reverse('add_review'), data=form_data, follow=True
+            )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertRedirects(response, reverse('reviews'))
+        self.assertEqual(Review.objects.count(), 1)
+        review = Review.objects.first()
+        self.assertEqual(review.author, self.user)
+        self.assertEqual(review.rating, 5)
+        self.assertEqual(review.comment, 'Test review')
+        messages = list(response.context['messages'])
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(messages[0].tags, 'success')
+        self.assertEqual(messages[0].message, 'Your review has been created')
