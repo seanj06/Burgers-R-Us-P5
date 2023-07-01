@@ -58,7 +58,7 @@
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-black rounded-0"
                                                         data-item_id="{{ item.item_id }}"
-                                                        id="decrement-qty_{{ item.item_id }}">
+                                                        id="decrement-qty_{{ item.item_id }}" aria-label="decrement-button">
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -66,11 +66,11 @@
                                                 </div>
                                                 <input class="form-control form-control-sm qty_input" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" aria-label="number-input">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-black rounded-0"
                                                         data-item_id="{{ item.item_id }}"
-                                                        id="increment-qty_{{ item.item_id }}">
+                                                        id="increment-qty_{{ item.item_id }}" aria-label="increment-button">
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>
@@ -79,8 +79,8 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <div class="text-center mt-2">
-                                        <a class="update-link btn btn-primary"><small>Update</small></a>
+                                    <div class="text-center mt-2 mr-3">
+                                        <a class="update-link btn btn-success text-black"><small>Update</small></a>
                                         <a class="remove-item btn btn-danger text-white"
                                             id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </div>
@@ -98,9 +98,9 @@
                             {% endfor %}
                             <tr class="text-center">
                                 <td colspan="5" class="pt-5 text-center text-white">
-                                    <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                                    <p><strong>Cart Total: €{{ total|floatformat:2 }}</strong></p>
+                                    <p>Delivery: €{{ delivery|floatformat:2 }}</p>
+                                    <h3 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h3>
                                     {% if free_delivery_delta > 0 %}
                                     <p class="mb-1 text-white">
                                         You could get free delivery by spending just
@@ -113,13 +113,13 @@
                             <tr>
                                 <td colspan="5" class="text-center">
                                     <div class="button-wrapper">
-                                        <a href="{% url 'products' %}" class="btn btn-primary rounded-0">
+                                        <a href="{% url 'products' %}" class="btn btn-warning rounded-0">
                                             <span class="icon">
                                                 <i class="fas fa-chevron-left"></i>
                                             </span>
                                             <span class="text-uppercase">Back to Products</span>
                                         </a>
-                                        <a href="{% url 'checkout' %}" class="btn btn-black rounded-0">
+                                        <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 text-white">
                                             <span class="text-uppercase">Secure Checkout</span>
                                             <span class="icon">
                                                 <i class="fas fa-lock"></i>
@@ -134,11 +134,11 @@
                 {% else %}
                 <div class="text-center">
                     <p class="lead mt-5 text-white">Your Cart is empty!</p>
-                    <a href="{% url 'products' %}" class="btn btn-primary mt-3">
+                    <a href="{% url 'products' %}" class="btn btn-warning mt-3">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Back to Products</span>
+                        <span class="text-uppercase text-black">Back to Products</span>
                     </a>
                 </div>
                 {% endif %}

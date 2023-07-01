@@ -1,12 +1,12 @@
-<li class="list-inline-item">
-    <a class="text-white nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+<div class="list-inline-item">
+    <a class="text-white nav-link d-block d-lg-none" href="#" id="user-mobile-options" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-2x"></i></div>
             <p class="icon-text">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0 text-white" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0 text-white" aria-labelledby="user-mobile-options">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <!-- Product Management -->
@@ -23,32 +23,32 @@
         <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         {% endif %}
     </div>
-</li>
-<li class="list-inline-item home-icon">
+</div>
+<div class="list-inline-item home-icon">
     <a class="text-white nav-link d-block d-lg-none" href="{% url 'home' %}">
         <div class="text-center">
             <div><i class="fas fa-home fa-2x"></i></div>
             <p class="icon-text">Home</p>
         </div>
     </a>
-</li>
-<li class="list-inline-item">
+</div>
+<div class="list-inline-item">
     <a class="text-white nav-link d-block d-lg-none" href="{% url 'reviews' %}" id="contact-options">
         <div class="text-center">
             <div><i class="fas fa-star fa-2x"></i></div>
             <p class="icon-text">Reviews</p>
         </div>
     </a>
-</li>
-<li class="list-inline-item">
+</div>
+<div class="list-inline-item">
     <a class="text-white nav-link d-block d-lg-none" href="{% url 'contact' %}" id="contact-options">
         <div class="text-center">
             <div><i class="fas fa-envelope fa-2x"></i></div>
             <p class="icon-text">Contact</p>
         </div>
     </a>
-</li>
-<li class="list-inline-item">
+</div>
+<div class="list-inline-item">
     <a class="text-white nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
@@ -62,7 +62,8 @@
                 <input class="form-control border border-black rounded-0" type="text" name="q"
                     placeholder="Search our site">
                 <div class="input-group-append">
-                    <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                    <button class="form-control form-control btn btn-black border border-black rounded-0 text-white"
+                        type="submit">
                         <span class="icon">
                             <i class="fas fa-search fa-2x"></i>
                         </span>
@@ -71,8 +72,8 @@
             </div>
         </form>
     </div>
-</li>
-<li class="list-inline-item">
+</div>
+<div class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none"
         href="{% url 'cart_home'%}">
         <div class="text-center">
@@ -86,4 +87,4 @@
             </p>
         </div>
     </a>
-</li>
+</div>
