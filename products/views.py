@@ -143,7 +143,7 @@ def edit_product(request, product_id):
     """
     if not request.user.is_superuser:
         messages.error(request,
-                       'Sorry you are not authorized to add a product'
+                       'Sorry you are not authorized to edit a product'
                        )
         return redirect(reverse('home'))
 

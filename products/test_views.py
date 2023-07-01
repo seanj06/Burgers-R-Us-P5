@@ -207,30 +207,70 @@ class TestEditProductView(TestCase):
             password='adminpassword'
         )
 
-    def test_edit_product_authenticated_superuser(self):
+    def test_edit_product_view_with_authenticated_superuser(self):
         """
-        Unit test for authenticated superuser
+        Test edit_product view with an authenticated superuser
         """
         self.client.force_login(self.superuser)
-        url = reverse('edit_product', args=[self.product.id])
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'products/edit_product.html')
-        self.assertIsInstance(response.context['form'], ProductForm)
-        self.assertEqual(response.context['product'], self.product)
-        self.assertContains(response, f'You are editing {self.product.name}')
 
-    def test_edit_product_authenticated_non_superuser(self):
+        form_data = {
+            'name': 'Updated Product',
+            'description': 'Updated description',
+            'price': 19.99,
+            'is_available': False,
+        }
+        response = self.client.post(
+            reverse('edit_product', args=[self.product.id]), data=form_data
+            )
+
+        self.assertRedirects(
+            response, reverse('product_detail', args=[self.product.id])
+            )
+        self.product.refresh_from_db()
+        self.assertEqual(self.product.name, 'Updated Product')
+        self.assertEqual(self.product.description, 'Updated description')
+        self.assertEqual(self.product.price,  Decimal('19.99'))
+        self.assertEqual(self.product.is_available, False)
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), 'Successfully updated product!')
+
+    def test_edit_product_view_with_invalid_form(self):
         """
-        Unit test for unathenticated user
+        Test edit_product view with invalid form data
+        """
+        self.client.force_login(self.superuser)
+
+        form_data = {
+            'name': 'test1',
+            'description': 'Updated description',
+            'price': 19.9999,
+            'is_available': False,
+        }
+        response = self.client.post(
+            reverse('edit_product', args=[self.product.id]), data=form_data
+            )
+
+        self.assertEqual(response.status_code, 200)
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), 'Failed to update product.\
+                            Please ensure the form is valid.')
+
+    def test_edit_product_view_unauthorized_user(self):
+        """
+        Test edit_product view with an unauthorized user
         """
         self.client.force_login(self.user)
-        url = reverse('edit_product', args=[self.product.id])
-        response = self.client.get(url)
+        response = self.client.get(
+            reverse('edit_product', args=[self.product.id])
+            )
+
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('home'))
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(len(messages), 1)
         self.assertEqual(
-            str(messages[0]), 'Sorry you are not authorized to add a product'
-            )
+            str(messages[0]),
+            'Sorry you are not authorized to edit a product'
+        )
