@@ -274,3 +274,63 @@ class TestEditProductView(TestCase):
             str(messages[0]),
             'Sorry you are not authorized to edit a product'
         )
+
+
+class TestDeleteProductView(TestCase):
+    """
+    Unit tests for delete_product view
+    """
+    def setUp(self):
+        """
+        setup method
+        """
+        self.client = Client()
+        self.category = Category.objects.create(name='Test Category')
+        self.subcategory = SubCategory.objects.create(name='Test Subcategory')
+        self.product = Food.objects.create(
+            name='Food 1', category=self.category, price=9.99
+        )
+        self.user = User.objects.create_user(
+            username='testuser', password='testpass'
+            )
+        self.superuser = User.objects.create_superuser(
+            username='admin',
+            email='admin@example.com',
+            password='adminpassword'
+        )
+
+    def test_delete_product_view_with_authenticated_superuser(self):
+        """
+        Test delete_product view with an authenticated superuser
+        """
+        self.client.force_login(self.superuser)
+
+        response = self.client.post(
+            reverse('delete_product', args=[self.product.id])
+        )
+
+        self.assertRedirects(response, reverse('products'))
+        self.assertFalse(Food.objects.filter(pk=self.product.id).exists())
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), 'Product deleted!')
+
+    def test_delete_product_view_unauthorized_user(self):
+        """
+        Test delete_product view with an unauthorized user
+        """
+        self.client.force_login(self.user)
+
+        response = self.client.post(
+            reverse('delete_product', args=[self.product.id])
+        )
+
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('home'))
+        self.assertTrue(Food.objects.filter(pk=self.product.id).exists())
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(
+            str(messages[0]),
+            'Sorry you are not authorized to delete a product'
+        )

@@ -182,6 +182,8 @@ def delete_product(request, product_id):
         messages.error(request,
                        'Sorry you are not authorized to delete a product'
                        )
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Food, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
