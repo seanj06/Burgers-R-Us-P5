@@ -140,6 +140,11 @@ class TestDeleteReview(TestCase):
         self.user = User.objects.create_user(
             username='testuser', password='testpassword'
             )
+
+        self.user2 = User.objects.create_user(
+            username='testuser2', password='testpassword2'
+            )
+
         self.review = Review.objects.create(
             author=self.user, rating=5, comment='Test review'
             )
@@ -159,3 +164,21 @@ class TestDeleteReview(TestCase):
         self.assertEqual(len(messages), 1)
         self.assertEqual(messages[0].tags, 'success')
         self.assertEqual(messages[0].message, 'Your review has been deleted')
+
+    def test_delete_review_unauthorized(self):
+        """
+        Unit test for delete view unauthorized user
+        """
+        self.client.force_login(self.user2)
+        response = self.client.post(
+            f'/review/delete/{self.review.id}/', follow=True
+            )
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'review/review.html')
+        self.assertTrue(Review.objects.filter(id=self.review.id).exists())
+        messages = list(response.context['messages'])
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(messages[0].tags, 'error')
+        self.assertEqual(
+            messages[0].message, 'You are not authorized to delete this review'
+            )
