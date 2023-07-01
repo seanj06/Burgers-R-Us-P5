@@ -5,6 +5,7 @@ from django.core.paginator import Paginator
 from .models import Review
 from review.forms import ReviewForm
 from .views import reviews
+from django.contrib import messages
 
 
 class TestReviewViews(TestCase):
@@ -126,3 +127,35 @@ class TestAddReview(TestCase):
         self.assertEqual(len(messages), 1)
         self.assertEqual(messages[0].tags, 'success')
         self.assertEqual(messages[0].message, 'Your review has been created')
+
+
+class TestDeleteReview(TestCase):
+    """
+    Unit Tests For delete review view
+    """
+    def setUp(self):
+        """
+        Setup Method
+        """
+        self.user = User.objects.create_user(
+            username='testuser', password='testpassword'
+            )
+        self.review = Review.objects.create(
+            author=self.user, rating=5, comment='Test review'
+            )
+
+    def test_delete_review(self):
+        """
+        unit test for delete review view
+        """
+        self.client.force_login(self.user)
+        response = self.client.post(
+            f'/review/delete/{self.review.id}/', follow=True
+            )
+        self.assertEqual(response.status_code, 200)
+        self.assertRedirects(response, '/review/')
+        self.assertFalse(Review.objects.filter(id=self.review.id).exists())
+        messages = list(response.context['messages'])
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(messages[0].tags, 'success')
+        self.assertEqual(messages[0].message, 'Your review has been deleted')
