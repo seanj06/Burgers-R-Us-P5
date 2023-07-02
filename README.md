@@ -10,3 +10,9 @@ Other features of the site include users being able to searh for products via a 
 able to sort products by a wide range of different filters.
 
 Developed by Sean Johnston for code institute Project Portfolio project 5.
+
+Link to the live site : [Burgers R-Us](https://burgers-r-us1.herokuapp.com/)
+
+## **Project Goals**
+
+As my fifth project for the [Code Institute](https://codeinstitute.net/) 5P course, the goal of the project is to demonstrate all of the skills I have learned in the course so far including languages such as HTML, CSS, Javascript and Python. Frameworks such as Django and Bootstrap and version control technologies such as Git and Github.
