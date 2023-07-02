@@ -11,6 +11,8 @@ able to sort products by a wide range of different filters.
 
 Developed by Sean Johnston for code institute Project Portfolio project 5.
 
+![amiresponsive](docs/readme%20images/amiresponsive.png)
+
 Link to the live site : [Burgers R-Us](https://burgers-r-us1.herokuapp.com/)
 
 ## **Project Goals**
@@ -395,6 +397,47 @@ On small screens 1 wide
 If a staff member is logged in they are shown 2 button at the bottom of the card to either edit or delete a product
 
 ![product-edit-delete-btns](docs/features/product-edit-delete-btns.png)
+
+#### **Product Detail Page**
+
+![product-detail-page](docs/features/product-detail-page-logged-out.png)
+
+The Product Detail page is accessible by both clicking on the product image and the product name on the Products page.
+
+On this page the users are shown the product name, image, price and description.
+
+From here they can also add the product to their cart by selecting the quantity they want and pressing the add to cart button.
+
+When users add a product to their cart they are shown an alert message giving them an overview of what product they just added to their cart, an overview of every product in their cart and their current order total
+
+![cart-toast](docs/features/cart-toast.png)
+
+**Responsiveness**
+
+On smaller screens the layout of the product detail card and the image centers on top with the rest of the details beneath.
+
+![product-detail-small-screen](docs/features/product-detail-small-screen.png)
+
+#### **Edit And Delete Product**
+
+**Delete Product**
+
+If a staff member clicks the delete product button they are shown a popup asking them if they are sure they want to delete the product. Only if they confirm delete from there the product is deleted. This feature is in place to handle misclicks or error.
+
+![product-delete-conf](docs/features/product-delete-confirmation.png)
+
+When the staff member confirms the deletion they are shown a success message telling the product was deleted. The product will be removed from the database after deletion.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
