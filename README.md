@@ -44,6 +44,14 @@ The design of the overall site is aimed to be eye catching for the users and eas
 - To provide users with the ability to contact the site owners about any issues or queries
 - To provide users with the ability to search fro different products in a wide variety of different ways.
 
+## **The Scope Plane**
+
+- CRUD Ability for authenticated users on Reviews and profile info
+- CRUD Ability for both authenticated and non authenticated users on cart
+- Restricted site features for authenticated and non-authenticated users such as adding and liking reviews, saving profile info and contact section.
+- Restricted site features for staff such as adding, editing and deleting products.
+- Full responsiveness for all screen sizes down to 320px including different navbar layout for medium to small screens
+
 
 
 
