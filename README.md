@@ -235,6 +235,87 @@ The backlog currently has 1 unfinished user story in it. Products special offer 
 1.**[USER STORY: Product Special Offers page #22](https://github.com/seanj06/Burgers-R-Us-P5/issues/22)**
 
 
+## **The Structure Plane**
+
+### **Features**
+
+#### **Home Page**
+
+**Navbar**
+
+  - The navbar is included in the base.html file of the site so is shown to the user on every page of the site.
+
+  - Navbar Desktop
+
+    ![Navbar-desktop](docs/features/navbar-desktop.png)
+
+    - On desktop the navbar features the hero logo on the left, a product search bar in the centre, 2 dropdown icons on the right(menu and my account) and a cart icon with a live update total.
+     When a user is logged in a logged in as: message is shown on the bottom right of the navbar
+     ![logged-in-message](docs/features/logged-in-message.png)
+
+      - The menu icon when clicked dropsdown to reveal 3 links with icons. Reviews, contact us and home. The colours invert when hovered over.
+          
+        ![Menu-expand](docs/features/menu-expand.png)
+
+      - The my account icon when clicked dropsdown to reveal different links depending on user status.
+
+        <details><summary>Superuser Logged In</summary>
+
+        ![Superuser-logged-in](docs/features/superuser-logged-in.png)
+        </details>
+
+        <details><summary>Regular user Logged In</summary>
+
+        ![user-logged-in](docs/features/user-logged-in.png)
+        </details>
+
+        <details><summary>Logged Out</summary>
+
+        ![logged-out](docs/features/account-logged-out.png)
+        </details>
+
+
+     - The navbar also features a main nav link for all products search including different search filters by category and and all food search filter.
+        
+        <details><summary>All Food dropdown</summary>
+
+        ![food-dropdown](docs/features/all-food-dropdown.png)
+        </details>
+
+        <details><summary>Burgers Dropdown</summary>
+
+        ![burgers-dropdown](docs/features/burgers-dropdown.png)
+        </details>
+
+        <details><summary>Burgers Dropdown</summary>
+
+        ![sides-dropdown](docs/features/sides-dropdown.png)
+        </details>
+
+        <details><summary>Pizza Dropdown</summary>
+
+        ![pizza-dropdown](docs/features/pizza-dropdown.png)
+        </details>
+
+     - On the bottom of the navbar there is a delivery banner giving users information on how much they need to spend to get free delivery.
+
+  - Navbar mobile
+
+    ![navbar-mobile](docs/features/navbar-mobile.png)
+
+    - On mobile the layout of the navbar changes. The hero logo is centered at the top of the screen, all the icons are spread across the bottom and the main food search menu is transformed into an expandable hamburger menu. All of the dropdown icons remain the same.
+
+    ![mobile-menu-expanded](docs/features/mobile-menu-expanded.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
