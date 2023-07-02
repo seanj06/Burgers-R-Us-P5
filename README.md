@@ -50,7 +50,59 @@ The design of the overall site is aimed to be eye catching for the users and eas
 - CRUD Ability for both authenticated and non authenticated users on cart
 - Restricted site features for authenticated and non-authenticated users such as adding and liking reviews, saving profile info and contact section.
 - Restricted site features for staff such as adding, editing and deleting products.
-- Full responsiveness for all screen sizes down to 320px including different navbar layout for medium to small screens
+- Full responsiveness for all screen sizes down to 320px including different navbar layout for medium to small screens.
+
+## **Agile Planning**
+
+This project was built using the Agile method throughout by creating EPIC Milestones which were broken down into smaller user stories with labels "must-have", "should-have", "could-have", and wont have. 
+
+Epics milestones were given Acceptance criteria and the must haves were completed first to complete the milestone. Any user stories that were not completed were moved back into the project backlog.
+
+The Kanban board was created using Github projects and can be located [here]()  and can be viewed to see the completed and backlogged user stories.
+
+![Kanban Board]()
+
+### **Epics**
+
+Epics were broken down into 13 EPIC Milestones(including backlog)
+which includes 56 user stories in total. Each Milestone was closed when all the criteria had been met / all user stories were completed.
+User stories were given tasks, and when each task and the given user stories were completed a comment was left with the commit number underneath the user story. When all tasks were complete the user story was closed.
+
+#### **EPIC: Django Installation and app setup [Milestone #1](https://github.com/seanj06/Burgers-R-Us-P5/milestone/1)**
+
+This Epic had 3 user stories attached and was the first to be completed 
+due to it being needed for the project work to start
+
+1. **[USER STORY: Create Django Project And App #3](https://github.com/seanj06/Burgers-R-Us-P5/issues/3)**
+
+2. **[USER STORY: Install Django and relevant libraries #2](https://github.com/seanj06/Burgers-R-Us-P5/issues/2)**
+
+3. **[USER STORY: Create Superuser #1](https://github.com/seanj06/Burgers-R-Us-P5/issues/1)**
+
+#### **EPIC: First Heroku Deployment [Milestone #2](https://github.com/seanj06/Burgers-R-Us-P5/milestone/2)**
+
+This Epic had 2 user stories attached and involved setting up heroku and aws bucket for deployment
+
+1. **[USER STORY: Static File Hosting #8](https://github.com/seanj06/Burgers-R-Us-P5/issues/8)**
+
+2. **[USER STORY: Create new Heroku app #7](https://github.com/seanj06/Burgers-R-Us-P5/issues/7)**
+
+#### **EPIC: Allauth Installation And Setup [Milestone #3](https://github.com/seanj06/Burgers-R-Us-P5/milestone/9)**
+
+This Epic had 4 user stories attached and involved setting up allauth, customising allauth templates and setting up emails.
+
+1. **[USER STORY: Install Allauth #4](https://github.com/seanj06/Burgers-R-Us-P5/issues/4)**
+
+2. **[USER STORY: Customise Allauth templates #10](https://github.com/seanj06/Burgers-R-Us-P5/issues/10)**
+
+3. **[USER STORY: Sign Up/Sign In/ Sign out #5](https://github.com/seanj06/Burgers-R-Us-P5/issues/5)**
+
+4. **[USER STORY: Email Verification #6](https://github.com/seanj06/Burgers-R-Us-P5/issues/6)**
+
+
+
+
+
 
 
 
