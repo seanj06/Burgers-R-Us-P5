@@ -16,3 +16,19 @@ Link to the live site : [Burgers R-Us](https://burgers-r-us1.herokuapp.com/)
 ## **Project Goals**
 
 As my fifth project for the [Code Institute](https://codeinstitute.net/) 5P course, the goal of the project is to demonstrate all of the skills I have learned in the course so far including languages such as HTML, CSS, Javascript and Python. Frameworks such as Django and Bootstrap and version control technologies such as Git and Github.
+
+## **UX**
+
+## **The Strategy Plane**
+
+Burgers R-Us is an e-commerce site for a local takeaway which is designed to be easy for users to find products, add them into their cart, securely checkout
+and enter their delivery details.
+
+Registered users will be able to contact the site owners about any enquiries or issues, save default delivery info and write and like reviews.
+Users with Staff status will be able to add, edit or delete products from the site aswell as the admin area.
+
+The design of the overall site is aimed to be eye catching for the users and easy on the eye with a darker theme rather than light.
+
+
+
+
