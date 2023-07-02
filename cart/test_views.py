@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from products.models import Food
+from django.contrib.messages import get_messages
 
 
 class TestCartHome(TestCase):

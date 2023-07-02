@@ -66,7 +66,7 @@ class TestOrderModel(TestCase):
         self.assertIsNotNone(order.order_number)
         self.assertIsInstance(order.order_number, str)
 
-    def test_str_(self):
+    def test_save_(self):
         """
         unit test for __str__ method
         """
@@ -75,6 +75,20 @@ class TestOrderModel(TestCase):
             str(order_item),
             f'SKU {self.food.sku} on order {self.order.order_number}'
             )
+
+    def test_str_(self):
+        """
+        unit test for __str__ method
+        """
+        order_item = OrderItem(order=self.order, food=self.food, quantity=2)
+        self.assertEqual(
+            str(order_item),
+            f'SKU {self.food.sku} on order {self.order.order_number}'
+        )
+
+        self.assertEqual(
+            str(self.order), self.order.order_number
+        )
 
 
 class TestOrderItemModel(TestCase):
