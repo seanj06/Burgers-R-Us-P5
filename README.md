@@ -338,6 +338,70 @@ The review section is just below the contact us section and shows the users a bu
 
 The footer lives at the bottom of the home page and contains 4 icon links to facebook, twitter, instagram and github. It also gives users the message that this site is a work of fiction and developer name and date.
 
+#### **Products Page**
+
+![products-page](docs/features/products-page.png)
+
+The products page is accessible via both the order now button on the homepage and the main nav menu in the navbar.
+
+**Sorting, Filtering and Pagination**
+
+The products page has a sorting feature where users can sort products by Price A-Z, Price Z-A, Name A-Z, Name Z-A, Category A-Z, Category Z-A, Sub-category A-Z and Sub-category Z-A. This feauture is found at the top right of the page.
+
+![product-sort-expand](docs/features/product-filter-expand.png)
+
+The users are also given info on how many products their search is returning. This info is shown on the top left of the screen.
+
+![product-count](docs/features/product-count.png)
+
+The product page also includes pagination with the users being shown how many pages of products in total their search is returning. This feature is at the bottom of the page. 6 products are shown per page.
+
+![pagination](docs/features/pagination.png)
+
+Users can filter their search for products by either the search bar in the navbar or the main nav menu
+
+For example if the user types "pizza" into the search bar. The search will return all pizza products in the database.
+
+![pizza-search](docs/features/pizza-search.png)
+
+If the user enters a word into the search bar and no products are found they are shown an alert telling them that no products were found.
+
+![no-products-found](docs/features/no-products-alert.png)
+
+The filter feature from the main nav menu works similiar to the search bar. For example if the user clicks "All Burgers" from the filter menu they will only be shown burgers.
+
+![burger-filter](docs/features/burger-filter.png)
+
+**Product Cards**
+
+The product cards were designed using bootstrap cards and feauture the product image, name, description, contains, if vegetarian, if gluten free, price and a clickable category link which will bring users to a filtered product search of other products in that category.
+
+![product-card](docs/features/product-card.png)
+
+On large screens the cards stack 3 wide.
+
+![product-large](docs/features/product-large-screen.png)
+
+On medium screens 2 wide
+
+![product-medium](docs/features/product-medium-screen.png)
+
+On small screens 1 wide
+
+![product-small](docs/features/product-small-screen.png)
+
+**Staff**
+
+If a staff member is logged in they are shown 2 button at the bottom of the card to either edit or delete a product
+
+![product-edit-delete-btns](docs/features/product-edit-delete-btns.png)
+
+
+
+
+
+
+
 
 
 
