@@ -29,6 +29,23 @@ Users with Staff status will be able to add, edit or delete products from the si
 
 The design of the overall site is aimed to be eye catching for the users and easy on the eye with a darker theme rather than light.
 
+### **Target Users**
+
+- A user looking to order a takeaway online
+- A user who likes to read/add reviews about food
+- A user who likes the convenience of being able to save default delivery info to their profile
+- A user who likes using a recognisable secure checkout method(stripe)
+
+### **Site Goals**
+
+- To provide users with the ability to order food for delivery online
+- To provide users with the ability to make an account to save their details
+- To provide users with the ability to write/like reviews
+- To provide users with the ability to contact the site owners about any issues or queries
+- To provide users with the ability to search fro different products in a wide variety of different ways.
+
+
+
 
 
 
