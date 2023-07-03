@@ -693,7 +693,19 @@ Once the user enters their email address they will be redirected to the password
 
 ![password-reset-done](docs/features/password-reset-done.png)
 
+**Logout**
 
+![logout](docs/features/logout.png)
+
+The logout page is accessible from the my account icon on the navbar if the user is logged in.
+
+![logout-navbar](docs/features/logout-navbar.png)
+
+From here the user is brought to the logout page where they are shown a message asking them if they are sure they want to sign out.
+
+If the user presses the cancel button they are redirected back to the home page and if the user presses the sign out button they are logged out, shown a success message and redirected back to the home page.
+
+![logout-toast](docs/features/logout-toast.png)
 
 
 
