@@ -549,6 +549,38 @@ The users log in and email are used as default info for the contact form so the 
 
 ![contact-email](docs/features/contact-enquiry-email.png)
 
+#### **Profile Page**
+
+![profile-page](docs/features/profile-page.png)
+
+The profile page is accessible to logged in users via the my account dropdown on the navbar
+
+![profile-navbar](docs/features/profile-navbar.png)
+
+Here users can update their default delivery info and view their order history.
+
+On valid form submission the users default info will be updated and they will be shown a success message telling them their profile was updated.
+
+![profile-success](docs/features/profile-success.png)
+
+This info will now be pre rendered into the form when a user wants to checkout.
+
+![profile-checkout](docs/features/checkout-form-profile-info.png)
+
+**Order History**
+
+Users can view their order history by clicking on the order number in the order history section.
+
+![order-history-profile](docs/features/order-history-profile.png)
+
+From there they will be brought to the order history page where they can view the details of the order that they have clicked on.
+They will also be shown an alert message telling them that this is a past comfirmation and they have received an email with the order details.
+
+![order-history-page](docs/features/order-history.png)
+
+
+
+
 
 
 
