@@ -523,6 +523,34 @@ Logged out users can still access the reviews page and read reviews but they wil
 
 ![review-logged-out](docs/features/review-logged-out.png)
 
+#### **Contact Page**
+
+![contact-page](docs/features/contact-page.png)
+
+The contact page is accessible via the menu dropdown on desktop
+
+![contact-desktop](docs/features/contact-desktop.png)
+
+And the contact icon on the navbar on mobile
+
+![contact-mobile](docs/features/contact-mobile.png)
+
+The contact page is only accessible to logged in users. This feature is in place to prevent spam. If a logged out user tries to access the contact page they are redirected to the sign in page.
+
+When users click the contact us link they are shown a form where they can select their issue from a dropdown, enter their full name, subject and message.
+
+![contact-form](docs/features/contact-form.png)
+
+On valid form submission the user is brought to the contact success page showing them a message telling them their enquiry has been received and they should receive an email shortly. The user can return to the home page from this page by pressing the home button
+
+![contact-success](docs/features/contact-success-and-toast.png)
+
+The users log in and email are used as default info for the contact form so the user will receive a confirmation email to the email address they signed upto the site with
+
+![contact-email](docs/features/contact-enquiry-email.png)
+
+
+
 
 
 
