@@ -578,6 +578,26 @@ They will also be shown an alert message telling them that this is a past comfir
 
 ![order-history-page](docs/features/order-history.png)
 
+#### **Cart**
+
+![cart](docs/features/cart-page.png)
+
+The cart page is accessbile via the navbar icon which also shows a live view of the cart total
+
+![cart-navbar](docs/features/cart-navbar.png)
+
+From here the user can View all the current products in their cart, view their current order total, update the total quantity of each product and remove products.
+
+If the user updates the quantity of a product in their cart they are shown a success message telling them the quantity of item was updated.
+
+![cart-update](docs/features/cart-update-toast.png)
+
+If the user removes a product from their cart they are shown a success message telling them which product was removed
+
+![cart-remove](docs/features/cart-remove-toast.png)
+
+Users are also shown 2 buttons at the bottom of the cart page. 1 to go back to products and 1 to proceed and checkout.
+
 
 
 
