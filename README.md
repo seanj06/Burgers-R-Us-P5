@@ -414,7 +414,7 @@ When users add a product to their cart they are shown an alert message giving th
 
 **Responsiveness**
 
-On smaller screens the layout of the product detail card and the image centers on top with the rest of the details beneath.
+On smaller screens the layout of the product detail card changes and the image centers on top with the rest of the details beneath.
 
 ![product-detail-small-screen](docs/features/product-detail-small-screen.png)
 
@@ -427,6 +427,41 @@ If a staff member clicks the delete product button they are shown a popup asking
 ![product-delete-conf](docs/features/product-delete-confirmation.png)
 
 When the staff member confirms the deletion they are shown a success message telling the product was deleted. The product will be removed from the database after deletion.
+
+![product-delete-toast](docs/features/product-delete-toast.png)
+
+**Edit Product**
+
+If the staff member clicks the edit product button they are brought to a form where they can edit the product details.
+
+![edit-product-1](docs/features/edit-product-1.png)
+![edit-product-2](docs/features/edit-product-2.png)
+
+On entering the page they are shown an alert message telling them which product they are editing
+
+![edit-product-toast](docs/features/edit-product-toast.png)
+
+After editing the product they are redirected back to the products page and shown a success message
+
+![product-updated-toast](docs/features/edit-product-toast.png)
+
+#### **Add Product Page**
+
+Staff members can access the add product page by clicking the product management link in the my account dropdown menu on the navbar.
+This option is only shown to users who have staff or superuser status
+
+![product-man-tab](docs/features/product-management-tab.png)
+
+On clicking the link they are brought to a page which contains the form to add a product.
+
+![add-product-1](docs/features/add-product-1.png)
+![add-product-2](docs/features/add-product-2.png)
+
+If a valid form is submitted a success message is shown telling the user that the product was successfully added and they are redirected back to the products page
+
+![add-product-toast](docs/features/add-product-toast.png)
+
+
 
 
 
