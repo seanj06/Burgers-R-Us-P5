@@ -27,21 +27,21 @@
                 {% if user.is_authenticated %}
                 <div class="row text-center mt-3">
                     <div class="col-12">
-                        <h5 class="text-white">Click the button below to write a review</h5>
+                        <p class="text-white">Click the button below to write a review</p>
                         <a href="{% url 'add_review' %}" class="btn btn-primary mt-2 text-black">Write A Review</a>
                     </div>
                 </div>
                 {% else %}
                 <div class="row text-center mt-3">
                     <div class="col-12">
-                        <h5 class="text-white">You must be logged in to write a review</h5>
-                        <p class="text-white">Click here to <a href="{% url 'account_login' %}"> login </a> or <a
-                                href="{% url 'account_signup' %}"> sign up </a> if you havent already</p>
+                        <p class="text-white">You must be logged in to write a review</p>
+                        <p class="text-white">Click here to <a href="{% url 'account_login' %}" class="sign-in-links"> login </a> or <a
+                                href="{% url 'account_signup' %}" class="sign-in-links"> sign up </a> if you havent already</p>
                     </div>
                 </div>
                 {% endif%}
                 {% for review in reviews %}
-                <div class="row text-center mt-3 p-4 comment-container">
+                <div class="row text-center mt-3 p-4 comment-container bg-white">
                     <div class="col-12 text-center review">
                         <hr class="bg-black">
                         <p class="rating mx-4"> Review By: <span class="text-gray px-3">{{ review.author }}</span>
@@ -49,15 +49,17 @@
                         <hr class="bg-black">
                         <p class="rating">On: <span class="text-black px-3">{{ review.created_at }}</span></p>
                         <hr class="rule">
-                        <p class="rating">Review: <span class="text-black px-3">{{ review.comment }}</span></p>
+                        <p class="text-black px-3">{{ review.comment|linebreaks }}</p>
                         <hr class="rule">
                         <p class="rating">Rated: <span class="text-black">{{ review.rating }}<i
                                     class="fas fa-star rating"></i> out of 5<i class="fas fa-star rating"></i>
                             </span></p>
-                        <button class="like-btn mb-2" data-review-id="{{ review.id }}">
+                        {% if user.is_authenticated %}
+                        <button class="like-btn mb-2" data-review-id="{{ review.id }}" aria-label="like-btn">
                             <i class="fas fa-thumbs-up"></i>
                         </button>
                         <span class="likes-count text-black px-3 mb-2">Likes: {{ review.likes_count }}</span>
+                        {% endif %}
                     </div>
                     {% if user.is_authenticated and review.author == user %}
                     <div class="col-12 text-center review">
@@ -79,13 +81,13 @@
             </div>
         </div>
         {% if reviews.paginator.num_pages > 1 %}
-        <div class="container pt-3 mt-3 text-center">
-            {% if products.has_previous %}
-            <a class="pagination-link" href="?page={{ products.previous_page_number }}">&laquo; Previous</a>
+        <div class="container pt-3 mt-3 pb-2 mb-2 text-center">
+            {% if reviews.has_previous %}
+            <a class="pagination-link" href="?page={{ reviews.previous_page_number }}">&laquo; Previous</a>
             {% endif %}
 
             {% for num in reviews.paginator.page_range %}
-            {% if products.number == num %}
+            {% if reviews.number == num %}
             <span class="current-page">{{ num }}</span>
             {% else %}
             <a class="pagination-link" href="?page={{ num }}">{{ num }}</a>
@@ -93,7 +95,7 @@
             {% endfor %}
 
             {% if reviews.has_next %}
-            <a class="pagination-link" href="?page={{ products.next_page_number }}">Next &raquo;</a>
+            <a class="pagination-link" href="?page={{ reviews.next_page_number }}">Next &raquo;</a>
             {% endif %}
         </div>
         {% endif %}
