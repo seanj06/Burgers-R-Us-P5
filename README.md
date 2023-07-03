@@ -707,6 +707,24 @@ If the user presses the cancel button they are redirected back to the home page 
 
 ![logout-toast](docs/features/logout-toast.png)
 
+#### **Custom Error pages**
+
+Custom Error 404, 403 and 500 error pages were made to match the theme of the rest of the site
+
+**404 Page Not Found**
+
+![404](docs/features/404-page.png)
+
+**500 Internal Server Error**
+
+![500](docs/features/500-page.png)
+
+**403 Action Forbidden**
+
+![403](docs/features/403-page.png)
+
+
+
 
 
 
