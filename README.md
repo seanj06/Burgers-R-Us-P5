@@ -723,6 +723,14 @@ Custom Error 404, 403 and 500 error pages were made to match the theme of the re
 
 ![403](docs/features/403-page.png)
 
+#### **Favicon**
+
+A custom favicon was built for the site which is A gold yellow B on with a dark gray background which matches the theme of the site.
+
+![favicon](docs/features/favicon.png)
+
+The favicon was built on [favicon.io](https://favicon.io/favicon-generator/)
+
 
 
 
