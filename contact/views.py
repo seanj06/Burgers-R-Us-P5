@@ -16,6 +16,7 @@ def contact(request):
         if form.is_valid():
             contact_message = form.save(commit=False)
             contact_message.user = request.user
+            contact_message.email = request.user.email
             contact_message.save()
             messages.success(request, 'Your enquiry has been sent')
             return redirect('contact_success')

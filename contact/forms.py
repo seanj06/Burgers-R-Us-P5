@@ -8,11 +8,10 @@ class ContactMessageForm(forms.ModelForm):
     """
     class Meta:
         model = ContactMessage
-        fields = ['issue', 'name', 'email', 'subject', 'message']
+        fields = ['issue', 'name', 'subject', 'message']
         widgets = {
             'issue': forms.Select(attrs={'class': 'form-control'}),
             'name': forms.TextInput(attrs={'placeholder': 'Your Name'}),
-            'email': forms.EmailInput(attrs={'placeholder': 'Your Email'}),
             'subject': forms.TextInput(attrs={'placeholder': 'Subject'}),
             'message': forms.Textarea(attrs={'placeholder': 'Your Message'}),
         }
