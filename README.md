@@ -651,6 +651,53 @@ The user will receive an email to their entered email address with all of the or
 
 All of the card payment elements on the checkout form are handled by Stripe Test account
 
+#### **Login, Logout And Register Pages**
+
+All of the user login, logout and Register pages on the site are handled by allauth and styled using crispyforms.
+
+**Register**
+
+![register](docs/features/register-page.png)
+
+The register page can be accessed via the my account icon in the navbar if the user is logged out.
+
+![register-navbar](docs/features/register-navbar.png)
+
+From here the user is shown a form to enter their email, username and password to sign up for an account.
+
+On valid form subission the user is brought to the verify email page telling them an email has been sent to the given email address and it needs to be verified. Ony when the user verifies their email they will be able to sign in.
+
+![verify-email](docs/features/register-verify-email.png)
+
+**Login**
+
+![login](docs/features/login.png)
+
+The login page is accessible via the my account icon in the navbar if the user is logged out
+
+![login-navbar](docs/features/login-navbar.png)
+
+From here the user is brought to the login page where they can enter their email or username and their password.
+
+They also have the option to check the remember me box for the site to remember their details next time they sign in.
+
+If the user enters valid login details they will be logged in, shown a success message and redirected to the home page.
+
+![login-toast](docs/features/login-toast.png)
+
+If the user presses the reset password button they will be redirected to the rest password page where they will be prompted to enter their email address to reset their password.
+
+![password-reset](docs/features/password-reset.png)
+
+Once the user enters their email address they will be redirected to the password reset done page telling them which steps to follow next
+
+![password-reset-done](docs/features/password-reset-done.png)
+
+
+
+
+
+
 
 
 
