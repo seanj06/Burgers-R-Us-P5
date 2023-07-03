@@ -461,6 +461,70 @@ If a valid form is submitted a success message is shown telling the user that th
 
 ![add-product-toast](docs/features/add-product-toast.png)
 
+#### **Review Page**
+
+![review-logged-in](docs/features/review-page.png)
+
+The review page is accessible via the menu dropdown on desktop
+
+![review-desktop](docs/features/review-desktop.png)
+
+The review icon directly from the navbar on mobile
+
+![review-mobile](docs/features/review-mobile.png)
+
+And the review section on the homepage
+
+![review-section-a](docs/features/reviews-section.png)
+
+**Adding Reviews**
+
+If users are logged in they are shown a write a review button on the top of the review page. Clicking this button will bring them to the add a review form where they can rate the service 1-5 and as there comment
+
+![add-review](docs/features/add-review.png)
+
+If the users submit a valid form they will be shown a success message and redirected back to the reviews page
+
+![review-toast](docs/features/review-toast.png)
+
+
+When a user has added their own review they are shown to buttons to either edit or delete their review if they wish.
+
+**Deleting Reviews**
+
+Pressing the delete button will show the user a confirmation message asking if they are sure they want to delete the review
+
+![delete-conf](docs/features/review-delete.png)
+
+If the user confirms the delete they are shown a success message and redirected back to the review page
+
+![review-delete-toast](docs/features/review-delete-toast.png)
+
+**Editing Reviews**
+
+If the user presses the edit button they are shown an edit review form where they can edit details.
+
+![edit-review](docs/features/edit-review.png)
+
+When the user has edited the form they are shown a success message and redirected back to the reviews page
+
+![edit-review-toast](docs/features/edit-review-toast.png)
+
+**Liking Reviews**
+
+Logged in users have the ability to like reviews by pressing the like button. The colour of the like button changes letting the user know if they have already liked the review or not
+
+![review-unliked](docs/features/review-unliked.png)
+![review-liked](docs/features/review-liked.png)
+
+**Logged Out Users**
+
+Logged out users can still access the reviews page and read reviews but they will be unable to write a review unless they are logged in. Instead of the write review button users are shown a message telling them they need to log in and links to both the login and signup pages
+
+![review-logged-out](docs/features/review-logged-out.png)
+
+
+
 
 
 
