@@ -598,6 +598,62 @@ If the user removes a product from their cart they are shown a success message t
 
 Users are also shown 2 buttons at the bottom of the cart page. 1 to go back to products and 1 to proceed and checkout.
 
+#### **Checkout Page**
+
+![checkout-page1](docs/features/checkout-page1.png)
+![checkout-page2](docs/features/checkout-page2.png)
+
+The checkout page is accessible after A user clicks the checkout securely button from the cart page.
+
+From there they are brought to the checkout page which includes a form for users to enter their name and email, delivery info and card info.
+
+If the user has updated their default delivery info on the profile page the form will be pre populated with the info they have entered.
+
+![profile-form](docs/features/profile-pre-populated-form.png)
+![pre-populated-form](docs/features/checkout-pre-populated-form.png)
+
+The user is also shown a checkout order summary which includes all products they are checking out, their quantity, total for each product, order total, delivery total and grand total
+
+![order-summary](docs/features/checkout-order-summary.png)
+
+**Dynamic Delivery times**
+
+One of the features of the checkout page is the dynamic delivery time slots. The user is able to choose delivery times based off the current time and a 30 minute delay.
+
+For example if the day is Monday the delivery time hours are 11:00 AM - 21:00 PM. So if the user makes an order at 16:30 on Monday the delivery times that will be shown to them will be 17:00 - 21:00 in 15 minute increments.
+
+![delivery-times](docs/features/delivery-times-2.png)
+
+These times vary per day. For example delivery times on Friday, Saturday and Sunday are much later so the user will have the option of choosing later delivery times.
+
+If the user tries to checkout outside of delivery times the checkout form doesnt render and they are shown the delivery service closed page
+
+![delivery-service-closed](docs/features/delivery-service-closed.png)
+
+One of the features I originally intended to implement was to let users order for the next day but due to time constraints this could not be completed. This will be discussed more in the future features section of the ReadMe.
+
+**Successful Checkout**
+
+If the form is valid the users will be shown a loading spinner while the order is processing
+
+![loading-spinner](docs/features/loading-spinner.png)
+
+After the order is processed the user is redirected to the checkout success page with their order details and a success message telling them their order number and their order details have been emailed to them.
+
+![checkout-success](docs/features/checkout-success.png)
+
+The user will receive an email to their entered email address with all of the order info.
+
+![checkout-email1](docs/features/checkout-email1.png)
+![checkout-email2](docs/features/checkout-email2.png)
+
+**Stripe**
+
+All of the card payment elements on the checkout form are handled by Stripe Test account
+
+
+
+
 
 
 
