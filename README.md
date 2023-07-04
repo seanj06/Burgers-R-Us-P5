@@ -797,6 +797,70 @@ When the site was finished being crawled the file was created which I downloaded
 
 A robots.txt file was also created in the root directory which links to the sitemap. In this file is a list of urls that cannot be crawled.
 
+## **Technologies Used**
+
+### **Languages Used**
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+- [jQuery](https://jquery.com/)
+- [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
+
+### **Frameworks used**
+
+- [Django](https://www.djangoproject.com/) was used for the main development of this project
+- [Bootstrap](https://blog.getbootstrap.com/) was used for the styling and main layout of the project.
+
+### **Other Technologies used**
+
+ - [ElephantSQL](https://www.elephantsql.com/) was used to run the postgres database for this project.
+ - [AWS S3 Bucket](https://aws.amazon.com/s3/) was used to store all static files and images for this project.
+ - [Heroku](https://www.heroku.com/) was used to deploy the project.
+ - [GitHub:](https://github.com/) was used for storing project code.
+ - [Git](https://git-scm.com/) was used for version control of the project.
+ - [GitPod](https://www.gitpod.io/) was the ide used to develop the project.
+ - [LucidChart](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjjsv7X6aH-AhWwgFAGHd1lAykYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ytxlwO3uCaazbKtzvqvppsNhe1heNFTWYr8Ja6pedxYm-qSu7Xj1K7h_fvv0_kTMzvjh05ERH1FwWEYshvM15Wfp03Zp21oiJIbm3ZTZd1b_1fJ9ENrGwYymQf5KRrpGNn5jUNGXbXujOM0&sig=AOD64_1k9ic9lgJt8Tto3XfmyTbZo-CLLg&q&adurl&ved=2ahUKEwjco_jX6aH-AhUCAsAKHch6ASkQ0Qx6BAgGEAE) was used for making the database schema diagram.
+ - [Balsamiq](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwih18Xz7KT-AhUK0O0KHa10Ac4YABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2RPESw4sarkzssyVuJ3_18noPRmNSFJOT2cF3stlWcQOFp6gPdcDCXuoyPrUKWZxNLLshZQIEAJo_zFZQQUX0f9Lu_XsA3g1AvKtc7qZuF628J-8r4AqElCFmrMznj-ckVA181bCrKg7__Gk&sig=AOD64_3_LMgzuzJFmOC4EuNM6hTDxVkC7A&q&adurl&ved=2ahUKEwjavL7z7KT-AhWgR0EAHYA1CbgQ0Qx6BAgHEAE) was used for creating the wireframes.
+ - [Grammarly](https://app.grammarly.com/) was used for spell and grammar checks on the README.md and TESTING.md files
+ - [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate python code
+
+### **Libraries Used**
+
+**Most of the library definitions below taken from [pypi.org](https://pypi.org/)**
+
+ - [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+ - [Aws S3 Bucket](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjXlMr22ZL-AhWH0u0KHTm2BIYYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2xfKGTfrAZNX1dKdwfAFGbYEjxaZ4WowTACOdPUY3Uvg3IOAzyI-iz9-dqdPAvTKMf9CU3FoaFikpVncVcFTll0loH_KkdLY_LWBZSRfkiIb66DXZydVxXyqakWYNzfedeSzB8pyLx8E160g&sig=AOD64_3225_Dn14hz5LDPgzqgd0eLR-7lA&q&adurl&ved=2ahUKEwixjMT22ZL-AhV0SEEAHYD-BD0Q0Qx6BAgKEAE) - A cloud based storage system for hosting images and static files.
+ - [coverage](https://pypi.org/project/django-coverage/) - A test coverage reporting tool that shows how much of your code is covered by tests.
+ - [crispy-bootstrap4](https://pypi.org/project/crispy-bootstrap5/) - Crispy forms template pack for bootstrap4.
+ - [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
+ - [Django](https://pypi.org/project/Django/) - A high level python framework
+ - [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - A Django authentication and account management system
+ - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - A Django package that controls the rendering and control of django forms.
+ - [django-storages](https://pypi.org/project/django-storages/) - Django Storages is a Django package that abstracts the file storage backends for handling media and static files in Django projects.
+ - [gunicorn](https://gunicorn.org/) - A Python WSGI HTTP Server for UNIX.
+ - [oauthlib](https://oauthlib.readthedocs.io/en/latest/) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
+ - [psycopg2](https://pypi.org/project/psycopg2/) - A database adapter for the python language.
+ -  [PyJWT](https://pyjwt.readthedocs.io/en/stable/) - A Python library which allows encoding and decoding of JSON Web Tokens (JWT).
+ -  [python3-openid](https://pypi.org/project/python3-openid/) - A set of Python packages to support use of the OpenID decentralized identity system in your application.
+ - [pytz](https://pypi.org/project/pytz/) - This library allows accurate and cross platform timezone calculations
+ - [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - 
+This project provides first-class OAuth library support for Requests.
+- [sqlparse](https://pypi.org/project/sqlparse/) - sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+- [urllib3](https://pypi.org/project/urllib3/) - urllib3 is a user-friendly HTTP client for Python.
+- [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
+- [s3transfer](https://pypi.org/project/s3transfer/) - S3transfer is a Python library for managing Amazon S3 transfers.
+- [Pillow](https://pypi.org/project/Pillow/) - This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
+- [jmespath](https://pypi.org/project/jmespath/) - JMESPath (pronounced “james path”) allows you to declaratively specify how to extract elements from a JSON document.
+
+
+
+
+
+
+
+
+
 
 
 
