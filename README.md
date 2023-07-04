@@ -771,6 +771,34 @@ Two fonts were used throughout the site. All of the heading and hero text use 'B
 
 All site images including Product images were taken from [Pexels.com](https://www.pexels.com/)
 
+## **Search Engine Optimization (SEO)**
+
+### **Keywords**
+
+[WordTracker](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiUq9e6-fP_AhUK0-0KHYGNBUoYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2_aQzvO6Qqz7jZCsqtYz4hiRwj52qlyarkAYEJlGmVObCH37U8anoEdQHda1AIFaQNS6wCjOu66JL83cKscuTXVkFH25aqTRrOqfP2pHWLcO5LRJcv2i-ImLTfZaU-uYAopawf1oOCqr3Jro&sig=AOD64_34kKUaDJSKicqUkfQighvzi2ZG-g&q&adurl&ved=2ahUKEwj9zdK6-fP_AhUBVEEAHfZ2DaoQ0Qx6BAgIEAE) was used to help me decide what keywords to choose. I opted for words which suited my site but also had high traffic and low competition.
+
+[Google](https://www.google.com/) was also used in helping me choose keywords especially by utilising the auto complete functionality.
+
+Both short and long tail keywords were researched and used on the site to optimize SEO.
+
+### **Page Titles**
+
+The main site title was given the slogan "Delicious Fast Food Delivered" to optimize SEO. This part of the title is shown on every page of the site. 
+
+Each page shows an extra title after the slogan to optimize SEO.
+
+### **Sitemap.xml**
+
+[XML-Sitemaps](https://www.xml-sitemaps.com) was used to generate a sitemap.xml file to optimize SEO.
+
+When the site was finished being crawled the file was created which I downloaded and placed in the root of my directory.
+
+### **Robots.txt**
+
+A robots.txt file was also created in the root directory which links to the sitemap. In this file is a list of urls that cannot be crawled.
+
+
+
 
 
 
