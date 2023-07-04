@@ -236,6 +236,135 @@ The backlog currently has 1 unfinished user story in it. Products special offer 
 
 1.**[USER STORY: Product Special Offers page #22](https://github.com/seanj06/Burgers-R-Us-P5/issues/22)**
 
+## **The Skeleton Plane**
+
+### **Wireframes**
+
+Wireframes for the project were created on [Balsamiq](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwipl_y6tPX_AhWS7O0KHQjIA1sYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ccqo8oDlzHFF4zbaV7KGAZVuaGnNBdddD_bCzQRZZXG89KOq1bR5tTzAGzFw9lulTUQrVzvNb-h1Y0Evgoy9Vysb07io1aY714qDyozR72dg5MUYiTf0U90m5Jtk84vM2qp4g1XZVs8MLGU&sig=AOD64_0cWpzV5GO3p3y1kmK1V2EAh6oj0w&q&adurl&ved=2ahUKEwjlh_a6tPX_AhWYiFwKHTr7DXQQ0Qx6BAgIEAE) prior to development.
+
+Wireframes were made for both dekstop and mobile versions of the site.
+
+Some layout changes were made to the site during development which do not match the wireframes.
+
+#### **Home Page**
+
+<details><summary>Home Page Desktop</summary>
+
+![home-page-desktop-wf](docs/wireframes/homepage-desktop-wf.png)
+
+</details>
+<details><summary>Home Page Mobile</summary>
+
+![home-page-mobile-wf](docs/wireframes/homepage-mobile-wf.png)
+
+</details>
+
+#### **Product Page**
+
+<details><summary>Product Page Desktop</summary>
+
+![product-page-desktop-wf](docs/wireframes/product-desktop-wf.png)
+
+</details>
+<details><summary>Product Page Mobile</summary>
+
+![product-page-mobile-wf](docs/wireframes/product-mobile-wf.png)
+
+</details>
+
+#### **Product Detail Page**
+
+<details><summary>Product Detail Page Desktop</summary>
+
+![product-detail-page-desktop-wf](docs/wireframes/product-detail-desktop-wf.png)
+
+</details>
+<details><summary>Product Page Mobile</summary>
+
+![product-detail-page-mobile-wf](docs/wireframes/product-detail-mobile-wf.png)
+
+</details>
+
+#### **Cart Page**
+
+<details><summary>Cart Page Desktop</summary>
+
+![cart-page-desktop-wf](docs/wireframes/cart-desktop-wf.png)
+
+</details>
+<details><summary>Cart Page Mobile</summary>
+
+![cart-page-mobile-wf](docs/wireframes/cart-mobile-wf.png)
+
+</details>
+
+#### **Checkout Page**
+
+<details><summary>Checkout Page Desktop</summary>
+
+![checkout-page-desktop-wf](docs/wireframes/checkout-desktop-wf.png)
+
+</details>
+<details><summary>Checkout Page Mobile</summary>
+
+![checkout-page-mobile-wf](docs/wireframes/checkout-mobile-wf.png)
+
+</details>
+
+#### **Contact Page**
+
+<details><summary>Contact Page Desktop</summary>
+
+![contact-page-desktop-wf](docs/wireframes/contact-desktop-wf.png)
+
+</details>
+<details><summary>Contact Page Mobile</summary>
+
+![contact-page-mobile-wf](docs/wireframes/contact-mobile-wf.png)
+
+</details>
+
+#### **Review Page**
+
+<details><summary>Review Page Desktop</summary>
+
+![review-page-desktop-wf](docs/wireframes/review-desktop-wf.png)
+
+</details>
+<details><summary>Review Page Mobile</summary>
+
+![review-page-mobile-wf](docs/wireframes/review-mobile-wf.png)
+
+</details>
+
+#### **Login Page**
+
+<details><summary>Login Page Desktop</summary>
+
+![login-page-desktop-wf](docs/wireframes/login-desktop-wf.png)
+
+</details>
+<details><summary>Login Page Mobile</summary>
+
+![login-page-mobile-wf](docs/wireframes/login-mobile-wf.png)
+
+</details>
+
+#### **Sign Up Page**
+
+<details><summary>Sign Up Page Desktop</summary>
+
+![signup-page-desktop-wf](docs/wireframes/signup-desktop-wf.png)
+
+</details>
+<details><summary>Sign Up Page Mobile</summary>
+
+![signup-page-mobile-wf](docs/wireframes/signup-mobile-wf.png)
+
+</details>
+
+
+
 
 ## **The Structure Plane**
 
@@ -852,6 +981,10 @@ This project provides first-class OAuth library support for Requests.
 - [s3transfer](https://pypi.org/project/s3transfer/) - S3transfer is a Python library for managing Amazon S3 transfers.
 - [Pillow](https://pypi.org/project/Pillow/) - This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
 - [jmespath](https://pypi.org/project/jmespath/) - JMESPath (pronounced “james path”) allows you to declaratively specify how to extract elements from a JSON document.
+
+## **Testing**
+
+All testing that was done for the project can be Found In [TESTING.md](TESTING.md)
 
 
 
