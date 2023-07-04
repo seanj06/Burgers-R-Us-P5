@@ -731,6 +731,23 @@ A custom favicon was built for the site which is A gold yellow B on with a dark 
 
 The favicon was built on [favicon.io](https://favicon.io/favicon-generator/)
 
+### **Future Features**
+
+#### **Special offers page**
+
+One feature that was originally meant to be implemented into the site but couldnt because of time constraints is the special offers page. This would be a page that users can navigate to to view special offers on products including meal deals.
+
+#### **Next Day Delivery**
+
+Another feature that I would like to be implemented in the future is the option for users to be able to choose next day delivery if they try to order outside of the current delivery hours. Again because of time constraints this feature could not be added.
+
+#### ***Admin Order tracker**
+
+Another feature I would like to implement in the future is an in site order tracker for management to view all orders for the day including total revenue.
+
+#### ***Customising Food**
+
+The ability for users to customise the food they are ordering is another feature I would like to implement in the future.
 
 
 
