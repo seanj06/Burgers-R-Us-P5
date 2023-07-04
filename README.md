@@ -741,13 +741,39 @@ One feature that was originally meant to be implemented into the site but couldn
 
 Another feature that I would like to be implemented in the future is the option for users to be able to choose next day delivery if they try to order outside of the current delivery hours. Again because of time constraints this feature could not be added.
 
-#### ***Admin Order tracker**
+#### **Admin Order tracker**
 
 Another feature I would like to implement in the future is an in site order tracker for management to view all orders for the day including total revenue.
 
-#### ***Customising Food**
+#### **Customising Food**
 
 The ability for users to customise the food they are ordering is another feature I would like to implement in the future.
+
+## **The Surface Plane**
+
+### **Design**
+
+#### **Colour Scheme**
+
+I opted to go with a simplistic, darker but aesthetically pleasing colour theme of 2 Shades of Gray, Gold And white.
+
+The background includes 2 shades of gray with the body background being the lighter and the header and foreground content being the darker.
+
+All heading and hero text is coloured gold to stand out well against the gray and all other text is coloured white.
+
+![coolers](docs/readme%20images/coolers.png)
+
+#### **Typography**
+
+Two fonts were used throughout the site. All of the heading and hero text use 'Belanosima' and all other text is 'Lato'. Both fonts were taken from [Google Fonts](https://fonts.google.com/)
+
+#### **Imagery**
+
+All site images including Product images were taken from [Pexels.com](https://www.pexels.com/)
+
+
+
+
 
 
 
