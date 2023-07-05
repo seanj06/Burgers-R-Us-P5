@@ -367,7 +367,7 @@ Some layout changes were made to the site during development which do not match 
 
 Below is a diagram of the database models and how the fields link to each other. The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi90PqHu_b_AhWa-O0KHS7BClgYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2tw3FgBHPxIXeKTXXZAEwetE-TcwcuCzi-BnwtTQPU834-ifaH8-B0h__L-Ceg30ALEyL_ctMEAmYRxZ7LZtE50gJ-NJQ61879X_YbrZrhdohEpAWnk16qjJ5Ptid2YD00Q1dIwjKIWYR9ko&sig=AOD64_3SnEZxUdPFejWzWe0iKN0C0E-VXA&q&adurl&ved=2ahUKEwiG3vSHu_b_AhWGTMAKHZllD60Q0Qx6BAgJEAE)
 
-![database-schema](docs/wireframes/database-schema.png)
+![database-schema](docs/wireframes/database-schema-2.png)
 
 #### **User Model**
 
@@ -395,7 +395,7 @@ The Contact Model links to the User model on the user field through a ForeignKey
 
 #### **Review Model**
 
-The Review model links to the User model on the author field through a ForeignKey
+The Review model links to the User model on the author field through a ForeignKey and to the User model on the likes field through a ManyToManyField
 
 #### **Food Model**
 
