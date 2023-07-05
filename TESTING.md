@@ -607,7 +607,323 @@ This user story had a must-have label
 - 3.What user is shown differs depending on if they are logged in or not.
 
   - The navbar links change depending on if a user is logged in or not.
-  
+
+[Top of page &uarr;](#contents)
+
+### **EPIC: Product Page**
+
+#### 32. [USER STORY: Product page creation](https://github.com/seanj06/Burgers-R-Us-P5/issues/19)
+
+As a developer I can create a products page so that users can search the site for all available products
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Users can access products page from navbar and homepage
+
+  - The products page is accessible from both the navbar and the order now buton on the homepage
+
+- 2.Users can see all available products
+
+  - Users can select the all products link which will show them all of the site products.
+
+#### 33. [USER STORY: Sort Food Products](https://github.com/seanj06/Burgers-R-Us-P5/issues/24)
+
+As a user I can choose which way I sort food products so that I can find items easier
+
+**Acceptance Criteria**
+
+- 1.Users Can sort products by price, category and sub category
+
+  - Users have the choice to sort products in various different ways.
+
+- 2.Users can access sort feature from navbar
+
+  - The sort feature is accessible from the main nav section of the navbar
+
+#### 34. [USER STORY: Filter Product By Category](https://github.com/seanj06/Burgers-R-Us-P5/issues/23)
+
+As a user I can filter products by category so that I can narrow my search down to the food products I am looking for
+
+**Acceptance Criteria**
+
+- 1.Users can filter product search by all categories
+
+  - Users have the option to filter products by category aswell as various other options.
+
+- 2.Users can access filter search from the navbar
+
+  - Users can filter search from the products section in the navbar
+
+#### 35. [USER STORY: Individual Product Details](https://github.com/seanj06/Burgers-R-Us-P5/issues/21)
+
+As a customer I can view info about an individual product so that I can make a decision on which product I want to purchase
+
+**Acceptance Criteria**
+
+- 1.Users able to see product image, price, and description
+
+  - Users are able to view all of the product details on the product card.
+
+#### 36. [USER STORY: View Products](https://github.com/seanj06/Burgers-R-Us-P5/issues/20)
+
+As a customer I can view all food products available so that I can choose what I want to purchase
+
+**Acceptance Criteria**
+
+- 1.Users can navigate to products page from home page and navbar
+
+  - Users are able to navigate to the products page from both the homepage and navbar
+
+- 2.Users can view all products from the products page
+
+  - Users can view paginated pages of all products from the products page
+
+[Top of page &uarr;](#contents)
+
+### **EPIC: Crud Functionality**
+
+#### 37. [USER STORY: View Items in cart](https://github.com/seanj06/Burgers-R-Us-P5/issues/16)
+
+As a user want to view the items in my cart so that I can view the items I wish to purchase
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Users can view items in their cart by going to cart page
+
+  - Users are able to view every item currently in their cart from the cart page.
+
+- 2.Only current user can see their own cart items and cannot access other users carts.
+
+  - User checks are in place to ensure only the current user can view their cart
+
+#### 38. [USER STORY: Remove item from cart](https://github.com/seanj06/Burgers-R-Us-P5/issues/14)
+
+As a user I want to be able to remove items from my cart so that I can remove any unwanted items
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.User is able to remove any added items in cart
+
+  - Users can remove items in their cart from the cart page by pressing the remove button
+
+- 2.User is redirected back to their cart after deletion
+
+  - After reload the user is redirected back to their cart
+
+- 3.User is shown success message with item that was deleted
+
+  - After deletion the user is shown a success toast.
+
+#### 39. [USER STORY: Edit quantity in cart](https://github.com/seanj06/Burgers-R-Us-P5/issues/15)
+
+As a user I want to be able to edit the quantity of items in my cart ** so that I can change the quantity of items I wish to purchase
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.User is able to edit quantity of items from cart
+
+  - Users can edit the quantity of an item in their cart by pressing the edit button
+
+- 2.User is shown success message with item edited
+
+  - User is shown a success toast after edit.
+
+- 3.User is redirected back to cart after edit.
+
+  - The user is redirected back to the cart after edit
+
+#### 40. [USER STORY: Add Product To Cart](https://github.com/seanj06/Burgers-R-Us-P5/issues/13)
+
+As a user I want to be able to add food items to my cart so that I can see the items I am ordering
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.User can add product to cart by clicking on product from product page
+
+  - Users can add a product to their cart by clicking the add to cart button
+
+- 2.User can view all items in cart before checkout
+
+  - The user is shown all items in their cart in the cart page before checkout
+
+[Top of page &uarr;](#contents)
+
+#### 41. [USER STORY: Delete Products](https://github.com/seanj06/Burgers-R-Us-P5/issues/44)
+
+As a superuser I can delete site products so that any unavailable products can be removed from the site
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Only superusers have access to delete products
+
+  - Only supersusers can delete products. All other users will be redirected to a 403 action forbidden page.
+
+#### 42. [USER STORY: Edit Product](https://github.com/seanj06/Burgers-R-Us-P5/issues/43)
+
+As a superuser I can edit site products so that products can be modified if a mistake is made or a price changes
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Only superusers have access to edit products
+
+  - Only supersusers can edit products. All other users will be redirected to a 403 action forbidden page.
+
+#### 43. [USER STORY: Add Products to site](https://github.com/seanj06/Burgers-R-Us-P5/issues/42)
+
+As a staff member I can add products to the site so that the site is keep updated with the latest products
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Form is linked to Food Model
+
+  - The add product form is linked to the Food model
+
+- 2.View and template code is added to ensure only superusers have access to form
+
+  - Code is added to ensure only superusers have access to add products
+
+[Top of page &uarr;](#contents)
+
+#### 44. [USER STORY: Delete Review](https://github.com/seanj06/Burgers-R-Us-P5/issues/41)
+
+As a user I can delete any reviews I have written so that I can remove it if i no longer feel the same about what i have written
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Users can delete reviews from a button located underneath the review
+
+  - Authors of the review can delete their own review with the delete button.
+
+- 2.Only the author of the review can delete the review
+
+  - Code was added to ensure only authors can delete own review. All other users will be redirected to 403 page
+
+#### 45. [USER STORY: Update Review](https://github.com/seanj06/Burgers-R-Us-P5/issues/40)
+
+As a user I can update any reviews I have written so that I can fix any mistakes I mad while writing it
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Users can update their review by clicking on a button located on the review
+
+  - Users are able to edit their review by clicking the review button
+
+- 2.Only the review author can access and update the review
+
+  - Code was added to ensure only authors can edit own review. All other users will be redirected to 403 page
+
+#### 46. [USER STORY: Read A Review](https://github.com/seanj06/Burgers-R-Us-P5/issues/39)
+
+As a user I can read reviews other users have written so that I can make a decision on what food to order
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Users can access review page from homepage
+
+  - Users can access the review page from both the navbar and the review section on the homepage
+
+- 2.Users can read reviews regardless of being signed in or not
+
+  - All users have access of the homepage whether they are signed in or not
+
+- 3.Users can like reviews
+
+  - Users can like reviews providing they are logged in
+
+#### 47. [USER STORY: Create a review](https://github.com/seanj06/Burgers-R-Us-P5/issues/38)
+
+As a user I can create a review so that I can share my thoughts on my food order
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Users can access review page from homepage
+
+  - Users can access the review page from both the navbar and the review section on the homepage
+
+- 2.Users can only write a review if logged in
+
+  - Users must be logged in to write a review.
+
+- 3.Users can rate restaurant from 1 to 5 stars
+
+  - When writing a review users can select 1 to 5 from a rating dropdown
+
+[Top of page &uarr;](#contents)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
