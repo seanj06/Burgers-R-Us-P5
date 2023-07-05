@@ -400,6 +400,248 @@ This user story had a must-have label.
 
   - There is login required and user checks to ensure only authorized users can access certain features.
 
+#### 21. [USER STORY: Finish styling home page](https://github.com/seanj06/Burgers-R-Us-P5/issues/45)
+
+As a developer I can finish the styling on the home page so that the user has a good impression when entering the site
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Footer is added to homepage
+
+  - The footer was added to the homepage with social media links and copyright info.
+
+- 2.Ensure all site links work
+
+  - All the homepage links were tested to ensure there were no broken links.
+
+- 3.Ensure site is fully responsive
+
+  - Extra bootstrap classes and media queries were added to ensure full responsiveness
+
+#### 22. [USER STORY: Finish styling cart page](https://github.com/seanj06/Burgers-R-Us-P5/issues/46)
+
+As a developer I can finish styling the cart page so that it matches the rest of the site theme
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1. Cart page is fully responsive on all screen sizes
+
+  - Extra bootstrap classes and media queries were added to ensure full responsiveness
+
+- 2.Page them matches rest of site
+
+  - The cart page was styled to match the rest of the site
+
+- 3.All page functionality works correctly
+
+  - All update, remove and links were tested to ensure working functionality.
+
+#### 23. [USER STORY: User Notifications](https://github.com/seanj06/Burgers-R-Us-P5/issues/25)
+
+As a developer I can set up custom user notifications so that users can be notified when they perform an action
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Users receive notifications when adding or removing item from cart
+
+  - Users are shown a success toast when adding or removing items from their cart.
+
+- 2.Users receive notifications when signing in or out
+
+  - Users are shwon a success toast notifiying them if they are logged in or out.
+
+[Top of page &uarr;](#contents)
+
+### **EPIC: SEO**
+
+#### 24.[USER STORY: Robots.txt file](https://github.com/seanj06/Burgers-R-Us-P5/issues/52)
+
+As a developer I can create a robots.txt file so that the file can tell search engines where they are not allowed on the site
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.All restricted URLs are included in robots.txt file
+
+  - All dissallowed urls were added to the file
+
+- 2.robots.txt file is on top level of code
+
+  - The robots.txt file was created in the root directory
+
+#### 25. [USER STORY: XML sitemap](https://github.com/seanj06/Burgers-R-Us-P5/issues/51)
+
+As a developer I can add a sitemap to my code so that it improves overall SEO optimization
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Sitemap shows all site URLs correctly
+
+  - The sitemap shows all of ths sites urls
+
+- 2.Sitemap file is at top level
+
+  - The sitemap file was created in the root directory
+
+#### 26. [USER STORY: Seo implementation](https://github.com/seanj06/Burgers-R-Us-P5/issues/50)
+
+As a developer I can implement seo into my code so that my site will be higher up the list on search engine algorithms
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Head tag includes researched SEO tags
+
+  - Researched key words were placed in the head tag of base.html
+
+- 2.Semantic HTML tages include researched SEO tags
+
+  - Keyword classed were added to html section elements throughout the site
+
+[Top of page &uarr;](#contents)
+
+### **EPIC: Home page creation**
+
+#### 27. [USER STORY: Contact Form](https://github.com/seanj06/Burgers-R-Us-P5/issues/37)
+
+As a user I can contact the restaurant so that I can let them know about any issues
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+ - 1.Users can access contact form from homepage
+
+   - The contact form can be accessed from both the navbar and the contact section from the homepage.
+
+- 2.Users can choose from select boxes to narrow down issue
+
+  - There is an issue dropwdown menu for users to select from on the form
+
+#### 28. [USER STORY: Home page styling](https://github.com/seanj06/Burgers-R-Us-P5/issues/18)
+
+As a developer I can make the home page eye catching so that first time and returning users are drawn in
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Navbar is easy for users to follow, links easy to find.
+
+  - All of the navbar links have icons attached for easy user navigation
+
+- 2.Hero image big enough to draw user attention
+
+  - The hero image sits just below the navbar on the homepage and is the first thing the user sees upon entering the site.
+
+- 3.About us section is short and descriptive
+
+  - The about us section is placed over the hero image and is in bold white text to draw users attention.
+
+- 4.Footer section contains media links and copyright info.
+
+  - The footer contains copyright info and 4 social media links
+
+#### 29. [USER STORY: Hero Image](https://github.com/seanj06/Burgers-R-Us-P5/issues/12)
+
+As a developer I can add a hero image to the homepage so that the site looks appealing for visitors as soon as they enter the site
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Image is correct size and responsive
+
+  - The image is fully responsive on all screen sizes and does not overflow.
+
+- 2.Image matches theme of site
+
+  - The image has a reduced opacity and the text matches the theme of the site
+
+- 3.Image has button which brings users to products page
+
+  - The image contains an order now button which brings users to the products page.
+
+#### 30. [USER STORY: Search functionality](https://github.com/seanj06/Burgers-R-Us-P5/issues/17)
+
+As a developer I can add search functionality so that the user can search for the products they want
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.Users can search for any product keyword from search bar in home page
+
+  - Users can search for product keywords, categories or sub categories in the search bar 
+
+- 2.Users are given feedback on whether a product is found or not
+
+  - Search results are returned letting users know how many products were found in their search.
+
+#### 31. [USER STORY: Navbar creation](https://github.com/seanj06/Burgers-R-Us-P5/issues/11)
+
+As a developer I can create a navbar so that users can navigate the site easily
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Navbar file is in correct includes folder
+
+  - The navbar is split into 2 files in the includes folder. Main nav and mobile top header
+
+- 2.Navbar contains links to all pages on the site
+
+  - The navbar contains full site navigation and changes depending on the users logged in or out status.
+
+- 3.What user is shown differs depending on if they are logged in or not.
+
+  - The navbar links change depending on if a user is logged in or not.
+  
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
