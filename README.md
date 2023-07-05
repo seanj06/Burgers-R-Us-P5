@@ -363,6 +363,46 @@ Some layout changes were made to the site during development which do not match 
 
 </details>
 
+#### **Database Schema**
+
+Below is a diagram of the database models and how the fields link to each other. The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi90PqHu_b_AhWa-O0KHS7BClgYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2tw3FgBHPxIXeKTXXZAEwetE-TcwcuCzi-BnwtTQPU834-ifaH8-B0h__L-Ceg30ALEyL_ctMEAmYRxZ7LZtE50gJ-NJQ61879X_YbrZrhdohEpAWnk16qjJ5Ptid2YD00Q1dIwjKIWYR9ko&sig=AOD64_3SnEZxUdPFejWzWe0iKN0C0E-VXA&q&adurl&ved=2ahUKEwiG3vSHu_b_AhWGTMAKHZllD60Q0Qx6BAgJEAE)
+
+![database-schema](docs/wireframes/database-schema.png)
+
+#### **User Model**
+
+The User model is the default django User that comes pre installed with django and links to all custom models in some way.
+
+#### **Category Model**
+
+The category links to the Sub Category model on the sub_category field through a ManyToManyField.
+
+#### **Order Model**
+
+The Order model links to the Profile model on the user_profile field through a ForeignKey
+
+#### **OrderItem Model**
+
+The OrderItem model links to the Order model on the order field through a ForeignKey and the Food model on the food field through a ForeignKey.
+
+#### **Profile Model**
+
+The Profile Model links to the User model on the user field through a OneToOneField.
+
+#### **Contact Model**
+
+The Contact Model links to the User model on the user field through a ForeignKey
+
+#### **Review Model**
+
+The Review model links to the User model on the author field through a ForeignKey
+
+#### **Food Model**
+
+The Food model links to both the Category and SubCategory models through a ForeignKey.
+
+
+
 
 
 
