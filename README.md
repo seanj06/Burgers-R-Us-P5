@@ -71,6 +71,8 @@ Link to the live site : [Burgers R-Us](https://burgers-r-us1.herokuapp.com/)
 
 As my fifth project for the [Code Institute](https://codeinstitute.net/) 5P course, the goal of the project is to demonstrate all of the skills I have learned in the course so far including languages such as HTML, CSS, Javascript and Python. Frameworks such as Django and Bootstrap and version control technologies such as Git and Github.
 
+[Top of page &uarr;](#contents)
+
 ## **UX**
 
 ## **The Strategy Plane**
@@ -98,6 +100,8 @@ The design of the overall site is aimed to be eye catching for the users and eas
 - To provide users with the ability to contact the site owners about any issues or queries
 - To provide users with the ability to search fro different products in a wide variety of different ways.
 
+[Top of page &uarr;](#contents)
+
 ## **The Scope Plane**
 
 - CRUD Ability for authenticated users on Reviews and profile info
@@ -105,6 +109,8 @@ The design of the overall site is aimed to be eye catching for the users and eas
 - Restricted site features for authenticated and non-authenticated users such as adding and liking reviews, saving profile info and contact section.
 - Restricted site features for staff such as adding, editing and deleting products.
 - Full responsiveness for all screen sizes down to 320px including different navbar layout for medium to small screens.
+
+[Top of page &uarr;](#contents)
 
 ## **Agile Planning**
 
@@ -178,6 +184,8 @@ This Epic had 5 user stories attached and involved setting up the profile models
 
 5. **[USER STORY: Order History #35](https://github.com/seanj06/Burgers-R-Us-P5/issues/35)**
 
+[Top of page &uarr;](#contents)
+
 #### **EPIC: Home page creation [Milestone #6](https://github.com/seanj06/Burgers-R-Us-P5/milestone/4)**
 
 This Epic had 5 user stories attached and involved setting up the navbar, search functionality and styling for the home page
@@ -230,6 +238,8 @@ This Epic had 11 user stories attached and involved all crud functionality acros
 
 11. **[USER STORY: View Items in cart #16](https://github.com/seanj06/Burgers-R-Us-P5/issues/16)**
 
+[Top of page &uarr;](#contents)
+
 #### **EPIC: U/X [Milestone #9](https://github.com/seanj06/Burgers-R-Us-P5/milestone/14)**
 
 This Epic had 6 user stories attached and involved finishing off the styling of pages for u/x
@@ -255,6 +265,8 @@ This Epic had 3 user stories attached and involved SEO optimization
 2. **[USER STORY: XML sitemap #51](https://github.com/seanj06/Burgers-R-Us-P5/issues/51)**
 
 3. **[USER STORY: Robots.txt file #52](https://github.com/seanj06/Burgers-R-Us-P5/issues/52)**
+
+[Top of page &uarr;](#contents)
 
 #### **EPIC: Product Page [Milestone #11](https://github.com/seanj06/Burgers-R-Us-P5/milestone/13?closed=1)**
 
@@ -287,6 +299,8 @@ This Epic had 4 user stories and involved all testing including automated testin
 The backlog currently has 1 unfinished user story in it. Products special offer page which was not completed due to time constraints. This will be discussed further in the testing user stories section
 
 1.**[USER STORY: Product Special Offers page #22](https://github.com/seanj06/Burgers-R-Us-P5/issues/22)**
+
+[Top of page &uarr;](#contents)
 
 ## **The Skeleton Plane**
 
@@ -415,6 +429,8 @@ Some layout changes were made to the site during development which do not match 
 
 </details>
 
+[Top of page &uarr;](#contents)
+
 #### **Database Schema**
 
 Below is a diagram of the database models and how the fields link to each other. The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi90PqHu_b_AhWa-O0KHS7BClgYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2tw3FgBHPxIXeKTXXZAEwetE-TcwcuCzi-BnwtTQPU834-ifaH8-B0h__L-Ceg30ALEyL_ctMEAmYRxZ7LZtE50gJ-NJQ61879X_YbrZrhdohEpAWnk16qjJ5Ptid2YD00Q1dIwjKIWYR9ko&sig=AOD64_3SnEZxUdPFejWzWe0iKN0C0E-VXA&q&adurl&ved=2ahUKEwiG3vSHu_b_AhWGTMAKHZllD60Q0Qx6BAgJEAE)
@@ -453,10 +469,7 @@ The Review model links to the User model on the author field through a ForeignKe
 
 The Food model links to both the Category and SubCategory models through a ForeignKey.
 
-
-
-
-
+[Top of page &uarr;](#contents)
 
 ## **The Structure Plane**
 
@@ -561,6 +574,8 @@ The review section is just below the contact us section and shows the users a bu
 
 The footer lives at the bottom of the home page and contains 4 icon links to facebook, twitter, instagram and github. It also gives users the message that this site is a work of fiction and developer name and date.
 
+[Top of page &uarr;](#contents)
+
 #### **Products Page**
 
 ![products-page](docs/features/products-page.png)
@@ -619,6 +634,8 @@ If a staff member is logged in they are shown 2 button at the bottom of the card
 
 ![product-edit-delete-btns](docs/features/product-edit-delete-btns.png)
 
+[Top of page &uarr;](#contents)
+
 #### **Product Detail Page**
 
 ![product-detail-page](docs/features/product-detail-page-logged-out.png)
@@ -666,6 +683,8 @@ After editing the product they are redirected back to the products page and show
 
 ![product-updated-toast](docs/features/edit-product-toast.png)
 
+[Top of page &uarr;](#contents)
+
 #### **Add Product Page**
 
 Staff members can access the add product page by clicking the product management link in the my account dropdown menu on the navbar.
@@ -681,6 +700,8 @@ On clicking the link they are brought to a page which contains the form to add a
 If a valid form is submitted a success message is shown telling the user that the product was successfully added and they are redirected back to the products page
 
 ![add-product-toast](docs/features/add-product-toast.png)
+
+[Top of page &uarr;](#contents)
 
 #### **Review Page**
 
@@ -744,6 +765,8 @@ Logged out users can still access the reviews page and read reviews but they wil
 
 ![review-logged-out](docs/features/review-logged-out.png)
 
+[Top of page &uarr;](#contents)
+
 #### **Contact Page**
 
 ![contact-page](docs/features/contact-page.png)
@@ -769,6 +792,8 @@ On valid form submission the user is brought to the contact success page showing
 The users log in and email are used as default info for the contact form so the user will receive a confirmation email to the email address they signed upto the site with
 
 ![contact-email](docs/features/contact-enquiry-email.png)
+
+[Top of page &uarr;](#contents)
 
 #### **Profile Page**
 
@@ -799,6 +824,9 @@ They will also be shown an alert message telling them that this is a past comfir
 
 ![order-history-page](docs/features/order-history.png)
 
+[Top of page &uarr;](#contents)
+
+
 #### **Cart**
 
 ![cart](docs/features/cart-page.png)
@@ -818,6 +846,8 @@ If the user removes a product from their cart they are shown a success message t
 ![cart-remove](docs/features/cart-remove-toast.png)
 
 Users are also shown 2 buttons at the bottom of the cart page. 1 to go back to products and 1 to proceed and checkout.
+
+[Top of page &uarr;](#contents)
 
 #### **Checkout Page**
 
@@ -871,6 +901,8 @@ The user will receive an email to their entered email address with all of the or
 **Stripe**
 
 All of the card payment elements on the checkout form are handled by Stripe Test account
+
+[Top of page &uarr;](#contents)
 
 #### **Login, Logout And Register Pages**
 
@@ -928,6 +960,8 @@ If the user presses the cancel button they are redirected back to the home page 
 
 ![logout-toast](docs/features/logout-toast.png)
 
+[Top of page &uarr;](#contents)
+
 #### **Custom Error pages**
 
 Custom Error 404, 403 and 500 error pages were made to match the theme of the rest of the site
@@ -944,6 +978,8 @@ Custom Error 404, 403 and 500 error pages were made to match the theme of the re
 
 ![403](docs/features/403-page.png)
 
+[Top of page &uarr;](#contents)
+
 #### **Favicon**
 
 A custom favicon was built for the site which is A gold yellow B on with a dark gray background which matches the theme of the site.
@@ -951,6 +987,8 @@ A custom favicon was built for the site which is A gold yellow B on with a dark 
 ![favicon](docs/features/favicon.png)
 
 The favicon was built on [favicon.io](https://favicon.io/favicon-generator/)
+
+[Top of page &uarr;](#contents)
 
 ### **Future Features**
 
@@ -969,6 +1007,8 @@ Another feature I would like to implement in the future is an in site order trac
 #### **Customising Food**
 
 The ability for users to customise the food they are ordering is another feature I would like to implement in the future.
+
+[Top of page &uarr;](#contents)
 
 ## **The Surface Plane**
 
@@ -991,6 +1031,8 @@ Two fonts were used throughout the site. All of the heading and hero text use 'B
 #### **Imagery**
 
 All site images including Product images were taken from [Pexels.com](https://www.pexels.com/)
+
+[Top of page &uarr;](#contents)
 
 ## **Search Engine Optimization (SEO)**
 
@@ -1017,6 +1059,8 @@ When the site was finished being crawled the file was created which I downloaded
 ### **Robots.txt**
 
 A robots.txt file was also created in the root directory which links to the sitemap. In this file is a list of urls that cannot be crawled.
+
+[Top of page &uarr;](#contents)
 
 ## **Technologies Used**
 
@@ -1074,9 +1118,13 @@ This project provides first-class OAuth library support for Requests.
 - [Pillow](https://pypi.org/project/Pillow/) - This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
 - [jmespath](https://pypi.org/project/jmespath/) - JMESPath (pronounced “james path”) allows you to declaratively specify how to extract elements from a JSON document.
 
+[Top of page &uarr;](#contents)
+
 ## **Testing**
 
 All testing that was done for the project can be Found In [TESTING.md](TESTING.md)
+
+[Top of page &uarr;](#contents)
 
 
 
