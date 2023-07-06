@@ -874,6 +874,199 @@ This user story had a should-have label
 
 [Top of page &uarr;](#contents)
 
+### **EPIC: Stripe Setup**
+
+#### 48. [USER STORY: Checkout Success](https://github.com/seanj06/Burgers-R-Us-P5/issues/30)
+
+As a developer I can write code that lets users checkout successfully so that the checkout process functions correctly
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Users are given the option to save their order to their profile.
+
+  - All orders are saved to the users profile after successful checkout
+
+- 2.Users are given success message on successful checkout
+
+  - Users are shown a success toast with their order number on successful checkout
+
+- 3.An email is sent to users with order number and delivery time
+
+  - Users receive an email with all of their order details to their inputted email address on successful checkout
+
+#### 49. [USER STORY: Render Stripe Field To Template](https://github.com/seanj06/Burgers-R-Us-P5/issues/29)
+
+As a developer I can render a stripe field on any relevant templates so that users have a way to checkout using a payment method with stripe
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Users are shown stripe field on the checkout view
+
+  - The stripe payment field is rendered at the bottom of the checkout form
+
+- 2.Secret Api key does not get into production commit
+
+  - The secret keys were used as enviroment variables so were not commited into production
+
+#### 50. [USER STORY: Heroku stripe setup](https://github.com/seanj06/Burgers-R-Us-P5/issues/9)
+
+As a developer I can link my stripe account to heroku so that all of the stripe features work correctly on my deployed app
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.Ensure all stripe features work correctly on deployed site
+
+  - Both stripe webhooks and payments were tested on both the production database and stripe test account.
+
+#### 51. [USER STORY: Webhooks](https://github.com/seanj06/Burgers-R-Us-P5/issues/31)
+
+As a developer I can set up webhooks so that I can ensure an order is created in the database even if a problem occurs while the user is making an order.
+
+This user story had a could-have label
+
+**Acceptance Criteria**
+
+- 1.Webhook class contains payment intent succeeded method
+
+  - Payment intent succeeded is included in the webhook
+
+- 2.Webhook class contains payment fail method
+
+  - Payment fail method is included in the webhook
+
+- 3.Webhooks tested to ensure functionality
+
+  - Webhooks were tested on both the terminal and stripe
+
+[Top of page &uarr;](#contents)
+
+### **EPIC: Testing**
+
+#### 52. [USER STORY: Python Automated testing](https://github.com/seanj06/Burgers-R-Us-P5/issues/53)
+
+As a developer I can write automated tests so that I can ensure my code functions correctly
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.All files in apps are tested
+
+  - An attempt was made to test all files in all apps
+
+- 2.At least 75% overall coverage between all apps
+
+  - Total coverage for all apps was 90%
+
+#### 53. [USER STORY: Python manual testing](https://github.com/seanj06/Burgers-R-Us-P5/issues/54)
+
+As a developer I can manually test the code that want covered in automated testing so that all of my code is tested in some way
+
+This user story had a should-have label
+
+**Acceptance Criteria**
+
+- 1.All python code is manually tested that wasn't covered in automated testing
+
+  - All code that was missed in the automated testing was manually tested.
+
+#### 54. [USER STORY: Code validation](https://github.com/seanj06/Burgers-R-Us-P5/issues/55)
+
+As a developer I can validate my code so that it passes through code validators and follows best practices
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.All HTML code passes validation
+
+  - All html was passed through the w3c validator and passed with no errors.
+
+- 2.All CSS code passes validation
+
+  - All css code was passed through the jigsaw validator and passed with no errors
+
+- 3.All python code passes validation
+
+  - All python code was passed through the pep8 validatior and passed with no errors
+
+- 4.All javascript code passes validation
+
+  - All javascript code was passed through the jshint validator and passed with no errors
+
+#### 55. [USER STORY: Lighthouse testing](https://github.com/seanj06/Burgers-R-Us-P5/issues/56)
+
+As a developer I can test my site on the lighthouse chrome extension so that I can ensure it has good performance, SEO and accessibility
+
+This user story had a must-have label
+
+**Acceptance Criteria**
+
+- 1.All site pages have a high SEO, accessibility and performance rating
+
+  - All pages passed lighthouse validation with high scores all round
+
+- 2.All site pages are tested through both mobile and desktop
+
+  - Both desktop and mobile results were tested and are available to view from the lighthouse testing section.
+
+[Top of page &uarr;](#contents)
+
+### **Backlog(Unfinished User Stories)**
+
+#### 56. [As a customer I can view all special offers so that I can take advantage of any deals](https://github.com/seanj06/Burgers-R-Us-P5/issues/22)
+
+This user story had a wont-have label
+
+This user story was not completed due to time constraints but would be the first future feature added when time allows as I think
+this would add a lot of value to the site.
+
+**Acceptance Criteria**
+
+- 1.Users can navigate to special offers page from the homepage and products page
+
+  - This acceptance criteria was not completed due to time constraints
+
+- 2.Special offers page shows users all deals
+
+  - This acceptance criteria was not completed due to time constraints
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
