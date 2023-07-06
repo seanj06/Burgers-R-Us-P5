@@ -4,10 +4,10 @@ from datetime import datetime, timedelta, time
 DELIVERY_TIME_DELAY = 30
 
 OPENING_HOURS = {
-    0: {'start': '11:00', 'end': '21:00'},   # Monday
-    1: {'start': '11:00', 'end': '21:00'},   # Tuesday
-    2: {'start': '11:00', 'end': '21:00'},   # Wednesday
-    3: {'start': '11:00', 'end': '21:00'},   # Thursday
+    0: {'start': '11:00', 'end': '23:00'},   # Monday
+    1: {'start': '11:00', 'end': '23:00'},   # Tuesday
+    2: {'start': '11:00', 'end': '23:00'},   # Wednesday
+    3: {'start': '11:00', 'end': '23:00'},   # Thursday
     4: {'start': '12:00', 'end': '01:30'},   # Friday
     5: {'start': '12:00', 'end': '02:30'},   # Saturday
     6: {'start': '12:00', 'end': '00:30'},   # Sunday
