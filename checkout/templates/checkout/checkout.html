@@ -44,14 +44,15 @@
                 {% for item in cart_items %}
                 <div class="row">
                     <div class="col-2 mb-1">
-                        <a href="{% url 'product_detail' item.product.id %}">
+                        <a href="{% url 'product_detail' item.product.id %}" aria-label="{{ item.product.name }}">
                             {% if item.product.image %}
-                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
                             <img class="w-100"
                                 src="https://burgers-r-us1.s3.eu-west-1.amazonaws.com/media/no-image.webp"
                                 alt="{{ product.name }}">
                             {% endif %}
+                            <span class="sr-only">{{ item.product.name }}</span>
                         </a>
                     </div>
                     <div class="col-7">
