@@ -1220,6 +1220,22 @@ I gathered reports for both desktop and mobile devices.
 ![lh-signout-page-mobile](docs/lighthouse/sign-out-mobile-lh.png)
 </details>
 
+### **Lighthouse Errors**
+
+#### **Mobile Performance Ratings**
+
+All mobile lighthouse performance ratings were severely effected by render blocking recources such as aws, stripe, jquery and bootstrap. 
+After some research I am unsure why this is happening on just mobile and am unable to fix the issue at this time.
+
+![lh-mobile-1](docs/lighthouse/lh-mobile-performance-1.png)
+![lh-mobile-2](docs/lighthouse/lh-mobile-performance-2.png)
+
+#### **Cart Page SEO**
+
+The cart page SEO rating was affected by a "links not crawlable" error.This is due to the cart page being included in the disallow section of the robots.txt file.
+
+![cart-page-seo](docs/lighthouse/cart-links-not-crawlable.png)
+
 
 
 
