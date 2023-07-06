@@ -1037,7 +1037,217 @@ this would add a lot of value to the site.
 
   - This acceptance criteria was not completed due to time constraints
 
-## **Validation  
+## **Validation**
+
+### **Lighthouse Testing**
+
+Lighthouse testing was done done through the chrome devtools by right clicking on the site page, navigation to inspect, then navigating to lighthouse report.
+I gathered reports for both desktop and mobile devices.
+
+#### **Home page**
+
+<details><summary>Home Page Desktop</summary>
+
+![lh-home-page-desktop](docs/lighthouse/homepage-desktop-lh.png)
+</details>
+
+<details><summary>Home Page Mobile</summary>
+
+![lh-home-page-mobile](docs/lighthouse/homepage-mobile-lh.png)
+</details>
+
+#### **Product Page**
+
+<details><summary>Product Page Desktop</summary>
+
+![lh-product-page-desktop](docs/lighthouse/products-desktop-lh.png)
+</details>
+
+<details><summary>Product Page Mobile</summary>
+
+![lh-product-page-mobile](docs/lighthouse/products-mobile-lh.png)
+</details>
+
+#### **Product Detail Page**
+
+<details><summary>Product Detail Page Desktop</summary>
+
+![lh-product-detail-page-desktop](docs/lighthouse/product-detail-desktop-lh.png)
+</details>
+
+<details><summary>Product Detail Page Mobile</summary>
+
+![lh-product-detail-page-mobile](docs/lighthouse/product-detail-mobile-lh.png)
+</details>
+
+#### **Edit Product Page**
+
+<details><summary>Edit Product Page Desktop</summary>
+
+![lh-edit-product-page-desktop](docs/lighthouse/edit-product-desktop-lh.png)</details>
+
+<details><summary>Edit Product Page Mobile</summary>
+
+![lh-edit-product-page-mobile](docs/lighthouse/edit-product-desktop-mobile.png)</details>
+
+#### **Add Product Page**
+
+<details><summary>Add Product Page Desktop</summary>
+
+![lh-add-product-page-desktop](docs/lighthouse/add-product-desktop-lh.png)</details>
+
+<details><summary>Add Product Page Mobile</summary>
+
+![lh-add-product-page-mobile](docs/lighthouse/add-product-mobile-lh.png)</details>
+
+#### **Review Page**
+
+<details><summary>Review Page Desktop</summary>
+
+![lh-review-page-desktop](docs/lighthouse/review-desktop-lh.png)
+</details>
+
+<details><summary>Review Page Mobile</summary>
+
+![lh-review-page-mobile](docs/lighthouse/review-mobile-lh.png)
+</details>
+
+#### **Edit Review Page**
+
+<details><summary>Edit Review Page Desktop</summary>
+
+![lh-edit-review-page-desktop](docs/lighthouse/edit-review-desktop-lh.png)
+</details>
+
+<details><summary>Edit Review Page Mobile</summary>
+
+![lh-edit-review-page-mobile](docs/lighthouse/edit-product-desktop-mobile.png)
+</details>
+
+#### **Contact Page**
+
+<details><summary>Contact Page Desktop</summary>
+
+![lh-contact-page-desktop](docs/lighthouse/contact-desktop-lh.png)
+</details>
+
+<details><summary>Contact Page Mobile</summary>
+
+![lh-contact-page-mobile](docs/lighthouse/contact-mobile-lh.png)
+</details>
+
+#### **Cart Page**
+
+<details><summary>Cart Page Desktop</summary>
+
+![lh-cart-page-desktop](docs/lighthouse/cart-desktop-lh.png)
+</details>
+
+<details><summary>Cart Page Mobile</summary>
+
+![lh-cart-page-mobile](docs/lighthouse/cart-mobile-lh.png)
+</details>
+
+#### **Checkout Page**
+
+<details><summary>Checkout Page Desktop</summary>
+
+![lh-checkout-page-desktop](docs/lighthouse/checkout-desktop-lh.png)
+</details>
+
+<details><summary>Checkout Page Mobile</summary>
+
+![lh-checkout-page-mobile](docs/lighthouse/checkout-mobile-lh.png)
+</details>
+
+#### **Checkout Success Page**
+
+<details><summary>Checkout Success Page Desktop</summary>
+
+![lh-checkout-success-page-desktop](docs/lighthouse/checkout-success-desktop-lh.png)
+</details>
+
+<details><summary>Checkout Success Page Mobile</summary>
+
+![lh-checkout-success-page-mobile](docs/lighthouse/checkout-success-mobile-lh.png)
+</details>
+
+#### **Profile Page**
+
+<details><summary>Profile Page Desktop</summary>
+
+![lh-profile-page-desktop](docs/lighthouse/profile-page-desktop-lh.png)
+</details>
+
+<details><summary>Profile Page Mobile</summary>
+
+![lh-profile-page-mobile](docs/lighthouse/profile-page-mobile-lh.png)
+</details>
+
+#### **Sign Up Page**
+
+<details><summary>Sign-Up Page Desktop</summary>
+
+![lh-signup-page-desktop](docs/lighthouse/signup-desktop-lh.png)
+</details>
+
+<details><summary>Sign-Up Page Mobile</summary>
+
+![lh-signup-page-mobile](docs/lighthouse/signup-mobile-lh.png)
+</details>
+
+#### **Sign In Page**
+
+<details><summary>Sign-In Page Desktop</summary>
+
+![lh-signin-page-desktop](docs/lighthouse/sign-in-desktop-lh.png)
+</details>
+
+<details><summary>Sign-In Page Desktop</summary>
+
+![lh-signin-page-mobile](docs/lighthouse/sign-in-mobile-lh.png)
+</details>
+
+#### **Sign Out Page**
+
+<details><summary>Sign-Out Page Desktop</summary>
+
+![lh-signout-page-desktop](docs/lighthouse/sign-out-desktop-lh.png)
+</details>
+
+<details><summary>Sign-Out Page Mobile</summary>
+
+![lh-signout-page-mobile](docs/lighthouse/sign-out-mobile-lh.png)
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
