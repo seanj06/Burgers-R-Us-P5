@@ -1039,12 +1039,114 @@ this would add a lot of value to the site.
 
 ## **Validation**
 
+### **Python Code Validation**
+
+The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python code used throughout the project.
+
+#### **Home App**
+
+<details><summary></summary>
+
+![home-page-views](docs/python%20validation/home_views.png)
+![home-page-urls](docs/python%20validation/home_urls.png)
+![home-page-test-views](docs/python%20validation/home_test_views.png)
+</details>
+
+#### **Cart App**
+
+<details><summary></summary>
+
+![cart-contexts](docs/python%20validation/cart_contexts.png)
+![cart-test-views](docs/python%20validation/cart_test_views.png)
+![cart-urls](docs/python%20validation/cart_urls.png)
+![cart-views](docs/python%20validation/cart_views.png)
+</details>
+
+#### **Checkout App**
+
+<details><summary></summary>
+
+![checkout-admin](docs/python%20validation/checkout_admin.png)
+![checkout-delivery-times](docs/python%20validation/checkout_delivery_times.png)
+![checkout-form](docs/python%20validation/checkout_forms.png)
+![checkout-models](docs/python%20validation/checkout_models.png)
+![checkout-signals](docs/python%20validation/checkout_signals.png)
+![checkout-test-delivery](docs/python%20validation/checkout_test_delivery_times.png)
+![checkout-test-forms](docs/python%20validation/checkout_test_forms.png)
+![checkout-test-models](docs/python%20validation/checkout_test_models.png)
+![checkout-test-signals](docs/python%20validation/checkout_test_signals.png)
+![checkout-urls](docs/python%20validation/checkout_urls.png)
+![checkout-views](docs/python%20validation/checkout_views.png)
+![checkout-webhook-handler](docs/python%20validation/checkout_webhook_handler.png)
+
+![checkout-webhooks](docs/python%20validation/checkout_webhooks.png)
+
+</details>
+
+#### **Contact App**
+
+<details><summary></summary>
+
+![contact-form](docs/python%20validation/contact_forms.png)
+![contact-model](docs/python%20validation/contact_models.png)
+![contact-test-model](docs/python%20validation/contact_test_models.png)
+![contact-test-views](docs/python%20validation/contact_test_views.png)
+![contact-urls](docs/python%20validation/contact_urls.png)
+![contact-views](docs/python%20validation/contact_views.png)
+</details>
+
+#### **Product App**
+
+<details><summary></summary>
+
+![product-form](docs/python%20validation/product_form.png)
+![product-model](docs/python%20validation/product_model.png)
+![product-test-form](docs/python%20validation/product_test_form.png)
+![product-test-model](docs/python%20validation/product_test_model.png)
+![product-test-view](docs/python%20validation/product_test_view.png)
+![product-url](docs/python%20validation/product_urls.png)
+![product-views](docs/python%20validation/product_views.png)
+![product-widgets](docs/python%20validation/product_widgets.png)
+</details>
+
+#### **Profile App**
+
+<details><summary></summary>
+
+![profile-form](docs/python%20validation/profile_form.png)
+![profile-model](docs/python%20validation/profile_model.png)
+![profile-test-form](docs/python%20validation/profile_test_form.png)
+![profile-test-model](docs/python%20validation/profile_test_model.png)
+![profile-test-view](docs/python%20validation/profile_test_views.png)
+![profile-urls](docs/python%20validation/profile_urls.png)
+![profile-views](docs/python%20validation/profile_views.png)
+</details>
+
+#### **Review App**
+
+<details><summary></summary>
+
+![review-form](docs/python%20validation/review_form.png)
+![review-model](docs/python%20validation/review_model.png)
+![review-test-model](docs/python%20validation/review_test_model.png)
+![review-test-view](docs/python%20validation/review_test_view.png)
+![review-urls](docs/python%20validation/review_urls.png)
+![review-views](docs/python%20validation/review_views.png)
+</details>
+
+
+
+
+
+
+
+
 ### **Lighthouse Testing**
 
 Lighthouse testing was done done through the chrome devtools by right clicking on the site page, navigation to inspect, then navigating to lighthouse report.
 I gathered reports for both desktop and mobile devices.
 
-#### **Home page**
+#### **Home Page Lighthouse**
 
 <details><summary>Home Page Desktop</summary>
 
@@ -1056,7 +1158,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-home-page-mobile](docs/lighthouse/homepage-mobile-lh.png)
 </details>
 
-#### **Product Page**
+#### **Product Page Lighthouse**
 
 <details><summary>Product Page Desktop</summary>
 
@@ -1068,7 +1170,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-product-page-mobile](docs/lighthouse/products-mobile-lh.png)
 </details>
 
-#### **Product Detail Page**
+#### **Product Detail Page Lighthouse**
 
 <details><summary>Product Detail Page Desktop</summary>
 
@@ -1080,7 +1182,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-product-detail-page-mobile](docs/lighthouse/product-detail-mobile-lh.png)
 </details>
 
-#### **Edit Product Page**
+#### **Edit Product Page Lighthouse**
 
 <details><summary>Edit Product Page Desktop</summary>
 
@@ -1090,7 +1192,7 @@ I gathered reports for both desktop and mobile devices.
 
 ![lh-edit-product-page-mobile](docs/lighthouse/edit-product-desktop-mobile.png)</details>
 
-#### **Add Product Page**
+#### **Add Product Page Lighthouse**
 
 <details><summary>Add Product Page Desktop</summary>
 
@@ -1100,7 +1202,7 @@ I gathered reports for both desktop and mobile devices.
 
 ![lh-add-product-page-mobile](docs/lighthouse/add-product-mobile-lh.png)</details>
 
-#### **Review Page**
+#### **Review Page Lighthouse**
 
 <details><summary>Review Page Desktop</summary>
 
@@ -1112,7 +1214,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-review-page-mobile](docs/lighthouse/review-mobile-lh.png)
 </details>
 
-#### **Edit Review Page**
+#### **Edit Review Page Lighthouse**
 
 <details><summary>Edit Review Page Desktop</summary>
 
@@ -1124,7 +1226,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-edit-review-page-mobile](docs/lighthouse/edit-product-desktop-mobile.png)
 </details>
 
-#### **Contact Page**
+#### **Contact Page Lighthouse**
 
 <details><summary>Contact Page Desktop</summary>
 
@@ -1136,7 +1238,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-contact-page-mobile](docs/lighthouse/contact-mobile-lh.png)
 </details>
 
-#### **Cart Page**
+#### **Cart Page Lighthouse**
 
 <details><summary>Cart Page Desktop</summary>
 
@@ -1148,7 +1250,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-cart-page-mobile](docs/lighthouse/cart-mobile-lh.png)
 </details>
 
-#### **Checkout Page**
+#### **Checkout Page Lighthouse**
 
 <details><summary>Checkout Page Desktop</summary>
 
@@ -1160,7 +1262,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-checkout-page-mobile](docs/lighthouse/checkout-mobile-lh.png)
 </details>
 
-#### **Checkout Success Page**
+#### **Checkout Success Page Lighthouse**
 
 <details><summary>Checkout Success Page Desktop</summary>
 
@@ -1172,7 +1274,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-checkout-success-page-mobile](docs/lighthouse/checkout-success-mobile-lh.png)
 </details>
 
-#### **Profile Page**
+#### **Profile Page Lighthouse**
 
 <details><summary>Profile Page Desktop</summary>
 
@@ -1184,7 +1286,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-profile-page-mobile](docs/lighthouse/profile-page-mobile-lh.png)
 </details>
 
-#### **Sign Up Page**
+#### **Sign Up Page Lighthouse**
 
 <details><summary>Sign-Up Page Desktop</summary>
 
@@ -1196,7 +1298,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-signup-page-mobile](docs/lighthouse/signup-mobile-lh.png)
 </details>
 
-#### **Sign In Page**
+#### **Sign In Page Lighthouse**
 
 <details><summary>Sign-In Page Desktop</summary>
 
@@ -1208,7 +1310,7 @@ I gathered reports for both desktop and mobile devices.
 ![lh-signin-page-mobile](docs/lighthouse/sign-in-mobile-lh.png)
 </details>
 
-#### **Sign Out Page**
+#### **Sign Out Page Lighthouse**
 
 <details><summary>Sign-Out Page Desktop</summary>
 
