@@ -1120,6 +1120,65 @@ With a total of 99% coverage
 
 ![review-app-coverage](docs/automated%20testing/review-app-coverage.png)
 
+## **Manual Testing**
+
+### **Automated Testing Missing Statements**
+
+As specified in the automated testing section the missing statements were manually tested to get full coverage.
+
+#### **Cart App**
+
+The cart app had 1 missing statement in the automated testing which was the quantity of the cart being updated on adding a product
+
+![cart-missing-statement](docs/manual%20testing/cart-missing-statement.png)
+
+To test this manually I added a product to my cart and ensured the success toast showed up and the quantity of item showed up on the cart
+
+![cart-test-toast](docs/manual%20testing/cart-toast-manual-test.png)
+
+#### **Checkout App**
+
+The checkout app was not included in the automated testing because of the stripe functionality so had a decent total of missing statements which wil be broken into sections.
+
+**Delivery Time form functionality**
+
+![delivery-time-statements](docs/manual%20testing/checkout-delivery-time-missing-statement.png)
+
+This missing statment included the delivery_time function data being added to the form and the valid form being saved on checkout. To test this i added a product to the cart, ensured the dynamic delivery time functionality was working by ensuring all of the dropdown options were there and submitted the form and checked the database to ensure it saved.
+
+![test-delivery-times](docs/manual%20testing/test-delivery-times.png)
+
+![test-checkout](docs/manual%20testing/test-checkout-success.png)
+
+![test-database](docs/manual%20testing/test-saved-database.png)
+
+**Save Delivery Info To Profile**
+
+![delivery-info-statements](docs/manual%20testing/save-profile-info-missing-statement.png)
+
+This missing statement involved the users delivery info being saved to their profile if they choose to do so.
+
+To test this i made a new profile so the users profile info was blank, made an order and navigated to the users profile to ensure the info was updated.
+
+![test-order-info](docs/manual%20testing/test-order-info.png)
+
+![test-profile-info](docs/manual%20testing/test-profile-info.png)
+
+As expected the profile info matched the saved delivery info.
+
+**Order Confirmation Email**
+
+![email-missing-statement](docs/manual%20testing/order-confirmation-email.png)
+
+This missing statement involved the order confirmation email being sent to the user on successful checkout. To test this I made an order and checked that I received an email on the given email address with the correct order details.
+
+![test-delivery-info-email](docs/manual%20testing/test-delivery-info-email.png)
+
+![test-email](docs/manual%20testing/test-email.png)
+
+As expected the email recieved included the correct order info.
+
+
 
 ## **Validation**
 
