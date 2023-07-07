@@ -1183,7 +1183,29 @@ No errors were returned in testing the review app
 
 All Css files were run through the jigsaw validator. No errors were found.
 
-#### **base.css**
+<details><summary>base.css</summary>
+
+![base.css](docs/css%20validation/base-css.png)
+</details>
+
+<details><summary>checkout.css</summary>
+
+![checkout.css](docs/css%20validation/checkout-css.png)
+</details>
+
+<details><summary>products.css</summary>
+
+![products.css](docs/css%20validation/products-css.png)
+</details>
+
+<details><summary>products.css</summary>
+
+![review.css](docs/css%20validation/review-css.png)
+</details>
+
+
+
+
 
 
 ### **Lighthouse Testing**
