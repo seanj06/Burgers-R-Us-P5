@@ -33,6 +33,16 @@ class TestAllProductsView(TestCase):
             username='testuser', password='testpassword'
             )
 
+    def test_allproducts_view_sorting(self):
+        """
+        Test product sorting
+        """
+        response = self.client.get(
+            reverse("products"), {"sort": "sub_category"}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "products/products.html")
+
     def test_all_products_no_filters(self):
         """
         Unit test for product view with no search filters
@@ -49,6 +59,14 @@ class TestAllProductsView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(self.food1, response.context['products'])
         self.assertNotIn(self.food2, response.context['products'])
+
+    def test_allproducts_search_no_query(self):
+        """
+        Test product searching with no query
+        """
+        response = self.client.get(reverse("products"), {"q": ""})
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse("products"))
 
 
 class TestProductDetailView(TestCase):
@@ -224,7 +242,7 @@ class TestEditProductView(TestCase):
             )
 
         self.assertRedirects(
-            response, reverse('product_detail', args=[self.product.id])
+            response, reverse('products')
             )
         self.product.refresh_from_db()
         self.assertEqual(self.product.name, 'Updated Product')
