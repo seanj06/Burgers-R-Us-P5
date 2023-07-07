@@ -1207,8 +1207,84 @@ All Css files were run through the jigsaw validator. No errors were found.
 
 Because of the django templating language html files could not be testing file by file through the W3 validator, rather they had to be tested by page source code. I tested the html by right clicking on the page, navigating to view page source and manually entering the html into the validator.
 
+#### **HTML Pages No Errors**
+
+<details><summary>Checkout Page</summary>
+
+![html-checkout](docs/html%20validation/hmtl-checkout.png)
+</details>
+
+<details><summary>Checkout Success Page</summary>
+
+![html-checkout-success](docs/html%20validation/html-checkout-success-.png)
+</details>
+
+<details><summary>Sign-Up Page</summary>
+
+![html-sign-up](docs/html%20validation/html%20signup.png)
+</details>
+
+<details><summary>Add Review Page</summary>
+
+![html-add-review](docs/html%20validation/html-add-review.png)
+</details>
+
+<details><summary>Cart Page</summary>
+
+![html-cart](docs/html%20validation/html-cart.png)
+</details>
+
+<details><summary>Contact Page</summary>
+
+![html-contact](docs/html%20validation/html-contact-us.png)
+</details>
+
+<details><summary>Home Page</summary>
+
+![html-home-page](docs/html%20validation/html-homepage.png)
+</details>
+
+<details><summary>Product Detail Page</summary>
+
+![html-product-detail-page](docs/html%20validation/html-product-detail.png)
+</details>
+
+<details><summary>Products Page</summary>
+
+![html-products-page](docs/html%20validation/html-products.png)
+</details>
+
+<details><summary>Profile Page</summary>
+
+![html-profile-page](docs/html%20validation/html-profile.png)
+</details>
+
+<details><summary>Sign-In Page</summary>
+
+![html-sign-in-page](docs/html%20validation/html-sign-in.png)
+</details>
+
+<details><summary>Sign-Out Page</summary>
+
+![html-sign-out-page](docs/html%20validation/html-sign-out.png)
+</details>
 
 
+#### **HTML Errors**
+
+When validating my html I ran into errors on 2 different pages. The review page and the add+edit product pages.
+
+**Review Errors**
+
+![review-errors](docs/html%20validation/html-review-errors.png)
+
+The validator returned 2 errors about extra p tags being generated, however on inspecting the code there were no extra p tags. I concluded that this must be due to the templating language so is unfixable at this time.
+
+**Edit + Add Product Page Errors**
+
+![edit+add-product-page-errors](docs/html%20validation/html-add+edit-product-errors.png)
+
+The validator returned duplicate class errors on this page on the "contains" select dropdown box elements. Since this is a multiselect field and multiple choices are generated which need to have the same class this error is unfixable at this time.
 
 
 ### **Lighthouse Testing**
