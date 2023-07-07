@@ -287,6 +287,14 @@ body {
     border-radius: 0;
 }
 
+/* Profiles */
+
+.profile-text {
+    color: gold;
+    font-size: 1.3rem;
+}
+
+
 
 /*  Media Queries */
 

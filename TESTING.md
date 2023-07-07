@@ -1179,7 +1179,11 @@ No errors were returned in testing the review app
 ![review-template-js](docs/js%20validation/review-template-js.png)
 
 
+### **Css Code Validation**
 
+All Css files were run through the jigsaw validator. No errors were found.
+
+#### **base.css**
 
 
 ### **Lighthouse Testing**
