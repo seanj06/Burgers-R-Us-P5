@@ -1037,6 +1037,90 @@ this would add a lot of value to the site.
 
   - This acceptance criteria was not completed due to time constraints
 
+## **Automated Testing**
+
+Overall 90% of the code was covered in automated testing with 54 total tests.
+
+![coverage-test-numbers](docs/automated%20testing/unit-tests-total-tests.png)
+
+
+All of the missing code will be manually tested in the Manual Testing Section.
+
+![coverage-overall-1](docs/automated%20testing/unit-test-report-1.png)
+![coverage-overall-2](docs/automated%20testing/unit-test-report-2.png)
+![coverage-overall-3](docs/automated%20testing/unit-test-report-3.png)
+
+### **Cart App**
+
+The Cart App had a total of 4 tests
+
+![cart-app-tests](docs/automated%20testing/cart-app-tests.png)
+
+With a total of 96% coverage
+
+![cart-app-coverage](docs/automated%20testing/cart-app-coverage.png)
+
+### **Checkout App**
+
+The Checkout App had a total of 9 tests
+
+![checkout-app-tests](docs/automated%20testing/checkout-app-tests.png)
+
+With a total of 76% coverage
+
+![checkout-app-coverage](docs/automated%20testing/checkout-app-coverage.png)
+
+### **Contact App**
+
+The Contact App had a total of 3 tests
+
+![contact-app-tests](docs/automated%20testing/contact-app-tests.png)
+
+With a total of 100% coverage
+
+![contact-app-coverage](docs/automated%20testing/contact-app-coverage.png)
+
+### **Home App**
+
+The Home App had a total of 1 test
+
+![home-app-tests](docs/automated%20testing/home-app-tests.png)
+
+With a total of 100% coverage
+
+![home-app-coverage](docs/automated%20testing/home-app-coverage.png)
+
+### **Products App**
+
+The Products app had a total of 17 tests
+
+![products-app-tests](docs/automated%20testing/products-app-tests.png)
+
+With a total of 96% coverage
+
+![products-app-coverage](docs/automated%20testing/product-app-coverage.png)
+
+### **Profiles App**
+
+The Profiles App had a total of 6 tests
+
+![profiles-app-tests](docs/automated%20testing/profiles-app-tests.png)
+
+With a total of 100% coverage
+
+![profiles-app-coverage](docs/automated%20testing/profiles-app-coverage.png)
+
+### **Review App**
+
+The Review App had a total of 14 tests
+
+![review-app-tests](docs/automated%20testing/review-app-tests.png)
+
+With a total of 99% coverage
+
+![review-app-coverage](docs/automated%20testing/review-app-coverage.png)
+
+
 ## **Validation**
 
 ### **Python Code Validation**
