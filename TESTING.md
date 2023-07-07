@@ -1134,7 +1134,7 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Pytho
 ![review-views](docs/python%20validation/review_views.png)
 </details>
 
-### **Javascript Code Validation**
+### **Javascript Jshint Validation**
 
 All javascript code was run through the jshint validator. Only 1 error was returned on the stripe_element.js file. "1 undefined variable : stripe". As this code links directly to the stripe element and is from the documentation I am unsure of how to fix it at this time.
 
@@ -1179,7 +1179,7 @@ No errors were returned in testing the review app
 ![review-template-js](docs/js%20validation/review-template-js.png)
 
 
-### **Css Code Validation**
+### **Css Jigsaw Validation**
 
 All Css files were run through the jigsaw validator. No errors were found.
 
@@ -1203,6 +1203,9 @@ All Css files were run through the jigsaw validator. No errors were found.
 ![review.css](docs/css%20validation/review-css.png)
 </details>
 
+### **HTML W3 validation**
+
+Because of the django templating language html files could not be testing file by file through the W3 validator, rather they had to be tested by page source code. I tested the html by right clicking on the page, navigating to view page source and manually entering the html into the validator.
 
 
 

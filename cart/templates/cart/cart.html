@@ -89,15 +89,12 @@
                                     <p class="my-0 text-white">€{{ item.product.price | calc_subtotal:item.quantity }}
                                     </p>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5">
-                                    <hr class="rule">
-                                </td>
+                                <td></td>
                             </tr>
                             {% endfor %}
                             <tr class="text-center">
                                 <td colspan="5" class="pt-5 text-center text-white">
+                                    <hr class="rule">
                                     <p><strong>Cart Total: €{{ total|floatformat:2 }}</strong></p>
                                     <p>Delivery: €{{ delivery|floatformat:2 }}</p>
                                     <h3 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h3>
@@ -151,7 +148,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_button_script.html' %}
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
         // Update quantity on change
         $('.update-link').click(function (e) {
