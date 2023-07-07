@@ -1134,8 +1134,49 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Pytho
 ![review-views](docs/python%20validation/review_views.png)
 </details>
 
+### **Javascript Code Validation**
 
+All javascript code was run through the jshint validator. Only 1 error was returned on the stripe_element.js file. "1 undefined variable : stripe". As this code links directly to the stripe element and is from the documentation I am unsure of how to fix it at this time.
 
+#### **Cart App**
+
+No errors were returned in testing the cart app
+
+**cart.js file**
+
+![cart.js-file](docs/js%20validation/cart-js.png)
+
+**cart template js**
+
+![cart-template-js](docs/js%20validation/cart-template-js.png)
+
+#### **Checkout App**
+
+As mentioned above 1 error was found in testing the javascript on this app. "1 undefined variable : stripe"
+
+**stripe_element.js file**
+
+![stripe_element_js](docs/js%20validation/checkout-stripe-element.png)
+
+#### **Products App**
+
+No errors were returned in testing the products app
+
+**products.js file**
+
+![products.js-file](docs/js%20validation/products-js.png)
+
+**edit and add product template js**
+
+![edit+add-product-js](docs/js%20validation/edit+add-product-template-js.png)
+
+#### **Review App**
+
+No errors were returned in testing the review app
+
+**review template js**
+
+![review-template-js](docs/js%20validation/review-template-js.png)
 
 
 
