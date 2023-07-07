@@ -1,7 +1,7 @@
 $('.update-link').click(function (e) {
     var form = $(this).prev('.update-form');
     form.submit();
-})
+});
 
 // Remove item and reload on click
 $('.remove-item').click(function (e) {
@@ -16,7 +16,7 @@ $('.remove-item').click(function (e) {
         .done(function () {
             location.reload();
         });
-})
+});
 
 $('#sort-selector').change(function () {
     var selector = $(this);
@@ -37,7 +37,7 @@ $('#sort-selector').change(function () {
 
         window.location.replace(currentUrl);
     }
-})
+});
 
 
 // Disable +/- buttons outside 1-99 range

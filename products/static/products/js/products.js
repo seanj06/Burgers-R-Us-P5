@@ -17,7 +17,7 @@ $('#sort-selector').change(function () {
 
         window.location.replace(currentUrl);
     }
-})
+});
 
 
 // Disable +/- buttons outside 1-99 range
