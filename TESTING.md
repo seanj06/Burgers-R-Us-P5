@@ -1152,6 +1152,8 @@ This missing statment included the delivery_time function data being added to th
 
 ![test-database](docs/manual%20testing/test-saved-database.png)
 
+As expected the delivery times were generated and the form data was saved correctly in the database.
+
 **Save Delivery Info To Profile**
 
 ![delivery-info-statements](docs/manual%20testing/save-profile-info-missing-statement.png)
@@ -1177,6 +1179,58 @@ This missing statement involved the order confirmation email being sent to the u
 ![test-email](docs/manual%20testing/test-email.png)
 
 As expected the email recieved included the correct order info.
+
+#### **Products App**
+
+**All_products missing statements**
+
+The missing statments in the all_products view were based around the sort and filtering functionality.
+
+![products-missing-statements](docs/manual%20testing/products-missing-statements.png)
+![products-missing-statement-2](docs/manual%20testing/products-missing-statement-2.png)
+
+To test this I sorted and searched for products in various different ways to ensure proper functionality.
+
+
+**Sorting**
+
+To Test the sorting functionality I sorted Products by Name A-Z, by Namze Z-A, by category A-Z and by category Z-A. As expected all sorting functioned correctly.
+
+Name A-Z
+![sort-name-a-z](docs/manual%20testing/sorting-name-a-z.png)
+
+Name Z-A
+![sort-name-z-a](docs/manual%20testing/sort-category-z-a.png)
+
+**Filtering**
+
+To test the filtering functionality I filtered products by Categories and ensured only the filtered products were returned. As expected all filtering functioned correctly.
+
+Filter Burgers
+![filter-burgers](docs/manual%20testing/filter-burgers.png)
+
+Filter Pizza
+![filter-pizza](docs/manual%20testing/filter-pizza.png)
+
+Filter Sides
+![filter-sides](docs/manual%20testing/filter-sides.png)
+
+**No Products Found Info Toast**
+
+To test this I searched for an item i knew didnt exist in the database and ensured the info toast was shown.
+
+As expected the info toast was shown after an empty search.
+![empty-search-toast](docs/manual%20testing/no-products-found-info-toast.png)
+
+**edit_product missing statement**
+
+The missing statement in the edit_product view was the info toast letting the user know which product they are editing.
+
+![edit-product-toast](docs/manual%20testing/edit_product_missing_statement.png)
+
+To test this I logged in as a superuser to get edit functionality, navigated to the edit product page and ensured the info toast was shown. As expected the info toast was shown.
+
+![edit-producct-info-toast](docs/manual%20testing/edit_product_toast.png)
 
 
 
