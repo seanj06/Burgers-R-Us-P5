@@ -1217,9 +1217,10 @@ Filter Sides
 
 **No Products Found Info Toast**
 
-To test this I searched for an item i knew didnt exist in the database and ensured the info toast was shown.
+To test this I searched for an item I knew didnt exist in the database and ensured the info toast was shown.
 
 As expected the info toast was shown after an empty search.
+
 ![empty-search-toast](docs/manual%20testing/no-products-found-info-toast.png)
 
 **edit_product missing statement**
@@ -1231,6 +1232,44 @@ The missing statement in the edit_product view was the info toast letting the us
 To test this I logged in as a superuser to get edit functionality, navigated to the edit product page and ensured the info toast was shown. As expected the info toast was shown.
 
 ![edit-producct-info-toast](docs/manual%20testing/edit_product_toast.png)
+
+### **Javascript**
+
+No Automated tests were written for javascript code so all of the code was manually tested.
+
+#### **Stripe Element js**
+
+![stripe-elements-js1](docs/manual%20testing%20js/stripe_element_js1.png)
+![stripe-element-js2](docs/manual%20testing%20js/stripe_element_js2.png)
+
+This javascript code was for the stripe card payment element on the checkout page. To test this code I first entered an invalid card number on the stripe element to ensure the error message was rendered correctly. I then entered a valid card number and ensured that the form was disabled and the loading spinner was displayed. Lastly I checked that the form was correctly submitted and there were no console errors on submit.
+
+As expected all tests passed.
+
+Invalid card message
+
+![invalid-card-message](docs/manual%20testing%20js/invalid-card.png)
+
+No error messages on console after checkout
+
+![no-console-errors](docs/manual%20testing%20js/checkout-clear-console.png)
+
+#### **Cart.js**
+
+![cart-js1](docs/manual%20testing%20js/cart-js1.png)
+![cart-js2](docs/manual%20testing%20js/cart-js2.png)
+![cart-js3](docs/manual%20testing%20js/cart-js3.png)
+
+This javascript code was for for the remove and update buttons on the cart page and the incremement and decrement quantity buttons on the quantity selector.
+To test this code I added items to the cart, navigated to the cart page, removed an item from the cart and updated the quantity of items in the cart to ensure functionality. As expected it all functioned correctly and all manual tests passed.
+
+Updated cart item
+
+![updated-cart-item](docs/manual%20testing%20js/update-cart-item.png)
+
+Removed cart item
+
+![removed-cart-item](docs/manual%20testing%20js/remove-cart-item.png)
 
 
 
