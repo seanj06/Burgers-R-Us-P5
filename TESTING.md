@@ -1774,6 +1774,21 @@ The cart page SEO rating was affected by a "links not crawlable" error.This is d
 
 ![cart-page-seo](docs/lighthouse/cart-links-not-crawlable.png)
 
+## **Bugs**
+
+### **Solved Bugs**
+
+| **Bug** | **Bug Description** | **Fix** |
+|---------|---------------------|---------|
+| Cart Update Button | During testing I noticed the cart update button was not disabling when the user entered a quantity over 99 | To fix this I added an extra javascript codeblock to ensure button was only clickable within the 1-99 range. 
+| Item Removel CSRF token | On site development I noticed when trying to remove an item from the cart a console error "missing csrf token" would appear | I concluded that this error was appearing because the javacript code was in an external file linked to the page. Moving the javascript code to the bottom of the template fixed this error. 
+| Delivery Info not being saved | On testing the site I noticed that the users default delivery info was not being saved to their profile if they clicked the "save my info" box. | After inspection I noticed the a typo in the code view and the default info being rendred to the form did not match the field names on the model. After fixing the typos the users delivery info was saved.
+| Delivery Times Data | On site development I noticed the users selected delivery time was not being saved properly in the order | After further testing I concluded that the function that handles generating the delivery times was returning time data whereas my delivery time field on my model was a charfield. After changing the field to a TimeField this error was resolved. 
+| Filtering pagination | On site pagination I noticed that if a user filter searches a product, then navigated to the next page the filter search would reset to all products. | After some research I added extra code to the get parameters in the pagination code to ensure all pagination did not affect filter searching. 
+| Review Text Overflow | On testing the site I noticed review text would overlfow out of the container if the user entered a long word with no whitespace. | To fix this I added a text-wrap css style to make sure the text overflowed onto the next line.
+| Quantity selector incrementing by 2 | On site development I noticed if a user clicked the increment button the quantity would increment by 2 instead of 1 | After reviewing the code I noticed that there were 2 external javascript files linked with the same function which was causing it to execute twice. To fix this bug I removed the duplicate javascript code.
+| Cart not emptying on checkout. | On development of the site I noticed after a user had checked out their cart was not emptying. | After reviewing my code I noticed that the cart delete functionality was outside the correct if/else block. After fixing this the cart emptied.
+
 
 
 
