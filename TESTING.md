@@ -1789,6 +1789,17 @@ The cart page SEO rating was affected by a "links not crawlable" error.This is d
 | Quantity selector incrementing by 2 | On site development I noticed if a user clicked the increment button the quantity would increment by 2 instead of 1 | After reviewing the code I noticed that there were 2 external javascript files linked with the same function which was causing it to execute twice. To fix this bug I removed the duplicate javascript code.
 | Cart not emptying on checkout. | On development of the site I noticed after a user had checked out their cart was not emptying. | After reviewing my code I noticed that the cart delete functionality was outside the correct if/else block. After fixing this the cart emptied.
 
+### **Unsolved Bugs**
+
+#### **Checkout 500 error**
+
+On testing the code I realised that if a user enters whitespace into one of the fields on the checkout form, the form submits and the site throws a 500 server error other than the form being handled on the page and giving the user an invalid form error.
+
+After some research I noticed that this is a tricky error to fix as the form is linked to stripe and the stripe webhooks. I also noticed that this same error is present on the boutique ado walkthrough project so it is currently beyond my skillset to try and fix this error correctly.
+I also concluded that the chances of a user entering whitespace into a checkout form are near to zero so this issue should virtually never arise.
+
+
+
 
 
 
