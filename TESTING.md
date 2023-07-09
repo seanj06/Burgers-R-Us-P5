@@ -1254,13 +1254,13 @@ No error messages on console after checkout
 
 ![no-console-errors](docs/manual%20testing%20js/checkout-clear-console.png)
 
-#### **Cart.js**
+#### **Update and Remove Functionality**
 
 ![cart-js1](docs/manual%20testing%20js/cart-js1.png)
 ![cart-js2](docs/manual%20testing%20js/cart-js2.png)
 ![cart-js3](docs/manual%20testing%20js/cart-js3.png)
 
-This javascript code was for for the remove and update buttons on the cart page and the incremement and decrement quantity buttons on the quantity selector.
+This javascript code was for for the remove and update buttons on the cart and products page and the incremement and decrement quantity buttons on the quantity selector.
 To test this code I added items to the cart, navigated to the cart page, removed an item from the cart and updated the quantity of items in the cart to ensure functionality. As expected it all functioned correctly and all manual tests passed.
 
 Updated cart item
@@ -1270,6 +1270,60 @@ Updated cart item
 Removed cart item
 
 ![removed-cart-item](docs/manual%20testing%20js/remove-cart-item.png)
+
+#### **Cart Quantity Input Limit Handling**
+
+![cart-input-handling](docs/manual%20testing%20js/cart-quantity-input-handling.png)
+
+As the button layout was different on the cart page in comparison to the products page, and extra code block was needed to limit the quantity the user could enter into the quantity selector.To test this I tried to enter a number less than 1, tried to enter a number more than 100 and lastly tried to enter a character that was not a number. As expected all functioned correctly and the manual tests passed.
+
+#### **Products Sort Url Replacement**
+
+![products-url-replace](docs/manual%20testing%20js/products-sort-selector.png)
+
+This javascript code block was responsible for handling the url replacement when sorting products. To test this I sorted products by name in both ascending and descending order and ensured the current url changed to match. As expected the urls changed and the manual tests passed.
+
+Url Ascending sort
+
+![url-ascending](docs/manual%20testing%20js/products-sort-asc.png)
+
+Url Descending sort
+
+![url-descending](docs/manual%20testing%20js/products-sort-desc.png)
+
+#### **Product and Review Delete Confirmation**
+
+![delete-review-confirmation](docs/manual%20testing%20js/delete-review-confirmation.png)
+
+[delete-product-confirmation](docs/manual%20testing%20js/delete-product-confrimation.png)
+
+These javascript code blocks were responsible for handling the showing of the confirmation containers when a user clicks the delete product or review button.
+To test this I logged in as a superuser to gain access to the delete product button, made a review so I had access to the delete review button and clicked delete to ensure the confirmation container appeared.
+As expected in both cases the confirmation container appeared and the manual tests passed.
+
+Delete Product confirmation container
+
+![delete-product-container](docs/manual%20testing%20js/manual-test-delete-products.png)
+
+Delete Review confirmation container
+
+![delete-review-container](docs/manual%20testing%20js/manual-test-delete-review.png)
+
+#### **Review Like Button**
+
+![review-like-btn](docs/manual%20testing%20js/review-js1.png)
+
+This code block was responsible for the toggling of the colour of the like button if pressed and the updating of the likes count when the like button was pressed.
+To test this I made a new review, liked the review to ensure the colour changed and the like count updated. I then unliked the review to ensure the colour changed back and the like count reverted to zero.
+As expected all the manual tests passed.
+
+Review unliked
+
+![review-unliked](docs/manual%20testing%20js/test-review-unliked.png)
+
+Review liked
+
+![review-liked](docs/manual%20testing%20js/test-review-liked.png)
 
 
 

@@ -175,11 +175,10 @@
                     location.reload();
                 });
         });
-
+        // Limit quantity input to between 1-99
         $('.qty_input').on('input', function () {
             var itemId = $(this).data('item_id');
             handleEnableDisable(itemId);
-
             var inputValue = parseInt($(this).val());
             var updateButton = $('#update_' + itemId);
             if (inputValue > 99) {
