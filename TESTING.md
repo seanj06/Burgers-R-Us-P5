@@ -5,6 +5,59 @@ A wide range of testing was carried out during development including, Automated 
 
 [Back to README](/README.md)
 
+## **Contents**
+
+1. [Overview](#overview)
+2. [User Story Testing](#user-story-testing)
+   - [EPIC: Django Installation and app setup](#epic-django-installation-and-app-setup)
+   - [EPIC: First Heroku Deployment](#epic-first-heroku-deployment)
+   - [EPIC: Allauth Installation And Setup](#epic-allauth-installation-and-setup)
+   - [EPIC: User Checkout](#epic-user-checkout)
+   - [EPIC: User profile](#epic-user-profile)
+   - [EPIC: U/X](#epic-ux)
+   - [EPIC: SEO](#epic-seo)
+   - [EPIC: Home page creation](#epic-home-page-creation)
+   - [EPIC: Product Page](#epic-product-page)
+   - [EPIC: Crud Functionality](#epic-crud-functionality)
+   - [EPIC: Stripe Setup](#epic-stripe-setup)
+   - [EPIC: Testing](#epic-testing)
+   - [Backlog(Unfinished User Stories)](#backlogunfinished-user-stories)
+3. [Automated Testing](#automated-testing)  
+   - [Cart App](#cart-app) 
+   - [Checkout App](#checkout-app)
+   - [Contact App](#contact-app)
+   - [Home App](#home-app)
+   - [Products App](#products-app)
+   - [Profiles App](#profiles-app)
+   - [Review App](#review-app)
+4. [Manual Testing](#manual-testing)  
+   - [Automated Testing Missing Statements](#automated-testing-missing-statements) 
+     - [Cart App](#cart-app-1)
+     - [Checkout App](#checkout-app-1)
+     - [Products App](#products-app-1)
+   - [Javascript](#javascript)   
+     - [Stripe Element js](#stripe-element-js)
+     - [Update And Remove Functionality](#update-and-remove-functionality)
+     - [Cart Quantity Input Limit Handling](#cart-quantity-input-limit-handling)
+     - [Products Sort Url Replacement](#products-sort-url-replacement)
+     - [Product and Review Delete Confirmation](#product-and-review-delete-confirmation)
+     - [Review Like Button](#review-like-button)
+5. [Validation](#validation)     
+   - [Python Code Validation](#python-code-validation)
+   - [Javascript Jshint Validation](#javascript-jshint-validation)
+   - [Css Jigsaw Validation](#css-jigsaw-validation)
+   - [HTML W3 validation](#html-w3-validation)
+   - [Lighthouse Testing](#lighthouse-testing)
+   - [Lighthouse Errors](#lighthouse-errors)
+6. [Bugs](#bugs)
+   - [Solved Bugs](#solved-bugs)
+   - [Unsolved Bugs](#unsolved-bugs)
+7. [Responsiveness](#responsiveness)  
+8. [Browser Testing](#browser-testing) 
+
+
+
+
 ## **User Story Testing**
 
 Overall there were 55 completed user stories and 1 uncompleted user story throughout the projects development. They will all be tested below to ensure criteria has been met for each story. The users stories will be broken down into their respetive milestones to be tested.
