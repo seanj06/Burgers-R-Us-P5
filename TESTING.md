@@ -1090,6 +1090,8 @@ this would add a lot of value to the site.
 
   - This acceptance criteria was not completed due to time constraints
 
+[Top of page &uarr;](#contents)
+
 ## **Automated Testing**
 
 Overall 90% of the code was covered in automated testing with 54 total tests.
@@ -1173,6 +1175,8 @@ With a total of 99% coverage
 
 ![review-app-coverage](docs/automated%20testing/review-app-coverage.png)
 
+[Top of page &uarr;](#contents)
+
 ## **Manual Testing**
 
 ### **Automated Testing Missing Statements**
@@ -1207,6 +1211,8 @@ This missing statment included the delivery_time function data being added to th
 
 As expected the delivery times were generated and the form data was saved correctly in the database.
 
+[Top of page &uarr;](#contents)
+
 **Save Delivery Info To Profile**
 
 ![delivery-info-statements](docs/manual%20testing/save-profile-info-missing-statement.png)
@@ -1232,6 +1238,8 @@ This missing statement involved the order confirmation email being sent to the u
 ![test-email](docs/manual%20testing/test-email.png)
 
 As expected the email recieved included the correct order info.
+
+[Top of page &uarr;](#contents)
 
 #### **Products App**
 
@@ -1268,6 +1276,8 @@ Filter Pizza
 Filter Sides
 ![filter-sides](docs/manual%20testing/filter-sides.png)
 
+[Top of page &uarr;](#contents)
+
 **No Products Found Info Toast**
 
 To test this I searched for an item I knew didnt exist in the database and ensured the info toast was shown.
@@ -1285,6 +1295,8 @@ The missing statement in the edit_product view was the info toast letting the us
 To test this I logged in as a superuser to get edit functionality, navigated to the edit product page and ensured the info toast was shown. As expected the info toast was shown.
 
 ![edit-producct-info-toast](docs/manual%20testing/edit_product_toast.png)
+
+[Top of page &uarr;](#contents)
 
 ### **Javascript**
 
@@ -1307,6 +1319,8 @@ No error messages on console after checkout
 
 ![no-console-errors](docs/manual%20testing%20js/checkout-clear-console.png)
 
+[Top of page &uarr;](#contents)
+
 #### **Update and Remove Functionality**
 
 ![cart-js1](docs/manual%20testing%20js/cart-js1.png)
@@ -1324,11 +1338,15 @@ Removed cart item
 
 ![removed-cart-item](docs/manual%20testing%20js/remove-cart-item.png)
 
+[Top of page &uarr;](#contents)
+
 #### **Cart Quantity Input Limit Handling**
 
 ![cart-input-handling](docs/manual%20testing%20js/cart-quantity-input-handling.png)
 
 As the button layout was different on the cart page in comparison to the products page, and extra code block was needed to limit the quantity the user could enter into the quantity selector.To test this I tried to enter a number less than 1, tried to enter a number more than 100 and lastly tried to enter a character that was not a number. As expected all functioned correctly and the manual tests passed.
+
+[Top of page &uarr;](#contents)
 
 #### **Products Sort Url Replacement**
 
@@ -1343,6 +1361,8 @@ Url Ascending sort
 Url Descending sort
 
 ![url-descending](docs/manual%20testing%20js/products-sort-desc.png)
+
+[Top of page &uarr;](#contents)
 
 #### **Product and Review Delete Confirmation**
 
@@ -1362,6 +1382,8 @@ Delete Review confirmation container
 
 ![delete-review-container](docs/manual%20testing%20js/manual-test-delete-review.png)
 
+[Top of page &uarr;](#contents)
+
 #### **Review Like Button**
 
 ![review-like-btn](docs/manual%20testing%20js/review-js1.png)
@@ -1378,7 +1400,7 @@ Review liked
 
 ![review-liked](docs/manual%20testing%20js/test-review-liked.png)
 
-
+[Top of page &uarr;](#contents)
 
 ## **Validation**
 
@@ -1452,6 +1474,8 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Pytho
 ![product-widgets](docs/python%20validation/product_widgets.png)
 </details>
 
+[Top of page &uarr;](#contents)
+
 #### **Profile App**
 
 <details><summary></summary>
@@ -1476,6 +1500,8 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Pytho
 ![review-urls](docs/python%20validation/review_urls.png)
 ![review-views](docs/python%20validation/review_views.png)
 </details>
+
+[Top of page &uarr;](#contents)
 
 ### **Javascript Jshint Validation**
 
@@ -1521,6 +1547,7 @@ No errors were returned in testing the review app
 
 ![review-template-js](docs/js%20validation/review-template-js.png)
 
+[Top of page &uarr;](#contents)
 
 ### **Css Jigsaw Validation**
 
@@ -1545,6 +1572,8 @@ All Css files were run through the jigsaw validator. No errors were found.
 
 ![review.css](docs/css%20validation/review-css.png)
 </details>
+
+[Top of page &uarr;](#contents)
 
 ### **HTML W3 validation**
 
@@ -1612,6 +1641,8 @@ Because of the django templating language html files could not be testing file b
 ![html-sign-out-page](docs/html%20validation/html-sign-out.png)
 </details>
 
+[Top of page &uarr;](#contents)
+
 
 #### **HTML Errors**
 
@@ -1629,6 +1660,7 @@ The validator returned 2 errors about extra p tags being generated, however on i
 
 The validator returned duplicate class errors on this page on the "contains" select dropdown box elements. Since this is a multiselect field and multiple choices are generated which need to have the same class this error is unfixable at this time.
 
+[Top of page &uarr;](#contents)
 
 ### **Lighthouse Testing**
 
@@ -1680,6 +1712,8 @@ I gathered reports for both desktop and mobile devices.
 <details><summary>Edit Product Page Mobile</summary>
 
 ![lh-edit-product-page-mobile](docs/lighthouse/edit-product-desktop-mobile.png)</details>
+
+[Top of page &uarr;](#contents)
 
 #### **Add Product Page Lighthouse**
 
@@ -1751,6 +1785,8 @@ I gathered reports for both desktop and mobile devices.
 ![lh-checkout-page-mobile](docs/lighthouse/checkout-mobile-lh.png)
 </details>
 
+[Top of page &uarr;](#contents)
+
 #### **Checkout Success Page Lighthouse**
 
 <details><summary>Checkout Success Page Desktop</summary>
@@ -1811,6 +1847,8 @@ I gathered reports for both desktop and mobile devices.
 ![lh-signout-page-mobile](docs/lighthouse/sign-out-mobile-lh.png)
 </details>
 
+[Top of page &uarr;](#contents)
+
 ### **Lighthouse Errors**
 
 #### **Mobile Performance Ratings**
@@ -1827,6 +1865,8 @@ The cart page SEO rating was affected by a "links not crawlable" error.This is d
 
 ![cart-page-seo](docs/lighthouse/cart-links-not-crawlable.png)
 
+[Top of page &uarr;](#contents)
+
 ## **Bugs**
 
 ### **Solved Bugs**
@@ -1842,6 +1882,8 @@ The cart page SEO rating was affected by a "links not crawlable" error.This is d
 | Quantity selector incrementing by 2 | On site development I noticed if a user clicked the increment button the quantity would increment by 2 instead of 1 | After reviewing the code I noticed that there were 2 external javascript files linked with the same function which was causing it to execute twice. To fix this bug I removed the duplicate javascript code.
 | Cart not emptying on checkout. | On development of the site I noticed after a user had checked out their cart was not emptying. | After reviewing my code I noticed that the cart delete functionality was outside the correct if/else block. After fixing this the cart emptied.
 
+[Top of page &uarr;](#contents)
+
 ### **Unsolved Bugs**
 
 #### **Checkout 500 error**
@@ -1850,6 +1892,8 @@ On testing the code I realised that if a user enters whitespace into one of the 
 
 After some research I noticed that this is a tricky error to fix as the form is linked to stripe and the stripe webhooks. I also noticed that this same error is present on the boutique ado walkthrough project so it is currently beyond my skillset to try and fix this error correctly.
 I also concluded that the chances of a user entering whitespace into a checkout form are near to zero so this issue should virtually never arise.
+
+[Top of page &uarr;](#contents)
 
 ## **Responsiveness**
 
@@ -1868,6 +1912,8 @@ I tested 10 devices on chrome devtools for responsiveness ranging from large to 
 | Ipad Pro | Pass |
 | Nest Hub Max | Pass |
 
+[Top of page &uarr;](#contents)
+
 ## **Browser Testing**
 
 The site was tested using 4 different browsers. Things looked out for when testing on different browsers included: All styles loading correctly, all pages loading correctly, all images showing correctly, all forms validating correctly and all navigation working correctly.
@@ -1878,6 +1924,8 @@ The site was tested using 4 different browsers. Things looked out for when testi
 | **Safari** | **Pass** |
 | **Firefox** | **Pass** |
 | **Microsoft Edge** | **Pass** |
+
+[Top of page &uarr;](#contents)
 
 
 
