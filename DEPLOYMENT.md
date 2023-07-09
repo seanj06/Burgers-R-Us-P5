@@ -29,8 +29,10 @@ Below were the steps taken to install the relevant packages to setup django on t
   - If the project was created succesfully you will see the django success page.
 12. Create env.py file to secure variables you dont want pushed to github.
 13. In env.py file create 2 variables
+```shell
    - 1. os.environ["SECRET_KEY"] = "any-secret-key-you-want"
    - 2. os.environ["DEVELOPMENT"] = "True"
+```   
 14. Change SECRET_KEY variable in settings.py to - SECRET_KEY = os.environ.get('SECRET_KEY')
 15. Change Debug variable in settings.py to -  DEBUG = "DEVELOPMENT" in os.environ
   - With this change debug will be set to True in development and False in production.
@@ -48,8 +50,13 @@ The following steps were followed to setup the database and link it to the proje
 5. Select the region that is the closest to your location.
 6. Navigate back to the dashboard and click on your created instance.
 7. Copy the url to your clipboard.
-8. Back in your workspace create a new variable in your env.py file and assign it to the copied url - os.environ["DATABASE_URL"] = "postgres://your-database-url"
-9. In settings.py change the database variable to your postgres database using an if else block - if "DATABASE_URL" in os.environ:
+8. Back in your workspace create a new variable in your env.py file and assign it to the copied url -
+```shell
+ os.environ["DATABASE_URL"] = "postgres://your-database-url"
+```
+9. In settings.py change the database variable to your postgres database using an if else block - 
+```shell
+if "DATABASE_URL" in os.environ:
     DATABASES = {
         "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
@@ -60,8 +67,81 @@ else:
             "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
         }
     }
+```
 10. Migrate the project files to your database using - python manage.py migrate.
 11. On the ElephantSQL dashboard navigate to explorer and ensure your project files are there.    
+
+## **AWS Setup**
+
+ This project uses [AWS](https://aws.amazon.com) s3 bucket to serve static files.
+
+The following steps were followed to setup the bucket and connect it to the project.
+
+### **S3 Bucket Setup**
+
+- Search for **S3**.
+- Create a new bucket, give it a name (matching your Heroku app name), and choose the region closest to you.
+- Uncheck **Block all public access**, and acknowledge that the bucket will be public (required for it to work on Heroku).
+- From **Object Ownership**, make sure to have **ACLs enabled**, and **Bucket owner preferred** selected.
+- From the **Properties** tab, turn on static website hosting, and type `index.html` and `error.html` in their respective fields, then click Save.
+- From the **Permissions** tab, paste in the following CORS configuration:
+
+  ```shell
+  [
+  	{
+  		"AllowedHeaders": [
+  			"Authorization"
+  		],
+  		"AllowedMethods": [
+  			"GET"
+  		],
+  		"AllowedOrigins": [
+  			"*"
+  		],
+  		"ExposeHeaders": []
+  	}
+  ]
+  ```
+
+- Copy your **ARN** string.
+- From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
+- Policy Type: **S3 Bucket Policy**
+- Effect: **Allow**
+- Principal: `*`
+- Actions: **GetObject**
+- Amazon Resource Name (ARN): **paste-your-ARN-here**
+- Click **Add Statement**
+- Click **Generate Policy**
+- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
+
+  ```shell
+  {
+  	"Id": "Policy1234567890",
+  	"Version": "2012-10-17",
+  	"Statement": [
+  		{
+  			"Sid": "Stmt1234567890",
+  			"Action": [
+  				"s3:GetObject"
+  			],
+  			"Effect": "Allow",
+  			"Resource": "arn:aws:s3:::your-bucket-name/*"
+  			"Principal": "*",
+  		}
+  	]
+  }
+  ```
+
+- Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
+- Click **Save**.
+
+- From the **Access Control List (ACL)** section, click "Edit" and enable **List** for **Everyone (public access)**, and accept the warning box.
+- If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
+
+
+
+
+
 
 
 
