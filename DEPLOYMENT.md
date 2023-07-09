@@ -35,6 +35,38 @@ Below were the steps taken to install the relevant packages to setup django on t
 15. Change Debug variable in settings.py to -  DEBUG = "DEVELOPMENT" in os.environ
   - With this change debug will be set to True in development and False in production.
 
+## **ElephantSQL Database**
+
+This project uses ElephantSQL for the PostgreSQL Database.
+
+The following steps were followed to setup the database and link it to the project.
+
+1. Sign up for a new ElephantSQL account and login.
+2. From the dashboard click "create new instance".
+3. Name your instance. It is best practice to name the instance the same as your created django project.
+4. Select the Tiny Turtle (Free) plan.
+5. Select the region that is the closest to your location.
+6. Navigate back to the dashboard and click on your created instance.
+7. Copy the url to your clipboard.
+8. Back in your workspace create a new variable in your env.py file and assign it to the copied url - os.environ["DATABASE_URL"] = "postgres://your-database-url"
+9. In settings.py change the database variable to your postgres database using an if else block - if "DATABASE_URL" in os.environ:
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+    }
+10. Migrate the project files to your database using - python manage.py migrate.
+11. On the ElephantSQL dashboard navigate to explorer and ensure your project files are there.    
+
+
+
+
+
 
 
 
