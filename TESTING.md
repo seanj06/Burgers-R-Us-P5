@@ -1798,6 +1798,24 @@ On testing the code I realised that if a user enters whitespace into one of the 
 After some research I noticed that this is a tricky error to fix as the form is linked to stripe and the stripe webhooks. I also noticed that this same error is present on the boutique ado walkthrough project so it is currently beyond my skillset to try and fix this error correctly.
 I also concluded that the chances of a user entering whitespace into a checkout form are near to zero so this issue should virtually never arise.
 
+## **Responsiveness**
+
+I tested 10 devices on chrome devtools for responsiveness ranging from large to small screens down to 320px. Things I was looking out for while testing includes, font sizes, font overflow, ratios, image sizes, image overflow and container overflow.
+
+| **Device** | **Result Pass/Fail** |
+|------------|----------------------|
+| Galaxy Note 2 | Pass |
+| Nexus 5 | Pass |
+| Iphone 4 | Pass |
+| Iphone XR | Pass |
+| Nexus 7 | Pass |
+| Pixel 2 XL | Pass |
+| Kindle Fire HDX | Pass |
+| Ipad Mini | Pass |
+| Ipad Pro | Pass |
+| Nest Hub Max | Pass |
+
+
 
 
 
