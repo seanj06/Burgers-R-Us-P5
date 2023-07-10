@@ -120,7 +120,7 @@ Epics milestones were given Acceptance criteria and the must haves were complete
 
 The Kanban board was created using Github projects and can be located [here]()  and can be viewed to see the completed and backlogged user stories.
 
-![Kanban Board]()
+![Kanban Board](docs/readme%20images/kanban-board.png)
 
 ### **Epics**
 
