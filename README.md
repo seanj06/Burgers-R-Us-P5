@@ -1130,6 +1130,22 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
 
 The final Deployed site can be found [here](https://burgers-r-us1.herokuapp.com/). I have included details of the deployment process in a separate document called [DEPLOYMENT.md](DEPLOYMENT.md)
 
+## **Credits**
+
+### **Project Set Up and Github Template**
+
+- The [Code Institute-Org/gitpod-full-template](https://github.com/Code-Institute-Org/gitpod-full-template) was the github template used to set up the project.
+
+### **Media And Content**
+
+- All placeholder images on the site were taken from [Pexels.com](https://www.pexels.com/)
+- Social media icons were taken from [Font Awesome](https://fontawesome.com/)
+- Text fonts were taken from [Google Fonts](https://fonts.google.com/)
+
+### **Code And Issues**
+
+- The [Django Documentation](https://docs.djangoproject.com/en/4.0/) helped along the way with troubleshooting and understanding django more in general.
+
 
 
 
