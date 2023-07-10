@@ -280,6 +280,29 @@ The following steps were followed to deploy the project on Heroku.
    Once GitHub is chosen, find your repository and connect it to Heroku.
 - Scroll down to Manual Deploy, make sure the "main" branch is selected, and click "Deploy Branch".
 
+## **Forking The Repository**
+
+**To Fork the repository follow these steps:**
+
+1. Go to [Github](https://github.com/) from your browser.
+2. Navigate to the repository named [Burgers-R-Us-P5](https://github.com/seanj06/Burgers-R-Us-P5)
+3. Locate the "fork" button at the top right of the page
+4. Change the name and add a description of the forked repository if you wish to
+5. Click Create Fork.
+6. You should now have a forked version of the repository.
+
+## **Clone The Repository**
+
+**To Clone the repository follow these steps**
+
+1. Go to [Github](https://github.com/) from your browser.
+2. Navigate to the repository named [Burgers-R-Us-P5](https://github.com/seanj06/Burgers-R-Us-P5)
+3. Click on the arrow on the green "Code" button at the top of the page.
+4. Copy the HTTPS url to your clipboard.
+5. In the terminal in your code editor change the directory to the location you want to clone the repository to.
+6. Type "git clone" into the terminal followed by the HTTPS url you copied to your clipboard.
+7. Press enter, your cloned repository should be created in the directory you specified.
+
 
 
 
