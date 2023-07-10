@@ -138,6 +138,61 @@ The following steps were followed to setup the bucket and connect it to the proj
 - From the **Access Control List (ACL)** section, click "Edit" and enable **List** for **Everyone (public access)**, and accept the warning box.
 - If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
 
+### **IAM Group and User setup**
+
+The next steps in setting up the bucket is creating an IAM group and user to give bucket permissions. The IAM group and user was set up following these steps.
+
+#### **Create Group**
+
+- Navigate back to the aws dashboard and search for IAM.
+- From user groups select "create new group"
+- Select a name for your group. It is best practise t name your group similiarly to your project.
+- From the user groups section click on your newly created group and navigate to the permissions tab.
+- Open the add permissions dropdown and click attach policies
+- Select the policy, then click add Permissions at the bottom when finished.
+- From the JSON tab, select the Import Managed Policy link.
+- Search for S3, select the AmazonS3FullAccess policy, and then Import.
+- You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
+```shell
+  {
+  	"Version": "2012-10-17",
+  	"Statement": [
+  		{
+  			"Effect": "Allow",
+  			"Action": "s3:*",
+  			"Resource": [
+  				"arn:aws:s3:::your-bucket-name",
+  				"arn:aws:s3:::your-bucket-name/*"
+  			]
+  		}
+  	]
+  }
+  ```
+
+- Click Review Policy.
+- Name your policy. It is best practise to name your policy the same as your group. "yourgroup-policy"
+- Enter a poicy description
+- Click Create Policy.  
+- From User Groups, select your created group.
+- Click Attach Policy.
+- Search for the policy you've just created, select it, then click Attach Policy.
+
+#### **Create User**
+
+- From User Groups, click Add User.
+- Name your user. It is best practice to name the user with the group name attached. "yourgroup-user".
+- For Select AWS Access Type, select Programmatic Access.
+- Add your user to to your created group.
+- Click Create User.
+
+- Once the user is created a "download csv" link will appear.
+- Click it to download your users secret keys to your machine.
+  - Once you pass this page there will be no option to download the file without generating new keys so ensure you download the file.
+- The file will contain 2 keys which you will need to connect the user to your workspace and heroku.
+   - `AWS_ACCESS_KEY_ID` = **Access key ID**
+   - `AWS_SECRET_ACCESS_KEY` = **Secret access key**  
+   
+
 
 
 
