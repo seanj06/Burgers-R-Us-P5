@@ -57,6 +57,8 @@ Below were the steps taken to install the relevant packages to setup django on t
 15. Change Debug variable in settings.py to -  DEBUG = "DEVELOPMENT" in os.environ
   - With this change debug will be set to True in development and False in production.
 
+[Top of page &uarr;](#contents)  
+
 ## **ElephantSQL Database**
 
 This project uses ElephantSQL for the PostgreSQL Database.
@@ -90,6 +92,8 @@ else:
 ```
 10. Migrate the project files to your database using - python manage.py migrate.
 11. On the ElephantSQL dashboard navigate to explorer and ensure your project files are there.    
+
+[Top of page &uarr;](#contents)
 
 ## **AWS Setup**
 
@@ -158,6 +162,8 @@ The following steps were followed to setup the bucket and connect it to the proj
 - From the **Access Control List (ACL)** section, click "Edit" and enable **List** for **Everyone (public access)**, and accept the warning box.
 - If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
 
+[Top of page &uarr;](#contents)
+
 ### **IAM Group and User setup**
 
 The next steps in setting up the bucket is creating an IAM group and user to give bucket permissions. The IAM group and user was set up following these steps.
@@ -197,6 +203,8 @@ The next steps in setting up the bucket is creating an IAM group and user to giv
 - Click Attach Policy.
 - Search for the policy you've just created, select it, then click Attach Policy.
 
+[Top of page &uarr;](#contents)
+
 #### **Create User**
 
 - From User Groups, click Add User.
@@ -232,6 +240,8 @@ These steps were followed to connect the created s3 bucket to the workspace.
   os.environ["AWS_ACCESS_KEY_ID"] = "your_aws_accesskeyid"
   os.environ["AWS_SECRET_ACCESS_KEY"] = "your_aws_secretkey"
   ```
+
+[Top of page &uarr;](#contents)  
 
 ## **settings.py Media setup**
 
@@ -277,6 +287,8 @@ To link the s3 bucket to your project add the following variables in settings.py
 
 - Once this code is added your bucket will be connected to your project.
 
+[Top of page &uarr;](#contents)
+
 ## **Heroku Deployment**
 
 The following steps were followed to deploy the project on Heroku.
@@ -300,6 +312,8 @@ The following steps were followed to deploy the project on Heroku.
    Once GitHub is chosen, find your repository and connect it to Heroku.
 - Scroll down to Manual Deploy, make sure the "main" branch is selected, and click "Deploy Branch".
 
+[Top of page &uarr;](#contents)
+
 ## **Forking The Repository**
 
 **To Fork the repository follow these steps:**
@@ -310,6 +324,8 @@ The following steps were followed to deploy the project on Heroku.
 4. Change the name and add a description of the forked repository if you wish to
 5. Click Create Fork.
 6. You should now have a forked version of the repository.
+
+[Top of page &uarr;](#contents)
 
 ## **Clone The Repository**
 
@@ -322,6 +338,8 @@ The following steps were followed to deploy the project on Heroku.
 5. In the terminal in your code editor change the directory to the location you want to clone the repository to.
 6. Type "git clone" into the terminal followed by the HTTPS url you copied to your clipboard.
 7. Press enter, your cloned repository should be created in the directory you specified.
+
+[Top of page &uarr;](#contents)
 
 
 

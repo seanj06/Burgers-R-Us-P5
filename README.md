@@ -1126,6 +1126,10 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
 
 [Top of page &uarr;](#contents)
 
+## **Deployment**
+
+The final Deployed site can be found [here](https://burgers-r-us1.herokuapp.com/). I have included details of the deployment process in a separate document called [DEPLOYMENT.md](DEPLOYMENT.md)
+
 
 
 
