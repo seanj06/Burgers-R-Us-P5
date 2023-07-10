@@ -1,3 +1,23 @@
+# **Deployment**
+
+## **Contents**
+
+1. [GitHub/Gitpod](#githubgitpod)
+   - [Create Repository](#create-repository)
+   - [Setting up the Workspace](#setting-up-the-workspace)
+2. [ElephantSQL Database](#elephantsql-database)
+3. [AWS Setup](#aws-setup)
+   - [S3 Bucket Setup](#s3-bucket-setup)
+   - [IAM Group And User Setup](#iam-group-and-user-setup)
+      - [Create Group](#create-group)
+	  - [Create User](#create-user)
+   - [Media Folder Setup](#media-folder-setup)
+   - [Connecting To Workspace](#connecting-to-workspace)
+4. [settings.py Media Setup](#settingspy-media-setup)  
+5. [Heroku Deployment](#heroku-deployment) 
+6. [Forking The Repository](#forking-the-repository)
+7. [Clone The Repository](#clone-the-repository)
+
 Below are the steps I took to deploy the site to Heroku.
 
 ## **GitHub/Gitpod**
@@ -199,7 +219,7 @@ The next steps in setting up the bucket is creating an IAM group and user to giv
 - From Manage Public Permissions select Grant public read access to this object(s)
 - Upload all of the media images from your project to the bucket by clicking the upload button inside the media folder.
 
-### **Connecting to your workspace**
+### **Connecting to workspace**
 
 These steps were followed to connect the created s3 bucket to the workspace.
 
