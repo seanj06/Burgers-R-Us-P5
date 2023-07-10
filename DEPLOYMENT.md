@@ -191,7 +191,31 @@ The next steps in setting up the bucket is creating an IAM group and user to giv
 - The file will contain 2 keys which you will need to connect the user to your workspace and heroku.
    - `AWS_ACCESS_KEY_ID` = **Access key ID**
    - `AWS_SECRET_ACCESS_KEY` = **Secret access key**  
-   
+
+### **Media Folder Setup**
+
+- From the s3 dashboard navigate to your created bucket
+- Create a new folder called "media"
+- From Manage Public Permissions select Grant public read access to this object(s)
+- Upload all of the media images from your project to the bucket by clicking the upload button inside the media folder.
+
+### **Connecting to your workspace**
+
+These steps were followed to connect the created s3 bucket to the workspace.
+
+- Install boto3 using - pip install boto3
+- Install django storages using - pip install django-storages
+- freeze packages to requirements.txt using - pip freeze --local>requirements.txt
+- Add storages to installed apps in settings.py
+- In env.py add the user keys downloaded from the csv file
+   ```shell
+  os.environ["AWS_ACCESS_KEY_ID"] = "your_aws_accesskeyid"
+  os.environ["AWS_SECRET_ACCESS_KEY"] = "your_aws_secretkey"
+  ```
+
+
+
+
 
 
 
