@@ -213,6 +213,51 @@ These steps were followed to connect the created s3 bucket to the workspace.
   os.environ["AWS_SECRET_ACCESS_KEY"] = "your_aws_secretkey"
   ```
 
+## **settings.py Media setup**
+
+To link the s3 bucket to your project add the following variables in settings.py
+
+ ```shell
+     if "USE_AWS" in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
+        "CacheControl": "max-age=94608000",
+    }
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = "pc-haven"
+    AWS_S3_REGION_NAME = "eu-west-1"
+    AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+
+    # Static and media files
+    STATICFILES_STORAGE = "custom_storages.StaticStorage"
+    STATICFILES_LOCATION = "static"
+    DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
+    MEDIAFILES_LOCATION = "media"
+
+    # Override static and media URLs in production
+    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/"
+    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/"
+  ```
+
+- Create a file call "Custom_storages.py" in the main directory of the project and add the following code:
+
+  ```python
+    from django.conf import settings
+    from storages.backends.s3boto3 import S3Boto3Storage
+
+  class StaticStorage(S3Boto3Storage):
+  	location = settings.STATICFILES_LOCATION
+
+  class MediaStorage(S3Boto3Storage):
+  	location = settings.MEDIAFILES_LOCATION
+  ```
+
+- Once this code is added your bucket will be connected to your project.
+
+
 
 
 
