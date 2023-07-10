@@ -257,6 +257,34 @@ To link the s3 bucket to your project add the following variables in settings.py
 
 - Once this code is added your bucket will be connected to your project.
 
+## **Heroku Deployment**
+
+The following steps were followed to deploy the project on Heroku.
+
+
+- Go to [Heroku](https://dashboard.heroku.com/apps) and click "New" to create a new app.
+- After choosing the app name and setting the region, press "Create app".
+- Go to "Settings" and navigate to Config Vars, enter the below
+
+    | Key                     | Value                                                                  |
+    | ----------------------- | ---------------------------------------------------------------------- |
+    | `DATABASE_URL`          | insert your own ElephantSQL database URL here                          |
+    | `SECRET_KEY`            | insert your Django secret key                                          |
+    | `DISABLE_COLLECTSTATIC` | 1 (_this is temporary and can be removed when static files available_) |
+    | `PORT`                  | 8000                                                                   |
+    | `AWS_ACCESS_KEY_ID`     | insert your own AWS Access Key ID key here                             |
+    | `AWS_SECRET_ACCESS_KEY` | insert your own AWS Secret Access key here                             |
+    | `USE_AWS`               | True                                                                   |
+
+- Leave "Settings" and go to "Deploy". Scroll down and set Deployment Method to GitHub.
+   Once GitHub is chosen, find your repository and connect it to Heroku.
+- Scroll down to Manual Deploy, make sure the "main" branch is selected, and click "Deploy Branch".
+
+
+
+
+
+
 
 
 
