@@ -190,9 +190,13 @@
 
     {% block page_header %}
     {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
-    {% block content %}
-    {% endblock %}
+    <!-- Footer -->
+    {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
     <script>
