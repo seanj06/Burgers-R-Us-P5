@@ -52,7 +52,9 @@ Link to the live site : [Burgers R-Us](https://burgers-r-us1.herokuapp.com/)
           - [Typography](#typography)
           - [Imagery](#imagery)
 4. [Ecommerce Business Model](#ecommerce-business-model)
-5. [Marketing Strategy](#marketing-strategy)          
+5. [Marketing Strategy](#marketing-strategy)    
+    - [Social Media Marketing](#social-media-marketing)  
+    - [Newsletter](#newsletter)    
 6. [SEO](#search-engine-optimization-seo)  
     - [Keywords](#keywords)  
     - [Page Titles](#page-titles)  
@@ -1051,6 +1053,21 @@ Two fonts were used throughout the site. All of the heading and hero text use 'B
 All site images including Product images were taken from [Pexels.com](https://www.pexels.com/)
 
 [Top of page &uarr;](#contents)
+
+## **Marketing Strategy**
+
+### **Social Media Marketing**
+
+A Facebook Business page was created and deployed to drive in more customers through social media. The Page includes keywords included in the site for SEO, a link to the site through a shop now button, the site opening hours, phone number, email address, the same header image as the site and a post with a link to the site.
+
+![facebook-1](docs/marketing/facebook-1.png)
+![facebook-2](docs/marketing/facebook-2.png)
+
+### **Newsletter**
+
+[MailChimp](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiFr7vX8oaAAxXG7u0KHf9bCBwYABAAGgJkZw&ei=U2utZLuGKZPzgAax5K_oDQ&ohost=www.google.com&cid=CAESbeD2mc-k-MyZ6c9Q4AMiTGIB9nH1itT6G0SlViTTqHZWJySCs_nZpEMlReBsnWZVo6s3GuKKGeK1w0vNuXXsZdS1Hhjz1YE9K-t7e9c1gImV6JTuJaxjxZFRJ-HEZapR3122BBCKxUbtU19eLvI&sig=AOD64_1lQv9qvwBBI2Q9yz7mEp3BM5fPbQ&q&sqi=2&adurl&ved=2ahUKEwj7-7XX8oaAAxWTOcAKHTHyC90Q0Qx6BAgIEAE) was used to create a newsletter sign up form on the site. Users can sign up for a newsletter with info on the latest products and special offers. This feature will drive in more customers by them receiving site info without having to re enter the site.
+
+![newsletter-marketing](docs/marketing/newsletter-marketig.png)
 
 ## **Search Engine Optimization (SEO)**
 
