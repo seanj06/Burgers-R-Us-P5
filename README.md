@@ -65,6 +65,10 @@ Link to the live site : [Burgers R-Us](https://burgers-r-us1.herokuapp.com/)
 8. [Testing](#testing)    
 9. [Deployment](#deployment) 
 10. [Credits](#credits)
+    - [Project Setup And Github Template](#project-set-up-and-github-template)
+    - [Media And Content](#media-and-content)
+    - [Code And Issues](#code-and-issues)
+    - [Unit Testing](#unit-testing)
 11. [Acknowledgements](#acknowledgements) 
 
 ## **Project Goals**
@@ -1145,6 +1149,37 @@ The final Deployed site can be found [here](https://burgers-r-us1.herokuapp.com/
 ### **Code And Issues**
 
 - The [Django Documentation](https://docs.djangoproject.com/en/4.0/) helped along the way with troubleshooting and understanding django more in general.
+
+- [Stack Overflow](https://stackoverflow.com/) was used numerous times throughout the project for various issues.
+
+- The Delivery time function was one of the biggest challenges in the project so a few resources were used on both stack overflow, the django documentation and others
+   - [How do I get the current date and current time only respectively in Django?](https://stackoverflow.com/questions/12030187/how-do-i-get-the-current-date-and-current-time-only-respectively-in-django)
+   - [TimeZones Django documentation](https://docs.djangoproject.com/en/4.2/topics/i18n/timezones/)
+   - [Django datetime.timedelta , how does its subtract from timezone.now() if they are posssibly different sets](koverflow.com/questions/32510123/django-datetime-timedelta-how-does-its-subtract-from-timezone-now-if-they-ar)
+
+- The code for the core functionality of the site was built following [Code Institutes](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjx5MKvvoWAAxUJ6-0KHQrtCMEYABAAGgJkZw&ei=Qa6sZMS1H-WnhbIPwqmv8Ag&ohost=www.google.com&cid=CAESbeD2OdAc732dpxmwedxImdmTuTEM-k8kfqofFwnyh2CHzYD5ChkE4rOldSiHWmvH08BkHFL1wPDiBJDelH5DV8MeE_LXYCcNHW81yrIHw-wIetXvIRcSxPj1qC-ckYgf8s8Nsgo6zsxNMTpJPBc&sig=AOD64_2d5R1ZzR5PitvQKZVbWcLWob92fw&q&sqi=2&adurl&ved=2ahUKEwiE2ryvvoWAAxXlU0EAHcLUC44Q0Qx6BAgJEAE) [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) Walkthrough project 
+
+### **Unit Testing**
+
+- Steps on how to install and use coverage were taken from [Code Institute](https://learn.codeinstitute.net/) coverage video from the Hello Django walkthrough.
+
+- [Stack Overflow](https://stackoverflow.com/) was used numerous times for research on how to use different unit test methods and test different type of functions. Some pages included:
+    - [How should I write tests for Forms in Django?](https://stackoverflow.com/questions/7304248/how-should-i-write-tests-for-forms-in-django)
+    - [how to get request object in django unit testing?](https://stackoverflow.com/questions/10277748/how-to-get-request-object-in-django-unit-testing)
+- [Django Writing and running tests](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) official documentation also helped through testing.
+- [Real Python Testing in Django](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/) was also used. 
+
+## **Acknowledgements** 
+
+- My amazing partner Sinead who has been supportive the whole way throughout the project.
+
+- My classmates Sean Finn and Victoria Traynor for help testing my site, spotting bugs and help throughout.
+
+- The Slack community as a whole for support.
+
+[Top of page &uarr;](#contents)
+
+
 
 
 
