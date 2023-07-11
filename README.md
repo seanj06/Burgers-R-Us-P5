@@ -41,6 +41,7 @@ Link to the live site : [Burgers R-Us](https://burgers-r-us1.herokuapp.com/)
         - [Profile Page](#profile-page)
         - [Cart Page](#cart)
         - [Checkout Page](#checkout-page)
+        - [Footer](#footer)
         - [Allauth Pages](#login-logout-and-register-pages)
         - [Custom Error Pages](#custom-error-pages)
         - [Favicon](#favicon)
@@ -572,11 +573,6 @@ The Contact Us Section is just below the delivery times section and gives users 
 
 The review section is just below the contact us section and shows the users a button which brings them to the review page.
 
-**Footer**
-
-![footer](docs/features/footer-section.png)
-
-The footer lives at the bottom of the home page and contains 4 icon links to facebook, twitter, instagram and github. It also gives users the message that this site is a work of fiction and developer name and date.
 
 [Top of page &uarr;](#contents)
 
@@ -907,6 +903,24 @@ The user will receive an email to their entered email address with all of the or
 All of the card payment elements on the checkout form are handled by Stripe Test account
 
 [Top of page &uarr;](#contents)
+
+#### **Footer**
+
+The footer is an includes file so is included on the bottom of every page of the site. It includes a newsletter form where users can sign up by entering their email address for the latest site info and special offers, a link to the sites facebook page and at the bottom copyright info including a link to the sites github repo.
+
+![footer2-feature](docs/features/footer2-feature.png)
+
+**NewsLetter**
+
+The newsletter section of the footer is where users can enter their email address to sign up for the latest info on the site and special offers. This element was built from [Mailchimp](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi3xP3Z6IaAAxXfK60GHbWxCxMYABACGgJwdg&ei=3GCtZLulHYOzhbIP2Oa30Ac&ohost=www.google.com&cid=CAESbeD2WoW6CT1Hblo9m_x_Tg-NDdlbpPpBT2Gb-ici5g5KOK4s9Ea8EPbG5MOKYK6AxIWWh_-LOnQS5irfUAwZZaytVcYkecHuBLKelg9uU_20Xvo961t3gz_Srr4ggXPFkQ_RyRnUAkrBJiikY_o&sig=AOD64_2Sk98tmcJEYAN1TRRZD2S0Z84-tQ&q&sqi=2&adurl&ved=2ahUKEwi7g_HZ6IaAAxWDWUEAHVjzDXoQ0Qx6BAgIEAE)
+
+**Facebook**
+
+The next section of the footer features a message asking the user to visit the sites facebook page where they can check info on opening hours and the latest special offers. It also includes a link to the sites facebook page.
+
+**Copyright info**
+
+The bottom section of the footer includes development info, a message telling the user that the site is fictional and a link to the sites Github Repo.
 
 #### **Login, Logout And Register Pages**
 

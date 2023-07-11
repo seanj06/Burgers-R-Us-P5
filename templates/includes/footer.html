@@ -11,7 +11,7 @@
                             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                             class="validate" target="_blank">
                             <div id="mc_embed_signup_scroll">
-                                <h2 class="text-center">Subscribe To Our Newsletter</h2>
+                                <p class="text-center header-text">Subscribe To Our Newsletter</p>
                                 <p class="text-white text-center">Get exclusive special offers and info on new products
                                     by signing upto our newsletter</p>
                                 <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
@@ -63,20 +63,22 @@
         </div>
         <div class="row mb-4 pb-4">
             <div class="col-12 justify-content-center">
-                <p class="text-center text-white">Visit our facebook page</p>
-                <a href="https://www.facebook.com/" target="_blank" aria-label="facebook link"><i
-                        class="fab fa-facebook fa-3x text-white"></i></a>
+                <p class="text-center text-white text-lg">Visit our facebook page for the latest info on opening hours,
+                    special offers and new products!</p>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener nofollow"
+                    aria-label="facebook link(opens in new tab)"><i class="fab fa-facebook fa-3x text-white"></i></a>
             </div>
         </div>
+        <hr class="rule">
         <div class="row">
             <div class="col-12">
-                <h5 class="text-white text-lg">Site is a work of fiction and created for project purposes only</h5>
+                <p class="text-white">Site is a work of fiction and created for project purposes only</p>
             </div>
             <div class="col-12">
                 <p class="text-white text-center">Website developed by Sean Johnston for Code Institute Project 5 2023
                 </p>
-                <a href="https://github.com/seanj06" target="_blank" rel="noopener nofollow" aria-label="github link"><i
-                        class="fab fa-github fa-2x text-white pb-2"></i></a>
+                <a href="https://github.com/seanj06" target="_blank" rel="noopener nofollow"
+                    aria-label="github link(opens in new tab)"><i class="fab fa-github fa-3x text-white pb-3"></i></a>
             </div>
         </div>
     </div>
@@ -87,22 +89,21 @@
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">
 </script>
 <script type="text/javascript">
-    (function ($) {
+    type = 'text/javascript' > (function ($) {
         window.fnames = new Array();
         window.ftypes = new Array();
-        fnames[0] = EMAIL;
-        ftypes[0] = merge;
-        fnames[1] = FNAME;
-        ftypes[1] = merge;
-        fnames[2] = LNAME;
-        ftypes[2] = merge;
-        fnames[3] = ADDRESS;
-        ftypes[3] = merge;
-        fnames[4] = PHONE;
-        ftypes[4] = merge;
-        fnames[5] = BIRTHDAY;
-        ftypes[5] = merge;
-        false
+        fnames[0] = 'EMAIL';
+        ftypes[0] = 'email';
+        fnames[1] = 'FNAME';
+        ftypes[1] = 'text';
+        fnames[2] = 'LNAME';
+        ftypes[2] = 'text';
+        fnames[3] = 'ADDRESS';
+        ftypes[3] = 'address';
+        fnames[4] = 'PHONE';
+        ftypes[4] = 'phone';
+        fnames[5] = 'BIRTHDAY';
+        ftypes[5] = 'birthday';
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
 </script>
