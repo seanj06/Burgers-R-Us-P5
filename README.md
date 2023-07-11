@@ -908,7 +908,7 @@ All of the card payment elements on the checkout form are handled by Stripe Test
 
 #### **Footer**
 
-The footer is an includes file so is included on the bottom of every page of the site. It includes a newsletter form where users can sign up by entering their email address for the latest site info and special offers, a link to the sites facebook page and at the bottom copyright info including a link to the sites github repo.
+The footer is an includes file so is included on the bottom of every main page on the site, excluding pages with forms. It includes a newsletter form where users can sign up by entering their email address for the latest site info and special offers, a link to the sites facebook page and at the bottom copyright info including a link to the sites github repo.
 
 ![footer2-feature](docs/features/footer2-feature.png)
 
@@ -1060,6 +1060,8 @@ This site sells and delivers food products to customers therefore follows a B2C 
 There are also features in place to keep customers returning such as food reviews so customers can leave reviews on their orders, view past customers orders, save their default delivery info for quick checkout and a newsletter to sign upto to receive info on latest products and offers.
 With these site features in place customers should have a quick and easy food ordering process and a reason to return to the site.
 
+[Top of page &uarr;](#contents)
+
 ## **Marketing Strategy**
 
 ### **Social Media Marketing**
@@ -1074,6 +1076,8 @@ A Facebook Business page was created and deployed to drive in more customers thr
 [MailChimp](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiFr7vX8oaAAxXG7u0KHf9bCBwYABAAGgJkZw&ei=U2utZLuGKZPzgAax5K_oDQ&ohost=www.google.com&cid=CAESbeD2mc-k-MyZ6c9Q4AMiTGIB9nH1itT6G0SlViTTqHZWJySCs_nZpEMlReBsnWZVo6s3GuKKGeK1w0vNuXXsZdS1Hhjz1YE9K-t7e9c1gImV6JTuJaxjxZFRJ-HEZapR3122BBCKxUbtU19eLvI&sig=AOD64_1lQv9qvwBBI2Q9yz7mEp3BM5fPbQ&q&sqi=2&adurl&ved=2ahUKEwj7-7XX8oaAAxWTOcAKHTHyC90Q0Qx6BAgIEAE) was used to create a newsletter sign up form on the site. Users can sign up for a newsletter with info on the latest products and special offers. This feature will drive in more customers by them receiving site info without having to re enter the site.
 
 ![newsletter-marketing](docs/marketing/newsletter-marketig.png)
+
+[Top of page &uarr;](#contents)
 
 ## **Search Engine Optimization (SEO)**
 
