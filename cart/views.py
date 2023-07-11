@@ -20,9 +20,23 @@ def add_to_cart(request, item_id):
     View to add item to cart
     """
     product = get_object_or_404(Food, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = request.POST.get('quantity', '').strip()
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
+
+    # Check if quantity is empty or contains only whitespace
+    if not quantity:
+        messages.error(request, 'Invalid quantity')
+        return redirect(redirect_url)
+
+    # Check if quantity is a valid integer greater than 0
+    try:
+        quantity = int(quantity)
+        if quantity <= 0:
+            raise ValueError
+    except ValueError:
+        messages.error(request, 'Invalid quantity')
+        return redirect(redirect_url)
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
@@ -42,8 +56,22 @@ def edit_cart(request, item_id):
     View to edit item in cart
     """
     product = get_object_or_404(Food, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = request.POST.get('quantity', '').strip()
     cart = request.session.get('cart', {})
+
+    # Check if quantity is empty or contains only whitespace
+    if not quantity:
+        messages.error(request, 'Invalid quantity')
+        return redirect(reverse('cart_home'))
+
+    # Check if quantity is a valid integer between 1 - 99
+    try:
+        quantity = int(quantity)
+        if quantity <= 0 or quantity > 99:
+            raise ValueError
+    except ValueError:
+        messages.error(request, 'Invalid quantity')
+        return redirect(reverse('cart_home'))
 
     if quantity > 0:
         cart[item_id] = quantity

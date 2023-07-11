@@ -175,22 +175,6 @@
                     location.reload();
                 });
         });
-        // Limit quantity input to between 1-99
-        $('.qty_input').on('input', function () {
-            var itemId = $(this).data('item_id');
-            handleEnableDisable(itemId);
-            var inputValue = parseInt($(this).val());
-            var updateButton = $('#update_' + itemId);
-            if (inputValue > 99) {
-                $(this).val(99); 
-                updateButton.prop('disabled', false);
-            } else if (inputValue < 1 || isNaN(inputValue)) {
-                $(this).val(1);
-                updateButton.prop('disabled', true);
-            } else {
-                updateButton.prop('disabled', false);
-            }
-        });
     });
 </script>
 {% endblock %}
