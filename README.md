@@ -1093,6 +1093,7 @@ A robots.txt file was also created in the root directory which links to the site
  - [Balsamiq](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwih18Xz7KT-AhUK0O0KHa10Ac4YABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2RPESw4sarkzssyVuJ3_18noPRmNSFJOT2cF3stlWcQOFp6gPdcDCXuoyPrUKWZxNLLshZQIEAJo_zFZQQUX0f9Lu_XsA3g1AvKtc7qZuF628J-8r4AqElCFmrMznj-ckVA181bCrKg7__Gk&sig=AOD64_3_LMgzuzJFmOC4EuNM6hTDxVkC7A&q&adurl&ved=2ahUKEwjavL7z7KT-AhWgR0EAHYA1CbgQ0Qx6BAgHEAE) was used for creating the wireframes.
  - [Grammarly](https://app.grammarly.com/) was used for spell and grammar checks on the README.md and TESTING.md files
  - [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate python code
+ - [Mailchimp](https://us11.admin.mailchimp.com/) was used to create the newsletter
 
 ### **Libraries Used**
 
@@ -1145,6 +1146,7 @@ The final Deployed site can be found [here](https://burgers-r-us1.herokuapp.com/
 - All placeholder images on the site were taken from [Pexels.com](https://www.pexels.com/)
 - Social media icons were taken from [Font Awesome](https://fontawesome.com/)
 - Text fonts were taken from [Google Fonts](https://fonts.google.com/)
+- The newsletter was created using [Mailchimp](https://us11.admin.mailchimp.com/)
 
 ### **Code And Issues**
 
