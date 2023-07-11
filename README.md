@@ -1054,6 +1054,12 @@ All site images including Product images were taken from [Pexels.com](https://ww
 
 [Top of page &uarr;](#contents)
 
+## **ECommerce Business Model**
+
+This site sells and delivers food products to customers therefore follows a B2C (Business To Customer) model. The site is designed to make ordering food for customers quick and easily done within a few clicks.
+There are also features in place to keep customers returning such as food reviews so customers can leave reviews on their orders, view past customers orders, save their default delivery info for quick checkout and a newsletter to sign upto to receive info on latest products and offers.
+With these site features in place customers should have a quick and easy food ordering process and a reason to return to the site.
+
 ## **Marketing Strategy**
 
 ### **Social Media Marketing**
