@@ -294,7 +294,25 @@ body {
     font-size: 1.3rem;
 }
 
+/* MailChimp */
 
+#mc_embed_signup {
+    color: white;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+#mc_embed_signup .button {
+    background-color: gold;
+    color: black;
+    height: 41px;
+    margin: 10px 5px 10px 0;
+}
+
+#mc_embed_signup .button:hover {
+    background-color: gold;
+    color: black;
+}
 
 /*  Media Queries */
 
