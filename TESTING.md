@@ -1881,6 +1881,7 @@ The cart page SEO rating was affected by a "links not crawlable" error.This is d
 | Review Text Overflow | On testing the site I noticed review text would overlfow out of the container if the user entered a long word with no whitespace. | To fix this I added a text-wrap css style to make sure the text overflowed onto the next line.
 | Quantity selector incrementing by 2 | On site development I noticed if a user clicked the increment button the quantity would increment by 2 instead of 1 | After reviewing the code I noticed that there were 2 external javascript files linked with the same function which was causing it to execute twice. To fix this bug I removed the duplicate javascript code.
 | Cart not emptying on checkout. | On development of the site I noticed after a user had checked out their cart was not emptying. | After reviewing my code I noticed that the cart delete functionality was outside the correct if/else block. After fixing this the cart emptied.
+| Cart quantity whitespace | During testing I noticed if that the user could enter whitespace into the quantity box, the form would submit and the site would throw a 500 server error. | To fix this I added code in the add to cart and edit cart views to check for valid integer before form submit.
 
 [Top of page &uarr;](#contents)
 
