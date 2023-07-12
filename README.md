@@ -32,15 +32,15 @@ Link to the live site : [Burgers R-Us](https://burgers-r-us1.herokuapp.com/)
       - [Database Schema](#database-schema)
     - [The Structure Plane](#the-structure-plane)  
       - [Features](#features)
-        - [Home Page](#home-page)
-        - [Products Page](#product-page)
-        - [Product Detail Page](#product-detail-page)
+        - [Home Page](#home-page-1)
+        - [Products Page](#products-page)
+        - [Product Detail Page](#product-detail-page-1)
         - [Add Product Page](#add-product-page)
-        - [Review Page](#review-page)
-        - [Contact Page](#contact-page)
+        - [Review Page](#review-page-1)
+        - [Contact Page](#contact-page-1)
         - [Profile Page](#profile-page)
         - [Cart Page](#cart)
-        - [Checkout Page](#checkout-page)
+        - [Checkout Page](#checkout-page-1)
         - [Footer](#footer)
         - [Allauth Pages](#login-logout-and-register-pages)
         - [Custom Error Pages](#custom-error-pages)
@@ -125,7 +125,7 @@ This project was built using the Agile method throughout by creating EPIC Milest
 
 Epics milestones were given Acceptance criteria and the must-haves were completed first to complete the milestone. Any user stories that were not completed were moved back into the project backlog.
 
-The Kanban board was created using Github projects and can be located [here]()  and can be viewed to see the completed and backlogged user stories.
+The Kanban board was created using Github projects and can be located [here](https://github.com/users/seanj06/projects/6)  and can be viewed to see the completed and backlogged user stories.
 
 ![Kanban Board](docs/readme%20images/kanban-board.png)
 
