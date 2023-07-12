@@ -27,6 +27,7 @@
                     <h2 class="logo-font mb-3 header-text">Cart</h2>
                     <hr class="w-50 mb-1 rule">
                 </div>
+                <!-- Cart Items Table -->
                 {% if cart_items %}
                 <div class="table-responsive table-responsive-sm rounded">
                     <table class="table table-sm table-borderless">
@@ -132,6 +133,7 @@
                         </tbody>
                     </table>
                 </div>
+                <!-- Empty Cart -->
                 {% else %}
                 <div class="text-center">
                     <p class="lead mt-5 text-white">Your Cart is empty!</p>
@@ -152,6 +154,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_button_script.html' %}
+<!--Update and remove buttons javascript-->
 <script>
     $(document).ready(function () {
         // Update quantity on change

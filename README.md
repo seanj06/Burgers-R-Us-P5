@@ -3,10 +3,10 @@
 ## **Overview**
 
 Burgers R-Us is a local takeaway e-commerce site that specialises in Burgers and Fries. Users are able to add Products to the cart and checkout securely
-via stripe whether they are signed in or not. If users sign up for an account they unlock more features such as saving  default delivery info, being able
+via stripe whether they are signed in or not. If users sign up for an account they unlock more features such as saving default delivery info, being able
 to contact the site with any issues or queries and writing and liking reviews.
 
-Other features of the site include users being able to searh for products via a search bar, a product filter search by category, sub category and being 
+Other features of the site include users being able to search for products via a search bar, a product filter search by category, subcategory and being 
 able to sort products by a wide range of different filters.
 
 Developed by Sean Johnston for code institute Project Portfolio project 5.
@@ -84,13 +84,13 @@ As my fifth project for the [Code Institute](https://codeinstitute.net/) 5P cour
 
 ## **The Strategy Plane**
 
-Burgers R-Us is an e-commerce site for a local takeaway which is designed to be easy for users to find products, add them into their cart, securely checkout
+Burgers R-Us is an e-commerce site for a local takeaway which is designed to be easy for users to find products, add them to their cart, securely checkout
 and enter their delivery details.
 
 Registered users will be able to contact the site owners about any enquiries or issues, save default delivery info and write and like reviews.
-Users with Staff status will be able to add, edit or delete products from the site aswell as the admin area.
+Users with Staff status will be able to add, edit or delete products from the site as well as the admin area.
 
-The design of the overall site is aimed to be eye catching for the users and easy on the eye with a darker theme rather than light.
+The design of the overall site is aimed to be eye-catching for the users and easy on the eye with a darker theme rather than light.
 
 ### **Target Users**
 
@@ -112,10 +112,10 @@ The design of the overall site is aimed to be eye catching for the users and eas
 ## **The Scope Plane**
 
 - CRUD Ability for authenticated users on Reviews and profile info
-- CRUD Ability for both authenticated and non authenticated users on cart
+- CRUD Ability for both authenticated and non-authenticated users on cart
 - Restricted site features for authenticated and non-authenticated users such as adding and liking reviews, saving profile info and contact section.
 - Restricted site features for staff such as adding, editing and deleting products.
-- Full responsiveness for all screen sizes down to 320px including different navbar layout for medium to small screens.
+- Full responsiveness for all screen sizes down to 320px including different navbar layouts for medium to small screens.
 
 [Top of page &uarr;](#contents)
 
@@ -123,7 +123,7 @@ The design of the overall site is aimed to be eye catching for the users and eas
 
 This project was built using the Agile method throughout by creating EPIC Milestones which were broken down into smaller user stories with labels "must-have", "should-have", "could-have", and wont have. 
 
-Epics milestones were given Acceptance criteria and the must haves were completed first to complete the milestone. Any user stories that were not completed were moved back into the project backlog.
+Epics milestones were given Acceptance criteria and the must-haves were completed first to complete the milestone. Any user stories that were not completed were moved back into the project backlog.
 
 The Kanban board was created using Github projects and can be located [here]()  and can be viewed to see the completed and backlogged user stories.
 
@@ -277,7 +277,7 @@ This Epic had 3 user stories attached and involved SEO optimization
 
 #### **EPIC: Product Page [Milestone #11](https://github.com/seanj06/Burgers-R-Us-P5/milestone/13?closed=1)**
 
-This Epic had 5 user stories attached and invloved the creation of the product page and search and filter functionality.
+This Epic had 5 user stories attached and involved the creation of the product page and search and filter functionality.
 
 1. **[USER STORY: View Products #20](https://github.com/seanj06/Burgers-R-Us-P5/issues/20)**
 
@@ -315,9 +315,9 @@ The backlog currently has 1 unfinished user story in it. Products special offer 
 
 Wireframes for the project were created on [Balsamiq](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwipl_y6tPX_AhWS7O0KHQjIA1sYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ccqo8oDlzHFF4zbaV7KGAZVuaGnNBdddD_bCzQRZZXG89KOq1bR5tTzAGzFw9lulTUQrVzvNb-h1Y0Evgoy9Vysb07io1aY714qDyozR72dg5MUYiTf0U90m5Jtk84vM2qp4g1XZVs8MLGU&sig=AOD64_0cWpzV5GO3p3y1kmK1V2EAh6oj0w&q&adurl&ved=2ahUKEwjlh_a6tPX_AhWYiFwKHTr7DXQQ0Qx6BAgIEAE) prior to development.
 
-Wireframes were made for both dekstop and mobile versions of the site.
+Wireframes were made for both desktop and mobile versions of the site.
 
-Some layout changes were made to the site during development which do not match the wireframes.
+Some layout changes were made to the site during development which does not match the wireframes.
 
 #### **Home Page**
 
@@ -446,7 +446,7 @@ Below is a diagram of the database models and how the fields link to each other.
 
 #### **User Model**
 
-The User model is the default django User that comes pre installed with django and links to all custom models in some way.
+The User model is the default django User that comes pre-installed with django and links to all custom models in some way.
 
 #### **Category Model**
 
@@ -492,15 +492,15 @@ Navbar Desktop
 
 ![Navbar-desktop](docs/features/navbar-desktop.png)
 
-  - On desktop the navbar features the hero logo on the left, a product search bar in the centre, 2 dropdown icons on the right(menu and my account) and a cart icon with a live update total.
+  - On desktop, the navbar features the hero logo on the left, a product search bar in the centre, 2 dropdown icons on the right(menu and my account) and a cart icon with a live update total.
   When a user is logged in a logged in as: message is shown on the bottom right of the navbar
   ![logged-in-message](docs/features/logged-in-message.png)
 
-    - The menu icon when clicked dropsdown to reveal 3 links with icons. Reviews, contact us and home. The colours invert when hovered over.
+    - The menu icon when clicked drops down to reveal 3 links with icons. Reviews, contact us and home. The colours invert when hovered over.
           
     ![Menu-expand](docs/features/menu-expand.png)
 
-    - The my account icon when clicked dropsdown to reveal different links depending on user status.
+    - The my account icon when clicked drops down to reveal different links depending on user status.
 
       <details><summary>Superuser Logged In</summary>
 
@@ -519,7 +519,7 @@ Navbar Desktop
 
 
     - The navbar also features a main nav link for all products search 
-      including different search filters by category and and all food search filter.
+      including different search filters by category and all food search filter.
         
       <details><summary>All Food dropdown</summary>
 
@@ -567,7 +567,7 @@ The opening hours section is just below the Hero image section and gives users a
 
 ![contact](docs/features/contact-section.png)
 
-The Contact Us Section is just below the delivery times section and gives users info on how to contact the restaurant if they have an issue via both a phone number and a button. If the users click the Contact Us button they are brought to the contact page where they can fill out a form with there enquiry/issue.
+The Contact Us Section is just below the delivery times section and gives users info on how to contact the restaurant if they have an issue via both a phone number and a button. If the users click the Contact Us button they are brought to the contact page where they can fill out a form with their enquiry/issue.
 
 **Review Section**
 
@@ -586,7 +586,7 @@ The products page is accessible via both the order now button on the homepage an
 
 **Sorting, Filtering and Pagination**
 
-The products page has a sorting feature where users can sort products by Price A-Z, Price Z-A, Name A-Z, Name Z-A, Category A-Z, Category Z-A, Sub-category A-Z and Sub-category Z-A. This feauture is found at the top right of the page.
+The products page has a sorting feature where users can sort products by Price A-Z, Price Z-A, Name A-Z, Name Z-A, Category A-Z, Category Z-A, Sub-category A-Z and Sub-category Z-A. This feature is found at the top right of the page.
 
 ![product-sort-expand](docs/features/product-filter-expand.png)
 
@@ -608,17 +608,17 @@ If the user enters a word into the search bar and no products are found they are
 
 ![no-products-found](docs/features/no-products-alert.png)
 
-The filter feature from the main nav menu works similiar to the search bar. For example if the user clicks "All Burgers" from the filter menu they will only be shown burgers.
+The filter feature from the main nav menu works similarly to the search bar. For example if the user clicks "All Burgers" from the filter menu they will only be shown burgers.
 
 ![burger-filter](docs/features/burger-filter.png)
 
 **Product Cards**
 
-The product cards were designed using bootstrap cards and feauture the product image, name, description, contains, if vegetarian, if gluten free, price and a clickable category link which will bring users to a filtered product search of other products in that category.
+The product cards were designed using bootstrap cards and feature the product image, name, description, contains, if vegetarian, if gluten free, price and a clickable category link which will bring users to a filtered product search of other products in that category.
 
 ![product-card](docs/features/product-card.png)
 
-On large screens the cards stack 3 wide.
+On large screens, the cards stack 3 wide.
 
 ![product-large](docs/features/product-large-screen.png)
 
@@ -632,7 +632,7 @@ On small screens 1 wide
 
 **Staff**
 
-If a staff member is logged in they are shown 2 button at the bottom of the card to either edit or delete a product
+If a staff member is logged in they are shown 2 buttons at the bottom of the card to either edit or delete a product
 
 ![product-edit-delete-btns](docs/features/product-edit-delete-btns.png)
 
@@ -644,7 +644,7 @@ If a staff member is logged in they are shown 2 button at the bottom of the card
 
 The Product Detail page is accessible by both clicking on the product image and the product name on the Products page.
 
-On this page the users are shown the product name, image, price and description.
+On this page, the users are shown the product name, image, price and description.
 
 From here they can also add the product to their cart by selecting the quantity they want and pressing the add to cart button.
 
@@ -662,7 +662,7 @@ On smaller screens the layout of the product detail card changes and the image c
 
 **Delete Product**
 
-If a staff member clicks the delete product button they are shown a popup asking them if they are sure they want to delete the product. Only if they confirm delete from there the product is deleted. This feature is in place to handle misclicks or error.
+If a staff member clicks the delete product button they are shown a popup asking them if they are sure they want to delete the product. Only if they confirm delete from there the product is deleted. This feature is in place to handle misclicks or errors.
 
 ![product-delete-conf](docs/features/product-delete-confirmation.png)
 
@@ -690,7 +690,7 @@ After editing the product they are redirected back to the products page and show
 #### **Add Product Page**
 
 Staff members can access the add product page by clicking the product management link in the my account dropdown menu on the navbar.
-This option is only shown to users who have staff or superuser status
+This option is only shown to users who have a staff or superuser status
 
 ![product-man-tab](docs/features/product-management-tab.png)
 
@@ -723,7 +723,7 @@ And the review section on the homepage
 
 **Adding Reviews**
 
-If users are logged in they are shown a write a review button on the top of the review page. Clicking this button will bring them to the add a review form where they can rate the service 1-5 and as there comment
+If users are logged in they are shown a write a review button on the top of the review page. Clicking this button will bring them to the add a review form where they can rate the service 1-5 and as their comment
 
 ![add-review](docs/features/add-review.png)
 
@@ -740,7 +740,7 @@ Pressing the delete button will show the user a confirmation message asking if t
 
 ![delete-conf](docs/features/review-delete.png)
 
-If the user confirms the delete they are shown a success message and redirected back to the review page
+If the user confirms the deletion they are shown a success message and redirected back to the review page
 
 ![review-delete-toast](docs/features/review-delete-toast.png)
 
@@ -756,14 +756,14 @@ When the user has edited the form they are shown a success message and redirecte
 
 **Liking Reviews**
 
-Logged in users have the ability to like reviews by pressing the like button. The colour of the like button changes letting the user know if they have already liked the review or not
+Logged-in users can like reviews by pressing the like button. The colour of the like button changes letting the user know if they have already liked the review or not
 
 ![review-unliked](docs/features/review-unliked.png)
 ![review-liked](docs/features/review-liked.png)
 
 **Logged Out Users**
 
-Logged out users can still access the reviews page and read reviews but they will be unable to write a review unless they are logged in. Instead of the write review button users are shown a message telling them they need to log in and links to both the login and signup pages
+Logged-out users can still access the reviews page and read reviews but they will be unable to write a review unless they are logged in. Instead of the write review button users are shown a message telling them they need to log in and links to both the login and signup pages
 
 ![review-logged-out](docs/features/review-logged-out.png)
 
@@ -791,7 +791,7 @@ On valid form submission the user is brought to the contact success page showing
 
 ![contact-success](docs/features/contact-success-and-toast.png)
 
-The users log in and email are used as default info for the contact form so the user will receive a confirmation email to the email address they signed upto the site with
+The users log in and email are used as default info for the contact form so the user will receive a confirmation email to the email address they signed up to the site with
 
 ![contact-email](docs/features/contact-enquiry-email.png)
 
@@ -822,7 +822,7 @@ Users can view their order history by clicking on the order number in the order 
 ![order-history-profile](docs/features/order-history-profile.png)
 
 From there they will be brought to the order history page where they can view the details of the order that they have clicked on.
-They will also be shown an alert message telling them that this is a past comfirmation and they have received an email with the order details.
+They will also be shown an alert message telling them that this is a past confirmation and they have received an email with the order details.
 
 ![order-history-page](docs/features/order-history.png)
 
@@ -833,7 +833,7 @@ They will also be shown an alert message telling them that this is a past comfir
 
 ![cart](docs/features/cart-page.png)
 
-The cart page is accessbile via the navbar icon which also shows a live view of the cart total
+The cart page is accessible via the navbar icon which also shows a live view of the cart total
 
 ![cart-navbar](docs/features/cart-navbar.png)
 
@@ -871,7 +871,7 @@ The user is also shown a checkout order summary which includes all products they
 
 **Dynamic Delivery times**
 
-One of the features of the checkout page is the dynamic delivery time slots. The user is able to choose delivery times based off the current time and a 30 minute delay.
+One of the features of the checkout page is the dynamic delivery time slots. The user is able to choose delivery times based on the current time and a 30 minute delay.
 
 For example if the day is Monday the delivery time hours are 11:00 AM - 21:00 PM. So if the user makes an order at 16:30 on Monday the delivery times that will be shown to them will be 17:00 - 21:00 in 15 minute increments.
 
@@ -938,7 +938,7 @@ The register page can be accessed via the my account icon in the navbar if the u
 
 From here the user is shown a form to enter their email, username and password to sign up for an account.
 
-On valid form subission the user is brought to the verify email page telling them an email has been sent to the given email address and it needs to be verified. Ony when the user verifies their email they will be able to sign in.
+On valid form submission the user is brought to the verify email page telling them an email has been sent to the given email address and it needs to be verified. Only when the user verifies their email they will be able to sign in.
 
 ![verify-email](docs/features/register-verify-email.png)
 
@@ -1014,7 +1014,7 @@ The favicon was built on [favicon.io](https://favicon.io/favicon-generator/)
 
 #### **Special offers page**
 
-One feature that was originally meant to be implemented into the site but couldnt because of time constraints is the special offers page. This would be a page that users can navigate to to view special offers on products including meal deals.
+One feature that was originally meant to be implemented into the site but couldnt because of time constraints is the special offers page. This would be a page that users can navigate to view special offers on products including meal deals.
 
 #### **Next Day Delivery**
 
