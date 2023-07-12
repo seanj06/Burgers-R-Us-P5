@@ -8,9 +8,9 @@ OPENING_HOURS = {
     1: {'start': '11:00', 'end': '23:00'},   # Tuesday
     2: {'start': '11:00', 'end': '23:00'},   # Wednesday
     3: {'start': '11:00', 'end': '23:00'},   # Thursday
-    4: {'start': '12:00', 'end': '01:30'},   # Friday
-    5: {'start': '12:00', 'end': '02:30'},   # Saturday
-    6: {'start': '12:00', 'end': '00:30'},   # Sunday
+    4: {'start': '11:00', 'end': '02:00'},   # Friday
+    5: {'start': '12:00', 'end': '03:00'},   # Saturday
+    6: {'start': '12:00', 'end': '01:00'},   # Sunday
 }
 
 
