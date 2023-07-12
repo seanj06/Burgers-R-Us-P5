@@ -112,4 +112,7 @@ class OrderItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
+        """
+        Returns string with sku and order number
+        """
         return f'SKU {self.food.sku} on order {self.order.order_number}'

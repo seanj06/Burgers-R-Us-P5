@@ -24,6 +24,7 @@ def generate_delivery_time_choices(delivery_date):
     delivery_time = current_time + timedelta(minutes=DELIVERY_TIME_DELAY)
     current_day = delivery_time.weekday()
 
+    # If the current time is within the current opening hours
     if current_day in OPENING_HOURS:
         opening_hours = OPENING_HOURS[current_day]
         start_time = datetime.strptime(opening_hours['start'], '%H:%M').time()

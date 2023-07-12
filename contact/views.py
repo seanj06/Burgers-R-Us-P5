@@ -40,6 +40,7 @@ def contact_success(request):
     from_email = 'burgers-r-us@example.com'
     to_email = [contact.email]
 
+    # Handles sending email to user after form submit
     html_message = render_to_string('contact/email/enquiry_confirmation.html',
                                     {'contact': contact})
     plain_message = strip_tags(html_message)

@@ -11,14 +11,16 @@ from django.db.models.functions import Lower
 
 
 def all_products(request):
-
+    """
+    View to handle logic of all products page
+    """
     products = Food.objects.all()
     query = None
     categories = None
     sort = None
     direction = None
     subcategory = None
-
+    # If filter is sort
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -39,6 +41,7 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
+    # If filter search by categories or sub categories
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -49,7 +52,7 @@ def all_products(request):
             subcategory = request.GET["subcategory"].split(",")
             products = products.filter(sub_category__name__in=subcategory)
             subcategory = SubCategory.objects.filter(name__in=subcategory)
-
+        # If search by keyword
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -93,7 +96,9 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-
+    """
+    View to handle logic of product detail page
+    """
     product = get_object_or_404(Food, pk=product_id)
 
     context = {

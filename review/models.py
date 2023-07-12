@@ -15,10 +15,19 @@ class Review(models.Model):
     likes = models.ManyToManyField(User, related_name='liked_reviews')
 
     class Meta:
+        """
+        Orders reviews by newly created
+        """
         ordering = ['-created_at']
 
     def __str__(self):
+        """
+        Returns string with review author
+        """
         return f'Review by {self.author.username}'
 
     def likes_count(self):
+        """
+        Returns total likes count on review
+        """
         return self.likes.count()

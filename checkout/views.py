@@ -22,6 +22,9 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    View to cache checkout data
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -38,10 +41,16 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    View to handle checkout logic
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+    # Set the deliver times to current date
     delivery_choices = generate_delivery_time_choices(date.today())
 
+    # Assign form data to post data
     if request.method == 'POST':
         cart = request.session.get('cart', {})
         form_data = {
@@ -57,12 +66,15 @@ def checkout(request):
         }
 
         delivery_time = request.POST.get('delivery_time')
+
+        # If outside delivery times
         if not delivery_time:
             messages.error(request, 'Sorry delivery is currently unavailable')
             return render(request, template, context)
 
         form_data['delivery_time'] = delivery_time
 
+        # Create instance of Orderform with form data
         order_form = OrderForm(form_data)
         if order_form.is_valid:
             order = order_form.save()
@@ -109,7 +121,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
+        # Pre populale form data with users default info
         if request.user.is_authenticated:
             try:
                 profile = Profile.objects.get(user=request.user)
@@ -181,6 +193,7 @@ def checkout_success(request, order_number):
     if 'cart' in request.session:
         del request.session['cart']
 
+    # Handles sending email to user after successful checkout
     subject = f'Order Confirmation - Order #{order.order_number}'
     from_email = 'burgers-r-us@example.com'
     to_email = [order.email]

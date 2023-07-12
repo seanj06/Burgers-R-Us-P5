@@ -6,7 +6,9 @@ from checkout.models import Order
 
 
 def profile(request):
-
+    """
+    View for handling logic for profile page
+    """
     profile = get_object_or_404(Profile, user=request.user)
     form = ProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -31,6 +33,9 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    View for handling profile page order history logic
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

@@ -5,7 +5,9 @@ from products.models import Food
 
 
 def cart_contents(request):
-
+    """
+    View for calculating delivery threshold
+    """
     cart_items = []
     total = 0
     product_count = 0
