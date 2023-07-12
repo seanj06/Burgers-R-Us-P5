@@ -46,7 +46,7 @@ Below were the steps taken to install the relevant packages to setup django on t
 9. Make migrations using - python manage.py makemigrations
 10. Migrate the changes using - python manage.py migrate
 11. Open up the server to make sure your django project was created successfully using - python manage.py runserver 
-  - If the project was created succesfully you will see the django success page.
+  - If the project was created successfully you will see the django success page.
 12. Create env.py file to secure variables you dont want pushed to github.
 13. In env.py file create 2 variables
 ```shell
@@ -172,7 +172,7 @@ The next steps in setting up the bucket is creating an IAM group and user to giv
 
 - Navigate back to the aws dashboard and search for IAM.
 - From user groups select "create new group"
-- Select a name for your group. It is best practise t name your group similiarly to your project.
+- Select a name for your group. It is best practice to name your group similiarly to your project.
 - From the user groups section click on your newly created group and navigate to the permissions tab.
 - Open the add permissions dropdown and click attach policies
 - Select the policy, then click add Permissions at the bottom when finished.
@@ -196,8 +196,8 @@ The next steps in setting up the bucket is creating an IAM group and user to giv
   ```
 
 - Click Review Policy.
-- Name your policy. It is best practise to name your policy the same as your group. "yourgroup-policy"
-- Enter a poicy description
+- Name your policy. It is best practice to name your policy the same as your group. "yourgroup-policy"
+- Enter a policy description
 - Click Create Policy.  
 - From User Groups, select your created group.
 - Click Attach Policy.
@@ -210,7 +210,7 @@ The next steps in setting up the bucket is creating an IAM group and user to giv
 - From User Groups, click Add User.
 - Name your user. It is best practice to name the user with the group name attached. "yourgroup-user".
 - For Select AWS Access Type, select Programmatic Access.
-- Add your user to to your created group.
+- Add your user to your created group.
 - Click Create User.
 
 - Once the user is created a "download csv" link will appear.
