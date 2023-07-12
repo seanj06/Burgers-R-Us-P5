@@ -60,7 +60,7 @@ A wide range of testing was carried out during development including, Automated 
 
 ## **User Story Testing**
 
-Overall there were 55 completed user stories and 1 uncompleted user story throughout the projects development. They will all be tested below to ensure criteria has been met for each story. The users stories will be broken down into their respetive milestones to be tested.
+Overall there were 55 completed user stories and 1 uncompleted user story throughout the projects development. They will all be tested below to ensure criteria has been met for each story. The users stories will be broken down into their respective milestones to be tested.
 
 ### **EPIC: Django Installation and app setup**
 
@@ -256,7 +256,7 @@ This user story had a must-have label
 
 - 2.User only able to submit form if all fields are valid
 
-  - Form validation was added to form fields and users are shwon an error message if the form is invalid.
+  - Form validation was added to form fields and users are shown an error message if the form is invalid.
 
 - 3.User form and checkout page matches rest of site
 
@@ -284,7 +284,7 @@ This user story had a should-have label
 
 #### 12. [USER STORY: Checkout Models](https://github.com/seanj06/Burgers-R-Us-P5/issues/26)
 
-As a developer I can create checkout database models so that the correct user information is saved in thee database upon checkout
+As a developer I can create checkout database models so that the correct user information is saved in the database upon checkout
 
 This user story had a must-have label
 
@@ -507,7 +507,7 @@ This user story had a must-have label
 
 - 2.Users receive notifications when signing in or out
 
-  - Users are shwon a success toast notifiying them if they are logged in or out.
+  - Users are shown a success toast notifiying them if they are logged in or out.
 
 [Top of page &uarr;](#contents)
 
@@ -579,7 +579,7 @@ This user story had a should-have label
 
 - 2.Users can choose from select boxes to narrow down issue
 
-  - There is an issue dropwdown menu for users to select from on the form
+  - There is an issue dropdown menu for users to select from on the form
 
 #### 28. [USER STORY: Home page styling](https://github.com/seanj06/Burgers-R-Us-P5/issues/18)
 
@@ -675,7 +675,7 @@ This user story had a must-have label
 
 - 1.Users can access products page from navbar and homepage
 
-  - The products page is accessible from both the navbar and the order now buton on the homepage
+  - The products page is accessible from both the navbar and the order now button on the homepage
 
 - 2.Users can see all available products
 
@@ -821,7 +821,7 @@ This user story had a should-have label
 
 - 1.Only superusers have access to delete products
 
-  - Only supersusers can delete products. All other users will be redirected to a 403 action forbidden page.
+  - Only superusers can delete products. All other users will be redirected to a 403 action forbidden page.
 
 #### 42. [USER STORY: Edit Product](https://github.com/seanj06/Burgers-R-Us-P5/issues/43)
 
@@ -871,7 +871,7 @@ This user story had a should-have label
 
 #### 45. [USER STORY: Update Review](https://github.com/seanj06/Burgers-R-Us-P5/issues/40)
 
-As a user I can update any reviews I have written so that I can fix any mistakes I mad while writing it
+As a user I can update any reviews I have written so that I can fix any mistakes I made while writing it
 
 This user story had a should-have label
 
@@ -1047,7 +1047,7 @@ This user story had a must-have label
 
 - 3.All python code passes validation
 
-  - All python code was passed through the pep8 validatior and passed with no errors
+  - All python code was passed through the pep8 validator and passed with no errors
 
 - 4.All javascript code passes validation
 
@@ -1195,13 +1195,13 @@ To test this manually I added a product to my cart and ensured the success toast
 
 #### **Checkout App**
 
-The checkout app was not included in the automated testing because of the stripe functionality so had a decent total of missing statements which wil be broken into sections.
+The checkout app was not included in the automated testing because of the stripe functionality so had a decent total of missing statements which will be broken into sections.
 
 **Delivery Time form functionality**
 
 ![delivery-time-statements](docs/manual%20testing/checkout-delivery-time-missing-statement.png)
 
-This missing statment included the delivery_time function data being added to the form and the valid form being saved on checkout. To test this i added a product to the cart, ensured the dynamic delivery time functionality was working by ensuring all of the dropdown options were there and submitted the form and checked the database to ensure it saved.
+This missing statement included the delivery_time function data being added to the form and the valid form being saved on checkout. To test this i added a product to the cart, ensured the dynamic delivery time functionality was working by ensuring all of the dropdown options were there and submitted the form and checked the database to ensure it saved.
 
 ![test-delivery-times](docs/manual%20testing/test-delivery-times.png)
 
@@ -1237,7 +1237,7 @@ This missing statement involved the order confirmation email being sent to the u
 
 ![test-email](docs/manual%20testing/test-email.png)
 
-As expected the email recieved included the correct order info.
+As expected the email received included the correct order info.
 
 [Top of page &uarr;](#contents)
 
@@ -1245,7 +1245,7 @@ As expected the email recieved included the correct order info.
 
 **All_products missing statements**
 
-The missing statments in the all_products view were based around the sort and filtering functionality.
+The missing statements in the all_products view were based around the sort and filtering functionality.
 
 ![products-missing-statements](docs/manual%20testing/products-missing-statements.png)
 ![products-missing-statement-2](docs/manual%20testing/products-missing-statement-2.png)
@@ -1327,7 +1327,7 @@ No error messages on console after checkout
 ![cart-js2](docs/manual%20testing%20js/cart-js2.png)
 ![cart-js3](docs/manual%20testing%20js/cart-js3.png)
 
-This javascript code was for for the remove and update buttons on the cart and products page and the incremement and decrement quantity buttons on the quantity selector.
+This javascript code was for the remove and update buttons on the cart and products page and the increment and decrement quantity buttons on the quantity selector.
 To test this code I added items to the cart, navigated to the cart page, removed an item from the cart and updated the quantity of items in the cart to ensure functionality. As expected it all functioned correctly and all manual tests passed.
 
 Updated cart item
@@ -1664,7 +1664,7 @@ The validator returned duplicate class errors on this page on the "contains" sel
 
 ### **Lighthouse Testing**
 
-Lighthouse testing was done done through the chrome devtools by right clicking on the site page, navigation to inspect, then navigating to lighthouse report.
+Lighthouse testing was done through the chrome devtools by right clicking on the site page, navigation to inspect, then navigating to lighthouse report.
 I gathered reports for both desktop and mobile devices.
 
 #### **Home Page Lighthouse**
@@ -1853,7 +1853,7 @@ I gathered reports for both desktop and mobile devices.
 
 #### **Mobile Performance Ratings**
 
-All mobile lighthouse performance ratings were severely effected by render blocking recources such as aws, stripe, jquery and bootstrap. 
+All mobile lighthouse performance ratings were severely affected by render blocking resources such as aws, stripe, jquery and bootstrap. 
 After some research I am unsure why this is happening on just mobile and am unable to fix the issue at this time.
 
 ![lh-mobile-1](docs/lighthouse/lh-mobile-performance-1.png)
@@ -1874,11 +1874,11 @@ The cart page SEO rating was affected by a "links not crawlable" error.This is d
 | **Bug** | **Bug Description** | **Fix** |
 |---------|---------------------|---------|
 | Cart Update Button | During testing I noticed the cart update button was not disabling when the user entered a quantity over 99 | To fix this I added an extra javascript codeblock to ensure button was only clickable within the 1-99 range. 
-| Item Removel CSRF token | On site development I noticed when trying to remove an item from the cart a console error "missing csrf token" would appear | I concluded that this error was appearing because the javacript code was in an external file linked to the page. Moving the javascript code to the bottom of the template fixed this error. 
-| Delivery Info not being saved | On testing the site I noticed that the users default delivery info was not being saved to their profile if they clicked the "save my info" box. | After inspection I noticed the a typo in the code view and the default info being rendred to the form did not match the field names on the model. After fixing the typos the users delivery info was saved.
+| Item Removal CSRF token | On site development I noticed when trying to remove an item from the cart a console error "missing csrf token" would appear | I concluded that this error was appearing because the javascript code was in an external file linked to the page. Moving the javascript code to the bottom of the template fixed this error. 
+| Delivery Info not being saved | On testing the site I noticed that the users default delivery info was not being saved to their profile if they clicked the "save my info" box. | After inspection I noticed the a typo in the code view and the default info being rendered to the form did not match the field names on the model. After fixing the typos the users delivery info was saved.
 | Delivery Times Data | On site development I noticed the users selected delivery time was not being saved properly in the order | After further testing I concluded that the function that handles generating the delivery times was returning time data whereas my delivery time field on my model was a charfield. After changing the field to a TimeField this error was resolved. 
 | Filtering pagination | On site pagination I noticed that if a user filter searches a product, then navigated to the next page the filter search would reset to all products. | After some research I added extra code to the get parameters in the pagination code to ensure all pagination did not affect filter searching. 
-| Review Text Overflow | On testing the site I noticed review text would overlfow out of the container if the user entered a long word with no whitespace. | To fix this I added a text-wrap css style to make sure the text overflowed onto the next line.
+| Review Text Overflow | On testing the site I noticed review text would overflow out of the container if the user entered a long word with no whitespace. | To fix this I added a text-wrap css style to make sure the text overflowed onto the next line.
 | Quantity selector incrementing by 2 | On site development I noticed if a user clicked the increment button the quantity would increment by 2 instead of 1 | After reviewing the code I noticed that there were 2 external javascript files linked with the same function which was causing it to execute twice. To fix this bug I removed the duplicate javascript code.
 | Cart not emptying on checkout. | On development of the site I noticed after a user had checked out their cart was not emptying. | After reviewing my code I noticed that the cart delete functionality was outside the correct if/else block. After fixing this the cart emptied.
 | Cart quantity whitespace | During testing I noticed if that the user could enter whitespace into the quantity box, the form would submit and the site would throw a 500 server error. | To fix this I added code in the add to cart and edit cart views to check for valid integer before form submit.
